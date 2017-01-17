@@ -1,0 +1,108 @@
+/* FRONTEND LESS
+*********************************************/
+//
+
+// Bootstrap
+@import "bootstrap/bootstrap.less";
+
+// Font Awesome
+@import "font-awesome/font-awesome.less";
+
+// Kleuren
+
+html {
+	overflow-y: scroll; /* scrollbar fix (prevent ugly left pull for lower content sites) */
+}
+
+body {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+
+/* YOUR CSS HERE */
+
+// Pagination - Hier wordt de opmaak ingesteld voor de pagina nummers onder aan blog pagina's
+.pagination{
+    width: 100%;
+    li{
+        display: inline-block;
+        padding: 0 10px;
+    }
+    
+    i{
+    font-style: normal;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+    
+    .disabled a, .active a{
+        color: #333;
+    }
+    .active a{
+        font-weight: bold;
+    }
+}
+
+i.icon-first:before{
+    font-family: 'FontAwesome';
+        content: '\f100';
+}
+i.icon-previous:before{
+    font-family: 'FontAwesome';
+        content: '\f104';
+}
+i.icon-last:before{
+    font-family: 'FontAwesome';
+        content: '\f101';
+}
+i.icon-next:before{
+    font-family: 'FontAwesome';
+        content: '\f105';
+}
+
+// START MEDIA QUERIES
+
+// Staande tablet en groter - vanaf 768 pixels breed
+@media (min-width: 768px) {}
+
+// Liggende tablet en groter - vanaf 992 pixels breed
+@media (min-width: 992px) {}
+
+// Desktop - vanaf 1200 pixels breed
+@media (min-width: 1200px) {}
+
+
+
+/* bootstrap search form fixes */
+
+#insidebar ul.unstyled {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#insidebar .form-control {
+	width: 100% !important;
+}
+
+.navbar div.search {
+	@media (max-width: 767px) {
+		padding: 0 0 20px 0;
+		width: 100%;
+	}
+}
+
+#mod-search-searchword {
+	@media (min-width: 768px) {
+		margin-top: 7px;
+	}
+}
+
+.form-group {
+	@media (min-width: 768px) {
+		padding: 5px 0;
+	}
+}
