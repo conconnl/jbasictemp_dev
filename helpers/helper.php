@@ -1,4 +1,10 @@
-<?php defined( '_JEXEC' ) or die; 
+<?php
+
+// Prevent direct access
+defined('_JEXEC') or die();
+
+// Define the base-path of this template
+define('TEMPLATE_BASE', dirname(__FILE__));
 
 // variables
 $app = JFactory::getApplication();
@@ -36,7 +42,7 @@ $doc->addScript($tpath.'/js/logic.js'); // <- use for custom script
 // css
 if ($templateparams->get('runless', 1) == 1)
 {
-	require 'css/lesscompiler/runless.php';
+	require ('templates/' . $this->template . '/css/lesscompiler/runless.php');
 }
 
 $doc->addStyleSheet($tpath.'/css/template.css');
