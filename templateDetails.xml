@@ -15,18 +15,18 @@
 	<files>
 		<folder>css</folder>
 		<folder>fonts</folder>
+		<folder>helpers</folder>
 		<folder>html</folder>
 		<folder>images</folder>
 		<folder>js</folder>
 		<folder>language</folder>
 		<filename>component.php</filename>
 		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
 		<filename>index.php</filename>
-		<filename>logic.php</filename>
 		<filename>offline.php</filename>
 		<filename>template_preview.png</filename>
 		<filename>template_thumbnail.png</filename>
-		<filename>favicon.ico</filename>
 		<filename>templateDetails.xml</filename>
 	</files>
 	
