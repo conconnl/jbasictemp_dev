@@ -1,43 +1,76 @@
 <?php
-
 // Prevent direct access
 defined('_JEXEC') or die();
 
-// Define the base-path of this template
-define('TEMPLATE_BASE', dirname(__FILE__));
+// Connect with Joomla
+$app            = JFactory::getApplication();
+$doc            = JFactory::getDocument();
+$session        = JFactory::getSession();
+$juser          = JFactory::getUser();
 
-// variables
-$app = JFactory::getApplication();
-$doc = JFactory::getDocument(); 
-$menu = $app->getMenu();
-$active = $app->getMenu()->getActive();
+// Get variables
+$option         = $app->input->getCmd('option', '');
+$view           = $app->input->getCmd('view', '');
+$layout         = $app->input->getCmd('layout', '');
+$task           = $app->input->getCmd('task', '');
+$itemid         = $app->input->getCmd('Itemid', '');
+$id             = $app->input->getCmd('id', '');
+$sitename       = $app->getCfg('sitename');
+$menu           = $app->getMenu();
+$menu_active    = $menu->getActive();
+$frontpage      = ($menu_active == $menu->getDefault() ? true : false);
+$templateparams = $app->getTemplate(true)->params;
+$templateUrl    = $this->baseurl.'/templates/'.$this->template;
+$templateDir    = JPATH_THEMES . '/' . $this->template . '/';
+$siteDir        = JPATH_ROOT;
+
+// Get pageclass
 $params = $app->getParams();
 $pageclass = $params->get('pageclass_sfx');
-$tpath = $this->baseurl.'/templates/'.$this->template;
-$templateparams	= $app->getTemplate(true)->params;
-$sitename = $app->get('sitename');
-$this->language  = $doc->language;
-$this->direction = $doc->direction;
 
-// generator tag
-$this->setGenerator(null);
-
-// force latest IE & chrome frame
+// Set MetaData
 $doc->setMetadata('x-ua-compatible','IE=edge,chrome=1');
+$doc->setMetaData('viewport', 'width=device-width, initial-scale=1.0' );
+$doc->setMetaData('content-type', 'text/html', true );
+$doc->setGenerator($sitename);
 
-// Remove Scripts
-unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-more.js']);
-unset($doc->_scripts[JURI::root(true) . '/media/system/js/mootools-core.js']);
-unset($doc->_scripts[JURI::root(true) . '/media/system/js/core.js']);
-unset($doc->_scripts[JURI::root(true) . '/media/system/js/modal.js']);
-unset($doc->_scripts[JURI::root(true) . '/media/system/js/caption.js']);
-unset($doc->_scripts[JURI::root(true) . '/media/jui/js/bootstrap.min.js']);
+// Call JavaScript to be able to unset it correctly
+JHtml::_('behavior.framework');
+JHtml::_('bootstrap.framework');
+JHtml::_('jquery.framework');
+JHtml::_('bootstrap.tooltip');
 
+// Unset unwanted JavaScript
+unset($this->_scripts[$this->baseurl . '/media/system/js/mootools-core.js']);
+unset($this->_scripts[$this->baseurl . '/media/system/js/mootools-more.js']);
+unset($this->_scripts[$this->baseurl . '/media/system/js/caption.js']);
+unset($this->_scripts[$this->baseurl . '/media/system/js/core.js']);
+unset($this->_scripts[$this->baseurl . '/media/system/js/validate.js']);
+unset($this->_scripts[$this->baseurl . '/media/system/js/modal.js']);
+unset($this->_scripts[$this->baseurl . '/media/jui/js/jquery.min.js']);
+unset($this->_scripts[$this->baseurl . '/media/jui/js/jquery-noconflict.js']);
+unset($this->_scripts[$this->baseurl . '/media/jui/js/jquery-migrate.min.js']);
+unset($this->_scripts[$this->baseurl . '/media/jui/js/bootstrap.min.js']);
+unset($this->_scripts[$this->baseurl . '/media/system/js/tabs-state.js']);
 
+if (isset($this->_script['text/javascript']))
+{
+    $this->_script['text/javascript'] = preg_replace('%jQuery\(window\)\.on\(\'load\'\,\s*function\(\)\s*\{\s*new\s*JCaption\(\'img.caption\'\);\s*}\s*\);\s*%', '', $this->doc->_script['text/javascript']);
+    $this->_script['text/javascript'] = preg_replace("%\s*jQuery\(document\)\.ready\(function\(\)\{\s*jQuery\('\.hasTooltip'\)\.tooltip\(\{\"html\":\s*true,\"container\":\s*\"body\"\}\);\s*\}\);\s*%", '', $this->doc->_script['text/javascript']);
+    $this->_script['text/javascript'] = preg_replace('%\s*jQuery\(function\(\$\)\{\s*\$\(\"\.hasTooltip\"\)\.tooltip\(\{\"html\":\s*true,\"container\":\s*\"body\"\}\);\s*\}\);\s*%', '', $this->doc->_script['text/javascript']);
+
+    // Unset completly if empty
+    if (empty($this->_script['text/javascript']))
+    {
+        unset($this->_script['text/javascript']);
+    }
+}
+
+// Add Scripts & StyleSheets
 // js
 JHtml::_('jquery.framework');
-$doc->addScript($tpath.'/js/bootstrap.min.js');
-$doc->addScript($tpath.'/js/logic.js'); // <- use for custom script
+$doc->addScript($templateUrl.'/js/bootstrap.min.js');
+$doc->addScript($templateUrl.'/js/logic.js'); // <- use for custom script
 
 // css
 if ($templateparams->get('runless', 1) == 1)
@@ -45,8 +78,9 @@ if ($templateparams->get('runless', 1) == 1)
 	require ('templates/' . $this->template . '/css/lesscompiler/runless.php');
 }
 
-$doc->addStyleSheet($tpath.'/css/template.css');
+$doc->addStyleSheet($templateUrl.'/css/template.css');
 
+// Template parameters specific configurations
 // Use chosen Logo, Site Title or sitename
 if ($this->params->get('logoFile'))
 {

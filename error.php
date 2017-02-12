@@ -2,8 +2,8 @@
 
 // variables
 $app = JFactory::getApplication();
-$doc = JFactory::getDocument(); 
-$tpath = $this->baseurl.'/templates/'.$this->template;
+$doc = JFactory::getDocument();
+$templateUrl = $this->baseurl.'/templates/'.$this->template;
 
 ?><!doctype html>
 
@@ -12,8 +12,8 @@ $tpath = $this->baseurl.'/templates/'.$this->template;
 <head>
   <title><?php echo $this->error->getCode(); ?> - <?php echo $this->title; ?></title>
   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> <!-- mobile viewport optimized -->
-  <link rel="stylesheet" href="<?php echo $tpath; ?>/css/editor.css?v=1">
-  <link rel="stylesheet" href="<?php echo $tpath; ?>/css/error.css?v=1">
+  <link rel="stylesheet" href="<?php echo $templateUrl; ?>/css/editor.css?v=1">
+  <link rel="stylesheet" href="<?php echo $templateUrl; ?>/css/error.css?v=1">
 </head>
 
 <body>

@@ -1,14 +1,14 @@
 <?php defined( '_JEXEC' ) or die; 
 
 // variables
-$doc = JFactory::getDocument(); 
-$tpath = $this->baseurl.'/templates/'.$this->template;
+$doc = JFactory::getDocument();
+$templateUrl = $this->baseurl.'/templates/'.$this->template;
 
 // generator tag
 $this->setGenerator(null);
 
 // load sheets and scripts
-$doc->addStyleSheet($tpath.'/css/print.css?v=1'); 
+$doc->addStyleSheet($templateUrl.'/css/print.css?v=1');
 
 ?><!doctype html>
 
