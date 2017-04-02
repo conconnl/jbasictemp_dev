@@ -1,21 +1,32 @@
-<?php defined( '_JEXEC' ) or die; ?>
-<?php include_once JPATH_THEMES . '/' . $this->template . '/helpers/helper.php'; ?>
-<!doctype html>
+<?php
+/*
+ * @package     Basic template
+ * @copyright   Copyright (c) Joomla Community Netherlands
+ * @license     GNU General Public License version 3 or later
+ */
+
+// No direct access.
+defined('_JEXEC') or die;
+
+// Load Basic Template Helper
+require_once JPATH_THEMES . '/' . $this->template . '/helpers/helper.php';
+
+BasicTemplateHelper::setMetadata();
+BasicTemplateHelper::setFavicon();
+BasicTemplateHelper::unloadCss();
+BasicTemplateHelper::unloadJs();
+BasicTemplateHelper::loadCss();
+BasicTemplateHelper::loadJs();
+BasicTemplateHelper::loadApplIcon();
+?>
+
+<!DOCTYPE html>
 <html lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<jdoc:include type="head" />
-	<link rel="apple-touch-icon-precomposed" href="<?php echo $templateUrl; ?>/images/apple-touch-icon-57x57-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $templateUrl; ?>/images/apple-touch-icon-72x72-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo $templateUrl; ?>/images/apple-touch-icon-114x114-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $templateUrl; ?>/images/apple-touch-icon-144x144-precomposed.png">
-	<!--[if lt IE 9]>
-    <script src="<?php echo JUri::root(true); ?>/media/jui/js/html5.js"></script>
-	<script type="text/javascript" src="<?php echo $templateUrl; ?>/js/respond.min.js"></script>
-	<![endif]-->
 </head>
-  
-<body class="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('site')).' '.$menu_active->alias.' '.$pageclass; ?>" role="document">
 
+<body class="<?php echo BasicTemplateHelper::getBodySuffix(); ?>" role="document">
 	    <div class="container">
 			<div class="row headerbar">
 				<?php echo $logo; ?>
