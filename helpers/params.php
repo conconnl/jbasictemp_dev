@@ -73,3 +73,13 @@ else
     $footermodule = 'col-sm-12';
     $totopicon = '';
 }
+
+// Use Container or Container-fluid
+if ($this->params->get('containerstyle') == 1)
+{
+    $containerstyle = 'container-fluid';
+}
+else
+{
+    $containerstyle = 'container';
+}

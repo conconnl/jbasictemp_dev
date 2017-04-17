@@ -27,7 +27,7 @@ BasicTemplateHelper::loadApplIcon();
 </head>
 
 <body class="<?php echo BasicTemplateHelper::getBodySuffix(); ?>" role="document">
-	    <div class="container">
+        <div class="<?php echo $containerstyle; ?>">
 			<div class="row headerbar">
 				<?php echo $logo; ?>
 			</div>
