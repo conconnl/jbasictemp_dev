@@ -261,7 +261,7 @@ class BasicTemplateHelper
     static public function loadJs()
     {
         $doc = JFactory::getDocument();
-        JHtml::_('jquery.framework');
+        $doc->addscript($doc->baseurl . '/media/jui/js/jquery.min.js');
         $doc->addScript('templates/' . self::template() . '/js/bootstrap.min.js');
         $doc->addScript('templates/' . self::template() . '/js/logic.js'); // <- use for custom script
     }
@@ -277,7 +277,7 @@ class BasicTemplateHelper
         $macOS   = stripos($_SERVER['HTTP_USER_AGENT'],"Macintosh");
 
         //do something with this information
-        if( $iPod || $iPhone || $macOS ){
+        if( $iPod || $iPhone || iPad ){
             $doc = JFactory::getDocument();
             $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon-57x57-precomposed.png', 'apple-touch-icon-precomposed', 'rel', array('type' => 'image/png'));
             $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon-72x72-precomposed.png', 'apple-touch-icon-precomposed', 'rel', array('type' => 'image/png','sizes' => '72x72'));
