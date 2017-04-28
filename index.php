@@ -50,6 +50,12 @@ BasicTemplateHelper::loadApplIcon();
 			<!-- End Navbar-->
 
 		<div class="row">
+            <!-- Begin Component Area -->
+            <div class="<?php echo $componentarea; ?>">
+                    <jdoc:include type="message" />
+                    <jdoc:include type="component" />
+            </div>
+            <!-- End Component Area -->
 			<!-- Begin Left Sidebar -->
 			<?php if ($this->countModules('leftsidebar')) : ?>
 				<div class="<?php echo $leftsidebar; ?>">
@@ -59,11 +65,6 @@ BasicTemplateHelper::loadApplIcon();
 				</div>
 			<?php endif; ?>
 			<!-- End Left Sidebar -->
-	            <div class="<?php echo $componentarea; ?>">
-					<jdoc:include type="message" />
-	                <jdoc:include type="component" /> 
-	            </div>
-
 			<!-- Begin Right Sidebar -->
 			<?php if ($this->countModules('rightsidebar')) : ?>
 	            <div class="<?php echo $rightsidebar; ?>">

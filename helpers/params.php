@@ -33,15 +33,15 @@ else
 // Check Sidebar usage to automatic change the grid
 if ($this->countModules('leftsidebar') && $this->countModules('rightsidebar'))
 {
-    $leftsidebar = "col-sm-2";
-    $rightsidebar = "col-sm-2";
-    $componentarea = "col-sm-8";
+    $leftsidebar = "col-xs-12 col-sm-2 col-sm-pull-8";
+    $rightsidebar = "col-xs-12 col-sm-2";
+    $componentarea = "col-xs-12 col-sm-8 col-sm-push-2";
 }
 elseif ($this->countModules('leftsidebar') or $this->countModules('rightsidebar'))
 {
-    $leftsidebar = "col-sm-3";
-    $rightsidebar = "col-sm-3";
-    $componentarea = "col-sm-9";
+    $leftsidebar = "col-xs-12 col-sm-3 col-sm-pull-9";
+    $rightsidebar = "col-xs-12 col-sm-3";
+    $componentarea = "col-xs-12 col-sm-9 col-sm-push-3";
 }
 else
 {
