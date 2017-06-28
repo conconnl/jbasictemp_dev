@@ -260,10 +260,9 @@ class BasicTemplateHelper
      */
     static public function loadJs()
     {
-        $doc = JFactory::getDocument();
-        $doc->addscript($doc->baseurl . '/media/jui/js/jquery.min.js');
-        $doc->addScript('templates/' . self::template() . '/js/bootstrap.min.js');
-        $doc->addScript('templates/' . self::template() . '/js/logic.js'); // <- use for custom script
+        JHtml::_('script', 'media/jui/js/jquery.min.jss', array('version' => 'auto'));
+        JHtml::_('script', 'templates/' . self::template() . '/js/bootstrap.min.js', array('version' => 'auto'));
+        JHtml::_('script', 'templates/' . self::template() . '/js/logic.js', array('version' => 'auto'));
     }
 
     static  public function loadApplIcon()
