@@ -27,6 +27,7 @@ BasicTemplateHelper::loadApplIcon();
 </head>
 
 <body class="<?php echo BasicTemplateHelper::getBodySuffix(); ?>" role="document">
+<?php BasicTemplateHelper::putAnalyticsTrackingCode(); ?>
 <div class="<?php echo $containerstyle; ?>">
     <div class="row headerbar">
 		<?php echo $logo; ?>
