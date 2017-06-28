@@ -265,6 +265,26 @@ class BasicTemplateHelper
         JHtml::_('script', 'templates/' . self::template() . '/js/logic.js', array('version' => 'auto'));
     }
 
+    /**
+     * Insert the Google Analytics Tracking code
+     * @since  BasicTemplate 1.0
+     */
+    static public function putAnalyticsTrackingCode()
+    {
+        $analytics = JFactory::getApplication()->getTemplate(true)->params->get('analytics');
+        if ($analytics)
+        {
+            echo "<script>\n";
+            echo "  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n";
+            echo "  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n";
+            echo "  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n";
+            echo "  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n";
+            echo "  ga('create', '$analytics', 'auto');\n";
+            echo "  ga('send', 'pageview');\n";
+            echo "</script>\n";
+        }
+    }
+
     static  public function loadApplIcon()
     {
         //Detect special conditions devices
