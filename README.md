@@ -3,6 +3,12 @@ Basic Joomla frontend template with Bootstrap, Font Awesome and JQuery
 
 
 # Dutch
-Deze template is op basis van de gebruikte basis opzet van Rachel Walraven gemaakt.
+## Credits
+Perfect Web Team (https://perfectwebteam.nl/)
+Rene Kreijveld (https://github.com/renekreijveld)
+
+
+## Basis
+Deze template is op basis van de gebruikte basis opzet van Rachel Walraven gemaakt, haar basis is te vinden op: https://www.joomlacommunity.nl/downloads/divers/16-basistemplate-rachel-walraven.
 Er zal regelmatig uitbreidingen en aanpassingen plaatsvinden.
-Dit gaat allemaal in overleg met Rachel Walraven, haar basis is te vinden op: https://www.joomlacommunity.nl/downloads/divers/16-basistemplate-rachel-walraven
+
