@@ -5,6 +5,7 @@ Basic Joomla frontend template with Bootstrap, Font Awesome and JQuery
 # Dutch
 ## Credits
 Perfect Web Team (https://perfectwebteam.nl/)
+
 Rene Kreijveld (https://github.com/renekreijveld)
 
 
