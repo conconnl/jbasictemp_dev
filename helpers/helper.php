@@ -208,7 +208,7 @@ class BasicTemplateHelper
      */
     static public function loadCss()
     {
-        JFactory::getDocument()->addStyleSheet('templates/' . self::template() . '/css/template.css');
+        JHtml::_('stylesheet', 'templates/' . self::template() . '/css/template.css', array('version' => 'auto'));
     }
 
     /**
