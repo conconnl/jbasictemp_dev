@@ -19,7 +19,7 @@ if ($this->params->get('runless', 1) == 1)
 // Use chosen Logo, Site Title or sitename
 if ($this->params->get('logoFile'))
 {
-    $logo = '<a class="logo" href="'. JURI::root() .'"><img src="' . JUri::root() . $this->params->get('logoFile') . '" alt="' . $sitename . '" /></a>';
+    $logo = '<a class="logo" href="'. JURI::root() .'"><img class= "img-responsive" src="' . JUri::root() . $this->params->get('logoFile') . '" alt="' . $sitename . '" /></a>';
 }
 elseif ($this->params->get('sitetitle'))
 {
