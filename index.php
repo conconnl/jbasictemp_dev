@@ -105,9 +105,8 @@ BasicTemplateHelper::loadApplIcon();
 			<?php if ($this->params->get('totop') == 1): ?>
                 <div class="<?php echo $totopicon; ?>">
                     <a href="#">
-					<span class="fa-stack fa-2x">
-  						<i class="fa fa-circle-thin fa-stack-2x" aria-hidden="true"></i>
-  						<i class="fa fa-angle-up fa-stack-1x" aria-hidden="true"></i>
+					<span class="totop">
+  						<i class="fa fa-angle-up fa-3x" aria-hidden="true"></i>
 					</span>
                     </a>
                 </div>
