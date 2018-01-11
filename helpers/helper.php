@@ -46,7 +46,7 @@ class BasicTemplateHelper
         $doc    = JFactory::getDocument();
         $config = JFactory::getConfig();
 
-        $doc->setCharset('utf8');
+        $doc->setCharset('utf-8');
         $doc->setMetaData('X-UA-Compatible', 'IE=edge', true);
         $doc->setMetaData('viewport', 'width=device-width, initial-scale=1.0');
         $doc->setMetaData('content-type', 'text/html', true );
