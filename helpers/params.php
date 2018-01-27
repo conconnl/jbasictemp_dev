@@ -37,10 +37,14 @@ if ($this->countModules('leftsidebar') && $this->countModules('rightsidebar'))
     $rightsidebar = "col-xs-12 col-sm-2";
     $componentarea = "col-xs-12 col-sm-8 col-sm-push-2";
 }
-elseif ($this->countModules('leftsidebar') or $this->countModules('rightsidebar'))
+elseif ($this->countModules('rightsidebar'))
+{
+    $rightsidebar = "col-xs-12 col-sm-3";
+    $componentarea = "col-xs-12 col-sm-9";
+}
+elseif ($this->countModules('leftsidebar'))
 {
     $leftsidebar = "col-xs-12 col-sm-3 col-sm-pull-9";
-    $rightsidebar = "col-xs-12 col-sm-3";
     $componentarea = "col-xs-12 col-sm-9 col-sm-push-3";
 }
 else
