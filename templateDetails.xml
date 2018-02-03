@@ -50,14 +50,14 @@
 	<config>
 		<fields name="params">
 			<fieldset name="advanced">
-				<field name="runless" type="radio" default="1" label="TPL_FRONTEND_RUNLESS" description="TPL_FRONTEND_RUNLESS_DESC">
+				<field name="runless" type="radio" class="btn-group" default="1" label="TPL_FRONTEND_RUNLESS" description="TPL_FRONTEND_RUNLESS_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
 				<field name="logoFile" class="" type="media" default=""
 					   label="TPL_FRONTEND_LOGO_LABEL"
 					   description="TPL_FRONTEND_LOGO_DESC" />
-				<field name="containerstyle" type="radio" default="0" label="TPL_FRONTEND_CONTAINERSTYLE" description="TPL_FRONTEND_CONTAINERSTYLE_DESC">
+				<field name="containerstyle" type="radio" class="btn-group" default="0" label="TPL_FRONTEND_CONTAINERSTYLE" description="TPL_FRONTEND_CONTAINERSTYLE_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
@@ -65,7 +65,7 @@
 					   label="JGLOBAL_TITLE"
 					   description="JFIELD_ALT_PAGE_TITLE_LABEL"
 					   filter="string" />
-                <field name="totop" type="radio" default="1" label="TPL_FRONTEND_TOTOP" description="TPL_FRONTEND_TOTOP_DESC">
+                <field name="totop" type="radio" class="btn-group" default="1" label="TPL_FRONTEND_TOTOP" description="TPL_FRONTEND_TOTOP_DESC">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
