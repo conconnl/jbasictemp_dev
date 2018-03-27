@@ -53,7 +53,7 @@ class BasicTemplateHelper
         $doc->setMetaData('mobile-web-app-capable', 'yes');
         $doc->setMetaData('apple-mobile-web-app-capable', 'yes');
         $doc->setMetaData('apple-mobile-web-app-status-bar-style', 'black');
-        $doc->setMetaData('apple-mobile-web-app-title', $config->get('sitename'));
+        $doc->setMetaData('apple-mobile-web-app-title', self::getSitename());
         self::setGenerator(self::getSitename());
     }
 
