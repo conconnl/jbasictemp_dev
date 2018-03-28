@@ -1,6 +1,9 @@
 # joomla-basictemplate
 Basic Joomla frontend template with Bootstrap, Font Awesome and JQuery
 
+# Fonts
+- A Hassle-Free Way to Self-Host Google Fonts :: http://google-webfonts-helper.herokuapp.com/fonts
+- Implement localStorage web font caching in seconds :: https://jaicab.com/localFont/
 
 # Dutch
 ## Credits
