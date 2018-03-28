@@ -18,6 +18,7 @@ BasicTemplateHelper::unloadJs();
 BasicTemplateHelper::loadCss();
 BasicTemplateHelper::loadJs();
 BasicTemplateHelper::loadApplIcon();
+BasicTemplateHelper::localstorageFont();
 ?>
 
 <!DOCTYPE html>
