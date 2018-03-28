@@ -9,6 +9,11 @@
 // No direct access.
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Environment\Browser;
+use Joomla\CMS\Factory;
+use Joomla\CMS\Uri\Uri;
+use Joomla\CMS\HTML\HTMLHelper;
+
 // Get Parameters configuration from templateDetails
 require_once 'params.php';
 
@@ -16,7 +21,7 @@ class BasicTemplateHelper
 {
     static public function template()
     {
-        return JFactory::getApplication()->getTemplate();
+        return Factory::getApplication()->getTemplate();
     }
 
     /**
@@ -25,7 +30,7 @@ class BasicTemplateHelper
     */
     static public function setGenerator($generator)
     {
-        JFactory::getDocument()->setGenerator($generator);
+        Factory::getDocument()->setGenerator($generator);
     }
 
     /**
@@ -34,7 +39,7 @@ class BasicTemplateHelper
      */
     static public function getSitename()
     {
-        return JFactory::getConfig()->get('config.sitename');
+        return Factory::getConfig()->get('config.sitename');
     }
 
     /**
@@ -43,8 +48,8 @@ class BasicTemplateHelper
      */
     static public function setMetadata()
     {
-        $doc    = JFactory::getDocument();
-        $config = JFactory::getConfig();
+        $doc    = Factory::getDocument();
+        $config = Factory::getConfig();
 
         $doc->setCharset('utf-8');
         $doc->setMetaData('X-UA-Compatible', 'IE=edge', true);
@@ -63,7 +68,7 @@ class BasicTemplateHelper
      */
     static public function setFavicon()
     {
-        $doc = JFactory::getDocument();
+        $doc = Factory::getDocument();
 
         $doc->addHeadLink('templates/' . self::template() . '/images/favicon.ico', 'shortcut icon', 'rel', array('type' => 'image/ico'));
         $doc->addHeadLink('templates/' . self::template() . '/images/favicon.png', 'shortcut icon', 'rel', array('type' => 'image/png'));
@@ -75,7 +80,7 @@ class BasicTemplateHelper
      */
     static public function getItemId()
     {
-        return JFactory::getApplication()->input->getInt('Itemid');
+        return Factory::getApplication()->input->getInt('Itemid');
     }
 
     /** Generate the needed information for the GetBodySuffix */
@@ -85,7 +90,7 @@ class BasicTemplateHelper
      */
     static public function getPath($output = 'array')
     {
-        $uri  = JURI::getInstance();
+        $uri  = URI::getInstance();
         $path = $uri->getPath();
         $path = preg_replace('/^\//', '', $path);
         if ($output == 'array')
@@ -104,7 +109,7 @@ class BasicTemplateHelper
      */
     static public function getPageClass()
     {
-        $activeMenu = JFactory::getApplication()->getMenu()->getActive();
+        $activeMenu = Factory::getApplication()->getMenu()->getActive();
         $pageclass  = ($activeMenu) ? $activeMenu->params->get('pageclass_sfx', '') : '';
 
         return $pageclass;
@@ -115,7 +120,7 @@ class BasicTemplateHelper
      */
     static public function getPageOption()
     {
-        $input = JFactory::getApplication()->input;
+        $input = Factory::getApplication()->input;
 
         return str_replace('_', '-', $input->getCmd('option', ''));
     }
@@ -125,7 +130,7 @@ class BasicTemplateHelper
      */
     static public function getPageView()
     {
-        $input = JFactory::getApplication()->input;
+        $input = Factory::getApplication()->input;
 
         return str_replace('_', '-', $input->getCmd('view', ''));
     }
@@ -135,7 +140,7 @@ class BasicTemplateHelper
      */
     static public function getPageLayout()
     {
-        $input = JFactory::getApplication()->input;
+        $input = factory::getApplication()->input;
 
         return str_replace(self::template(), '', $input->getCmd('layout', ''));
     }
@@ -145,7 +150,7 @@ class BasicTemplateHelper
      */
     static public function getPageTask()
     {
-        $input = JFactory::getApplication()->input;
+        $input = Factory::getApplication()->input;
 
         return str_replace('_', '', $input->getCmd('task', ''));
     }
@@ -156,7 +161,7 @@ class BasicTemplateHelper
     static public function isHome()
     {
         // Fetch the active menu-item
-        $activeMenu = JFactory::getApplication()->getMenu()->getActive();
+        $activeMenu = Factory::getApplication()->getMenu()->getActive();
 
         // Return whether this active menu-item is home or not
         return (boolean) ($activeMenu) ? $activeMenu->home : false;
@@ -187,7 +192,7 @@ class BasicTemplateHelper
      */
     static public function unloadCss()
     {
-        $doc = JFactory::getDocument();
+        $doc = Factory::getDocument();
 
         $unset_css = array('com_finder');
         foreach ($doc->_styleSheets as $name => $style)
@@ -208,7 +213,7 @@ class BasicTemplateHelper
      */
     static public function loadCss()
     {
-        JHtml::_('stylesheet', 'templates/' . self::template() . '/css/template.css', array('version' => 'auto'));
+        HTMLHelper::_('stylesheet', 'templates/' . self::template() . '/css/template.css', array('version' => 'auto'));
     }
 
     /**
@@ -217,13 +222,13 @@ class BasicTemplateHelper
      */
     static public function unloadJs()
     {
-        $doc = JFactory::getDocument();
+        $doc = Factory::getDocument();
 
         // Call JavaScript to be able to unset it correctly
-        JHtml::_('behavior.framework');
-        JHtml::_('bootstrap.framework');
-        JHtml::_('jquery.framework');
-        JHtml::_('bootstrap.tooltip');
+        HTMLHelper::_('behavior.framework');
+        HTMLHelper::_('bootstrap.framework');
+        HTMLHelper::_('jquery.framework');
+        HTMLHelper::_('bootstrap.tooltip');
 
         // Unset unwanted JavaScript
         unset($doc->_scripts[$doc->baseurl . '/media/system/js/mootools-core.js']);
@@ -260,9 +265,9 @@ class BasicTemplateHelper
      */
     static public function loadJs()
     {
-        JHtml::_('script', 'media/jui/js/jquery.min.js', array('version' => 'auto'));
-        JHtml::_('script', 'templates/' . self::template() . '/js/bootstrap.min.js', array('version' => 'auto'));
-        JHtml::_('script', 'templates/' . self::template() . '/js/logic.js', array('version' => 'auto'));
+        HTMLHelper::_('script', 'media/jui/js/jquery.min.js', array('version' => 'auto'));
+        HTMLHelper::_('script', 'templates/' . self::template() . '/js/bootstrap.min.js', array('version' => 'auto'));
+        HTMLHelper::_('script', 'templates/' . self::template() . '/js/logic.js', array('version' => 'auto'));
     }
 
     /**
@@ -271,7 +276,7 @@ class BasicTemplateHelper
      */
     static public function putAnalyticsTrackingCode()
     {
-        $analytics = JFactory::getApplication()->getTemplate(true)->params->get('analytics');
+        $analytics = Factory::getApplication()->getTemplate(true)->params->get('analytics');
         if ($analytics)
         {
             echo "<script>\n";
@@ -297,7 +302,7 @@ class BasicTemplateHelper
 
         //do something with this information
         if( $iPod || $iPhone || $iPad ){
-            $doc = JFactory::getDocument();
+            $doc = Factory::getDocument();
             $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon-57x57-precomposed.png', 'apple-touch-icon-precomposed', 'rel', array('type' => 'image/png'));
             $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon-72x72-precomposed.png', 'apple-touch-icon-precomposed', 'rel', array('type' => 'image/png','sizes' => '72x72'));
             $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon-114x114-precomposed.png', 'apple-touch-icon-precomposed', 'rel', array('type' => 'image/png','sizes' => '114x114'));
