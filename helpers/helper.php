@@ -140,7 +140,7 @@ class BasicTemplateHelper
      */
     static public function getPageLayout()
     {
-        $input = factory::getApplication()->input;
+        $input = Factory::getApplication()->input;
 
         return str_replace(self::template(), '', $input->getCmd('layout', ''));
     }
