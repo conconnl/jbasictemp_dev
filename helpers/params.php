@@ -6,8 +6,12 @@
  * @version     1.0
  */
 
-$config         = JFactory::getConfig();
-$sitename       = $config->get('sitename');
+// No direct access.
+defined('_JEXEC') or die;
+
+use Joomla\CMS\Factory;
+// Get the current sitename
+$sitename       = Factory::getConfig()->get('sitename');
 
 // css
 if ($this->params->get('runless', 1) == 1)
