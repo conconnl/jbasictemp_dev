@@ -289,7 +289,7 @@ class BasicTemplateHelper
         }
     }
 
-    static  public function loadApplIcon()
+    static  public function loadAppleIcon()
     {
         //Detect special conditions devices
         $iPod    = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
@@ -302,18 +302,27 @@ class BasicTemplateHelper
         //do something with this information
         if( $iPod || $iPhone || $iPad ){
             $doc = Factory::getDocument();
-            $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon-57x57-precomposed.png', 'apple-touch-icon-precomposed', 'rel', array('type' => 'image/png'));
-            $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon-72x72-precomposed.png', 'apple-touch-icon-precomposed', 'rel', array('type' => 'image/png','sizes' => '72x72'));
-            $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon-114x114-precomposed.png', 'apple-touch-icon-precomposed', 'rel', array('type' => 'image/png','sizes' => '114x114'));
-            $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon-144x144-precomposed.png', 'apple-touch-icon-precomposed', 'rel', array('type' => 'image/png','sizes' => '144x144'));
-        }else if($iPad){
-            //browser reported as an iPad -- do something here
+	        // For non-Retina (@1× display) iPhone, iPod Touch, and Android 2.1+ devices:
+	        $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon-57x57.png', 'apple-touch-icon', 'rel', array('type' => 'image/png','sizes' => '57x57'));
+	        // For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7:
+	        $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon-76x76.png', 'apple-touch-icon', 'rel', array('type' => 'image/png','sizes' => '76x76'));
+	        // For iPhone with @2× display running iOS ≥ 7:
+	        $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon-120x120.png', 'apple-touch-icon', 'rel', array('type' => 'image/png','sizes' => '120x120'));
+	        // For iPad with @2× display running iOS ≥ 7:
+	        $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon-152x152.png', 'apple-touch-icon', 'rel', array('type' => 'image/png','sizes' => '152x152'));
+	        // For iPhone 6 Plus with @3× display: -->
+	        $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon-180x180.png', 'apple-touch-icon', 'rel', array('type' => 'image/png','sizes' => '180x180'));
+	        // FallBack
+	        $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon.png', 'apple-touch-icon', 'rel', array('type' => 'image/png'));
         }else if($Android){
-            //browser reported as an Android device -- do something here
+	        $doc = Factory::getDocument();
+	        $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon.png', 'apple-touch-icon', 'rel', array('type' => 'image/png'));
         }else if($webOS){
-            //browser reported as a webOS device -- do something here
+	        $doc = Factory::getDocument();
+	        $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon.png', 'apple-touch-icon', 'rel', array('type' => 'image/png'));
         }else if($macOS){
-            //browser reported as a macOS device -- do something here
+	        $doc = Factory::getDocument();
+	        $doc->addHeadLink('templates/' . self::template() . '/images/apple-touch-icon.png', 'apple-touch-icon', 'rel', array('type' => 'image/png'));
         }
     }
 
