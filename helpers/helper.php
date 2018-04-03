@@ -39,7 +39,7 @@ class BasicTemplateHelper
      */
     static public function getSitename()
     {
-        return Factory::getConfig()->get('config.sitename');
+        return Factory::getConfig()->get('sitename');
     }
 
     /**
@@ -49,7 +49,6 @@ class BasicTemplateHelper
     static public function setMetadata()
     {
         $doc    = Factory::getDocument();
-        $config = Factory::getConfig();
 
         $doc->setCharset('utf-8');
         $doc->setMetaData('X-UA-Compatible', 'IE=edge', true);
