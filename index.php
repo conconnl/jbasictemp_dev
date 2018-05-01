@@ -52,7 +52,7 @@ BasicTemplateHelper::localstorageFont();
 	<?php endif; ?>
     <!-- End Navbar-->
 
-    <div class="row">
+    <div class="row componentbar">
         <!-- Begin Component Area -->
         <div class="<?php echo $componentarea; ?>">
             <jdoc:include type="message"/>
@@ -81,7 +81,7 @@ BasicTemplateHelper::localstorageFont();
 
 
     <!-- Footer -->
-    <footer class="row" role="contentinfo">
+    <footer class="row footerbar" role="contentinfo">
         <div class="row">
 			<?php if ($this->countModules('footerblock1')) : ?>
                 <div class="<?php echo $footerblock; ?>">
