@@ -1,13 +1,15 @@
 /* FRONTEND LESS
 *********************************************/
-//
-
-// Bootstrap
+/* LESS Imports */
+// Load Bootstrap
 @import "bootstrap/bootstrap.less";
 
-// Font Awesome
+// Load Font Awesome 5 Free
 @import "fontawesome/fontawesome.less";
 @import "fontawesome/fa-solid.less";
+
+/* LESS VARIABLES */
+@iconfont: Font Awesome 5 Free;
 
 // Kleuren
 
@@ -48,19 +50,19 @@ body {
 }
 
 i.icon-first:before{
-    font-family: 'Font Awesome 5 Free';
+    font-family: @iconfont;
         content: '\f100';
 }
 i.icon-previous:before{
-    font-family: 'Font Awesome 5 Free';
+    font-family: @iconfont;
         content: '\f104';
 }
 i.icon-last:before{
-    font-family: 'Font Awesome 5 Free';
+    font-family: @iconfont;
         content: '\f101';
 }
 i.icon-next:before{
-    font-family: 'Font Awesome 5 Free';
+    font-family: @iconfont;
         content: '\f105';
 }
 
