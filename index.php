@@ -34,23 +34,39 @@ BasicTemplateHelper::localstorageFont();
 		<?php echo $logo; ?>
     </div>
 
-    <!-- Begin Navbar -->
+
+    <!-- Begin Navigation bar -->
 	<?php if ($this->countModules('navbar')) : ?>
-        <nav class="navbar navbar-default" role="navigation">
-            <div class="container-fluid">
-                <div id="navbar" class="navbar-collapse collapse">
-                    <jdoc:include type="modules" name="navbar"/>
+    <div class="nav-wrapper">
+        <nav class="navbar navbar-default navbar-main <?php echo $navcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
+            <div class="<?php echo $navwidth; ?>">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="navbar-main-menu navbar-<?php echo $menualign; ?>">
+                    <jdoc:include type="modules" name="navbar" style="notitle"/>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <div class="navbar-mobile">
+                        <jdoc:include type="modules" name="navbar" style="notitle"/>
+                    </div>
                 </div>
             </div>
-            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
         </nav>
+    </div>
 	<?php endif; ?>
-    <!-- End Navbar-->
+    <!-- End Navigation bar -->
 
     <div class="row componentbar">
         <!-- Begin Component Area -->

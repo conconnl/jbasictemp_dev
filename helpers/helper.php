@@ -17,6 +17,13 @@ use Joomla\CMS\HTML\HTMLHelper;
 // Get Parameters configuration from templateDetails
 require_once 'params.php';
 
+// css
+if ($this->params->get('runless', 1) == 1)
+{
+	require ('templates/' . $this->template . '/helpers/lesscompiler/runless.php');
+}
+
+
 class BasicTemplateHelper
 {
     static public function template()

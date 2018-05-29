@@ -26,7 +26,7 @@ $uri = $this->baseurl.'/templates/'.$this->template;
 // less compiler
 $lesspath = __DIR__;
 require_once $lesspath . '/less.php';
-$less_files = array( $lesspath . '/../template.less' => $uri);
+$less_files = array( $lesspath . '/../../css/template/template.less' => $uri);
 $options = array( 'cache_dir' => $lesspath.'/cache/' );
 $css_file_name = Less_Cache::Get( $less_files, $options );
 $compiled = file_get_contents( $lesspath.'/cache/'.$css_file_name );
@@ -41,5 +41,5 @@ if (file_exists($lesspath.'/cache/'.$css_file_name))
 
 	$compressed = compress($compiled);
 
-	file_put_contents($lesspath.'/../template.css', $compressed);
+	file_put_contents($lesspath.'/../../css/template.css', $compressed);
 }

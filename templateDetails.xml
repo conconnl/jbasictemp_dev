@@ -48,6 +48,70 @@
 	
 	<config>
 		<fields name="params">
+			<fieldset name="TEMPLATE_MODULES">
+				<field
+						name="navcolor"
+						type="list"
+						default=""
+						label="Menubar Color"
+				>
+					<option value="">None</option>
+					<option value="bg-color1">TPL_FRONTEND_OPTION_BGCOLOR_COLOR1</option>
+					<option value="bg-color2">TPL_FRONTEND_OPTION_BGCOLOR_COLOR2</option>
+					<option value="bg-color3">TPL_FRONTEND_OPTION_BGCOLOR_COLOR3</option>
+					<option value="bg-color4">TPL_FRONTEND_OPTION_BGCOLOR_COLOR4</option>
+					<option value="bg-color5">TPL_FRONTEND_OPTION_BGCOLOR_COLOR5</option>
+				</field>
+
+				<field
+						name="navwidth"
+						type="radio"
+						class="btn-group"
+						default="container"
+						label="Menubar Width"
+				>
+					<option value="container">Container</option>
+					<option value="container-fluid">Fluid</option>
+				</field>
+
+				<field
+						name="menualign"
+						type="radio"
+						class="btn-group"
+						default="right"
+						label="Menu Align"
+				>
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+				</field>
+
+				<field
+						name="stickymenu"
+						type="radio"
+						class="btn-group"
+						default=""
+						label="Menubar Sticky"
+						description="Sticky menu on top"
+				>
+					<option value="1">JYES</option>
+					<option value="">JNO</option>
+				</field>
+
+				<field
+						name="stickymenuoffset"
+						class=""
+						type="text"
+						default="0"
+						label="Sticky Offset"
+						showon="stickymenu:1"
+				/>
+
+				<field
+						name="menuspacer"
+						type="spacer"
+						hr="true"
+				/>
+			</fieldset>
 			<fieldset name="advanced">
 				<field name="runless" type="radio" class="btn-group" default="1" label="TPL_FRONTEND_RUNLESS" description="TPL_FRONTEND_RUNLESS_DESC">
 					<option value="0">JNO</option>

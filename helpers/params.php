@@ -13,12 +13,6 @@ use Joomla\CMS\Factory;
 // Get the current sitename
 $sitename       = Factory::getConfig()->get('sitename');
 
-// css
-if ($this->params->get('runless', 1) == 1)
-{
-    require ('templates/' . $this->template . '/css/lesscompiler/runless.php');
-}
-
 // Template parameters specific configurations
 // Use chosen Logo, Site Title or sitename
 if ($this->params->get('logoFile'))

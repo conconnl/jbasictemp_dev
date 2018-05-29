@@ -1,0 +1,277 @@
+/* ========================================================================
+  MENU
+========================================================================== */
+// Navbar
+.nav-wrapper {
+  min-height: @main-menu-height;
+}
+
+.navbar {
+  border: 0px;
+  min-height: 39px;
+  width: 100%;
+  top: 0;
+}
+
+.navbar-default .navbar-nav li > a {
+  color: #777777;
+}
+
+// Navbar logo
+.navbar-logo {
+  height: @main-menu-height;
+  overflow: hidden;
+  clear: left;
+}
+
+.navbar-logo .logo {
+  display: block;
+  height: @main-menu-height;
+  margin: 0 auto;
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    text-decoration: none;
+  }
+  p {
+    margin: 0px;
+  }
+  @media (max-width: @screen-xs) {
+    float: left;
+  }
+  @media (max-width: 300px) {
+    background: none;
+    padding-left: 7px;
+  }
+}
+
+// Main navigation
+.navbar-main {
+  margin-bottom: 0;
+  a {
+    font-weight: 400;
+  }
+  &:hover {
+    .transition(color .2s linear);
+  }
+}
+
+.nav li {
+  &.active > a,
+  > a:hover {
+    color: #000000;
+  }
+}
+
+.navbar-main-menu {
+  display: block;
+  height: @main-menu-height+2;
+  font-size: 17px;
+  padding-left: 10px;
+}
+
+
+// mobile
+@media (max-width: @grid-float-breakpoint-max) {
+  .nav-wrapper {
+    min-height: 74px;
+  }
+  .navbar-main-menu {
+    display: none !important;
+  }
+
+  .affix {
+    position: absolute;
+  }
+}
+
+// desktop specific
+@media (min-width: @grid-float-breakpoint) {
+
+  .nav-wrapper {
+    min-height: @main-menu-height;
+  }
+
+  .navbar-mobile,
+  .toggle-sub,
+  .dropdown-toggle-text {
+    display: none !important;
+  }
+
+  .navbar-main {
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: @zindex-navbar-fixed;
+    border-radius: 0;
+    height: @main-menu-height;
+
+    .nav > li > a {
+      line-height: @main-menu-height;
+      padding: 0 12px;
+    }
+
+    .nav-child {
+      background: @dropdown-color;
+      box-shadow: 0px 0 0px rgba(0, 0, 0, 0.0);
+      left: 0;
+      min-width: 100%;
+      top: auto;
+      > li {
+        width: @dropdown-width;
+        > a {
+          line-height: 40px;
+        }
+      }
+    }
+
+    .affix {
+      position: fixed;
+    }
+  }
+
+  // Dropdown
+  .dropdown-toggle-text {
+    float: left;
+  }
+
+  li.deeper ul {
+    display: none;
+  }
+
+  li.deeper:hover > ul {
+    color: #ffffff;
+    display: block;
+    margin-left: 0px;
+    min-width: 100%;
+    padding: 0px;
+    position: absolute;
+    text-align: left;
+    z-index: 1000;
+  }
+
+  ul.nav li:hover li a {
+    width: 100%;
+  }
+
+  ul.nav li:hover li {
+    float: none;
+    display: block;
+  }
+
+  .nav-child li.deeper:hover > ul {
+    margin-left: 100%;
+    margin-top: -35px;
+  }
+}
+
+// Navlist
+
+.navlist-nav li.active.deeper ul {
+  display: block;
+}
+
+.navlist-nav li.deeper:hover ul {
+  display: none;
+}
+ul.nav li:hover li {
+  float: none;
+  display: block;
+}
+
+.navlist-nav .nav-child a {
+  padding-left: 25px;
+}
+
+.navlist-nav li.active.deeper:hover > ul {
+  display: block !important;
+  position: inherit;
+}
+
+// navbar mobile
+.navbar-toggle {
+  margin: 0;
+  padding: 23px 15px;
+  border: none;
+  border-radius: 0;
+  transition: background-color .1s ease;
+}
+
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  background: #efefef;
+  border: none;
+  &.collapsed {
+    background: transparent;
+  }
+}
+
+.navbar-collapse {
+  will-change: height; // the browser may optimize
+}
+
+.navbar-mobile .navbar-nav {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navbar-mobile {
+  li.parent > ul {
+    display: none;
+  }
+  li.expand > ul {
+    display: block;
+  }
+}
+
+.navbar-mobile .nav > li > a {
+  padding: @nav-link-padding;
+}
+
+.navbar-mobile .parent > a {
+  margin-right: (@font-size-base * 1.8) + @grid-gutter-width; // calculated width of .toggle-sub + margin
+
+  @switch: sibling; // selects ".toggle-sub"
+  color: #000000;
+}
+
+.navbar-mobile .nav-child li {
+  margin-left: 10px;
+}
+
+// Toggle button, expands submenu items
+.toggle-sub {
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: @nav-link-padding;
+  width: 1.8em;
+  height: 1.8em;
+  border-radius: @border-radius-base;
+  line-height: 1.8em;
+  font-size: @font-size-base;
+  text-align: center;
+  color: #ffffff;
+  background: @color-primary;
+  cursor: pointer;
+
+  &:before {
+    content: "+";
+  }
+  &.active:before {
+    content: "-";
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    background: #ccc;
+  }
+}
+
+.navbar-expanded.affix {
+  bottom: 0;
+  overflow-y: auto;
+}
