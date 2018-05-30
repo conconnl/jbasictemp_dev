@@ -10,8 +10,17 @@
 defined('_JEXEC') or die;
 
 use Joomla\CMS\Factory;
-// Get the current sitename
-$sitename       = Factory::getConfig()->get('sitename');
+
+$config         = Factory::getConfig();
+$sitename       = $config->get('sitename');
+
+// Navbar
+$navcolor     		= $this->params->get('navcolor', '');
+$navwidth     		= $this->params->get('navwidth', '');
+$menualign			= $this->params->get('menualign', '');
+$stickymenu     	= $this->params->get('stickymenu', '');
+$stickymenuoffset  	= $this->params->get('stickymenuoffset', 0);
+
 
 // Template parameters specific configurations
 // Use chosen Logo, Site Title or sitename
