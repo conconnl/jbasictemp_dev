@@ -31,7 +31,9 @@ BasicTemplateHelper::localstorageFont();
 <?php BasicTemplateHelper::putAnalyticsTrackingCode(); ?>
 <div class="<?php echo $containerstyle; ?>">
     <div class="row headerbar">
-		<?php echo $logo; ?>
+	    <?php if ($logoposition == 'header') :?>
+		    <?php echo $logo; ?>
+	    <?php endif; ?>
     </div>
 
 
@@ -49,6 +51,10 @@ BasicTemplateHelper::localstorageFont();
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
+                    <!-- Logo -->
+                    <?php if ($logoposition == 'menu') :?>
+	                    <?php echo $logo; ?>
+                    <?php endif; ?>
                 </div>
 
                 <!-- Desktop Navigation -->

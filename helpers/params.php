@@ -21,6 +21,9 @@ $menualign			= $this->params->get('menualign', '');
 $stickymenu     	= $this->params->get('stickymenu', '');
 $stickymenuoffset  	= $this->params->get('stickymenuoffset', 0);
 
+// Logo
+$logoposition       = $this->params->get('logoposition', '');
+
 
 // Template parameters specific configurations
 // Use chosen Logo, Site Title or sitename

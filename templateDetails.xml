@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.3" type="template" client="site" method="upgrade">
+<extension version="3.8" type="template" client="site" method="upgrade">
 	<name>frontend</name>
 	<creationDate>2017</creationDate>
 	<author>AUTHOR</author>
@@ -48,19 +48,22 @@
 	
 	<config>
 		<fields name="params">
-			<fieldset name="TEMPLATE_MODULES">
+			<fieldset name="TPL_FRONTEND_MODULES">
+                <field name="navbarparameters" type="note" class="alert alert-success"
+                       label="TPL_FRONTEND_NOTE_NAVBARPARAMETERS"
+                       description="TPL_FRONTEND_NOTE_NAVBARPARAMETERS_DESC" />
 				<field
 						name="navcolor"
 						type="list"
 						default=""
-						label="Menubar Color"
+						label="TPL_FRONTEND_PARAMETER_NAVBAR_COLOR"
 				>
 					<option value="">None</option>
-					<option value="bg-color1">TPL_FRONTEND_OPTION_BGCOLOR_COLOR1</option>
-					<option value="bg-color2">TPL_FRONTEND_OPTION_BGCOLOR_COLOR2</option>
-					<option value="bg-color3">TPL_FRONTEND_OPTION_BGCOLOR_COLOR3</option>
-					<option value="bg-color4">TPL_FRONTEND_OPTION_BGCOLOR_COLOR4</option>
-					<option value="bg-color5">TPL_FRONTEND_OPTION_BGCOLOR_COLOR5</option>
+					<option value="bg-color1">TPL_FRONTEND_PARAMETER_NAVBAR_BGCOLOR1</option>
+					<option value="bg-color2">TPL_FRONTEND_PARAMETER_NAVBAR_BGCOLOR2</option>
+					<option value="bg-color3">TPL_FRONTEND_PARAMETER_NAVBAR_BGCOLOR3</option>
+					<option value="bg-color4">TPL_FRONTEND_PARAMETER_NAVBAR_BGCOLOR4</option>
+					<option value="bg-color5">TPL_FRONTEND_PARAMETER_NAVBAR_BGCOLOR5</option>
 				</field>
 
 				<field
@@ -68,7 +71,7 @@
 						type="radio"
 						class="btn-group"
 						default="container"
-						label="Menubar Width"
+						label="TPL_FRONTEND_PARAMETER_NAVBAR_WIDTH"
 				>
 					<option value="container">Container</option>
 					<option value="container-fluid">Fluid</option>
@@ -79,10 +82,10 @@
 						type="radio"
 						class="btn-group"
 						default="right"
-						label="Menu Align"
+						label="TPL_FRONTEND_PARAMETER_NAVBAR_ALIGN"
 				>
-					<option value="left">Left</option>
-					<option value="right">Right</option>
+					<option value="left">TPL_FRONTEND_PARAMETER_NAVBAR_ALIGN_LEFT</option>
+					<option value="right">TPL_FRONTEND_PARAMETER_NAVBAR_ALIGN_RIGHT</option>
 				</field>
 
 				<field
@@ -90,8 +93,8 @@
 						type="radio"
 						class="btn-group"
 						default=""
-						label="Menubar Sticky"
-						description="Sticky menu on top"
+						label="TPL_FRONTEND_PARAMETER_NAVBAR_STICKY"
+						description="TPL_FRONTEND_PARAMETER_NAVBAR_STICKY_DESC"
 				>
 					<option value="1">JYES</option>
 					<option value="">JNO</option>
@@ -102,32 +105,39 @@
 						class=""
 						type="text"
 						default="0"
-						label="Sticky Offset"
+						label="TPL_FRONTEND_PARAMETER_NAVBAR_STICKY_OFFSET"
 						showon="stickymenu:1"
 				/>
-
-				<field
-						name="menuspacer"
-						type="spacer"
-						hr="true"
-				/>
+                <field name="logoparameters" type="note" class="alert alert-success"
+                       label="TPL_FRONTEND_NOTE_LOGOPARAMETERS"
+                       description="TPL_FRONTEND_NOTE_LOGOPARAMETERS_DESC" />
+                <field name="logoFile" class="" type="media" default=""
+                       label="TPL_FRONTEND_PARAMETER_LOGO"
+                       description="TPL_FRONTEND_PARAMETER_LOGO_DESC" />
+                <field
+                        name="logoposition"
+                        type="radio"
+                        class="btn-group"
+                        default="right"
+                        label="TPL_FRONTEND_PARAMETER_LOGO_POSITION"
+                        description="TPL_FRONTEND_PARAMETER_LOGO_POSITION_DESC">
+                    <option value="header">TPL_FRONTEND_PARAMETER_LOGO_POSITION_HEADER</option>
+                    <option value="menu">TPL_FRONTEND_PARAMETER_LOGO_POSITION_MENU</option>
+                </field>
+                <field name="sitetitle"  type="text" default=""
+                       label="JGLOBAL_TITLE"
+                       description="JFIELD_ALT_PAGE_TITLE_LABEL"
+                       filter="string" />
 			</fieldset>
 			<fieldset name="advanced">
 				<field name="runless" type="radio" class="btn-group" default="1" label="TPL_FRONTEND_RUNLESS" description="TPL_FRONTEND_RUNLESS_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="logoFile" class="" type="media" default=""
-					   label="TPL_FRONTEND_LOGO_LABEL"
-					   description="TPL_FRONTEND_LOGO_DESC" />
 				<field name="containerstyle" type="radio" class="btn-group" default="0" label="TPL_FRONTEND_CONTAINERSTYLE" description="TPL_FRONTEND_CONTAINERSTYLE_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="sitetitle"  type="text" default=""
-					   label="JGLOBAL_TITLE"
-					   description="JFIELD_ALT_PAGE_TITLE_LABEL"
-					   filter="string" />
                 <field name="totop" type="radio" class="btn-group" default="1" label="TPL_FRONTEND_TOTOP" description="TPL_FRONTEND_TOTOP_DESC">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
