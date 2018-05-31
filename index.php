@@ -30,26 +30,26 @@ BasicTemplateHelper::localstorageFont();
 <body class="<?php echo BasicTemplateHelper::getBodySuffix(); ?>" role="document">
 <?php BasicTemplateHelper::putAnalyticsTrackingCode(); ?>
 <div class="<?php echo $containerstyle; ?>">
-    <div class="row headerbar">
-	    <?php if ($logoposition == 'header') :?>
+	<?php if ($logoposition == 'header') :?>
+    <div class="headerbar">
 		    <?php echo $logo; ?>
-	    <?php endif; ?>
     </div>
+	<?php endif; ?>
 
 
     <!-- Begin Navigation bar -->
 	<?php if ($this->countModules('navbar')) : ?>
     <div class="nav-wrapper">
+	    <?php if ($navbarmobile == 'collapse') :?>
         <nav class="navbar navbar-default navbar-main <?php echo $navcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
             <div class="<?php echo $navwidth; ?>">
-
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                             data-target="#navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
                     </button>
                     <!-- Logo -->
                     <?php if ($logoposition == 'menu') :?>
@@ -62,7 +62,7 @@ BasicTemplateHelper::localstorageFont();
                     <jdoc:include type="modules" name="navbar" style="notitle"/>
                 </div>
 
-                <!-- Mobile Navigation -->
+                <!-- Mobile Navigation Collapse -->
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <div class="navbar-mobile">
                         <jdoc:include type="modules" name="navbar" style="notitle"/>
@@ -70,11 +70,46 @@ BasicTemplateHelper::localstorageFont();
                 </div>
             </div>
         </nav>
+	    <?php endif; ?>
+	    <?php if ($navbarmobile == 'offcanvas') :?>
+            <nav class="navbar navbar-default navbar-main <?php echo $navcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
+                <div class="<?php echo $navwidth; ?>">
+                    <div class="navbar-header">
+                        <button type="button" class="offcanvas-toggle pull-right" data-toggle="offcanvas"
+                                data-target="#js-bootstrap-offcanvas" aria-expanded="false">
+                            <span class="navbar-toggle">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </span>
+                        </button>
+                        <!-- Logo -->
+					    <?php if ($logoposition == 'menu') :?>
+						    <?php echo $logo; ?>
+					    <?php endif; ?>
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <div class="navbar-main-menu navbar-<?php echo $menualign; ?>">
+                        <jdoc:include type="modules" name="navbar" style="notitle"/>
+                    </div>
+
+                    <!-- Mobile Navigation Collapse -->
+                    <div class="navbar-offcanvas navbar-offcanvas-touch" id="js-bootstrap-offcanvas">
+                        <div class="navbar-mobile">
+                            <jdoc:include type="modules" name="navbar" style="notitle"/>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+	    <?php endif; ?>
     </div>
 	<?php endif; ?>
     <!-- End Navigation bar -->
 
-    <div class="row componentbar">
+
+    <div class="componentbar">
         <!-- Begin Component Area -->
         <div class="<?php echo $componentarea; ?>">
             <jdoc:include type="message"/>
@@ -103,8 +138,8 @@ BasicTemplateHelper::localstorageFont();
 
 
     <!-- Footer -->
-    <footer class="row footerbar" role="contentinfo">
-        <div class="row">
+    <footer class="footerbar" role="contentinfo">
+        <div class="footerblocks">
 			<?php if ($this->countModules('footerblock1')) : ?>
                 <div class="<?php echo $footerblock; ?>">
                     <jdoc:include type="modules" name="footerblock1" style="xhtml"/>
@@ -121,7 +156,7 @@ BasicTemplateHelper::localstorageFont();
                 </div>
 			<?php endif; ?>
         </div>
-        <div class="row">
+        <div class="footer_totop">
             <div class="<?php echo $footermodule; ?>">
                 <jdoc:include type="modules" name="footer" style="xhtml"/>
             </div>

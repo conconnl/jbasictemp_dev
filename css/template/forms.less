@@ -1,0 +1,65 @@
+/* ========================================================================
+  FORMS
+========================================================================== */
+
+input, select, textarea {
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  color: #595959;
+  display: block;
+  font-size: 16px;
+  height: 35px;
+  line-height: 1.7;
+  padding: 6px 12px;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  width: 100%;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  height: inherit;
+  width: inherit;
+}
+
+label, .form-horizontal .control-label {
+  font-weight: normal;
+  text-align: left;
+}
+
+textarea {
+  height: inherit;
+}
+
+/* ========================================================================
+   SEARCH FORM
+ ========================================================================== */
+#insidebar ul.unstyled {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#insidebar .form-control {
+  width: 100% !important;
+}
+
+.navbar div.search {
+  @media (max-width: 767px) {
+    padding: 0 0 20px 0;
+    width: 100%;
+  }
+}
+
+#mod-search-searchword {
+  @media (min-width: 768px) {
+    margin-top: 7px;
+  }
+}
+
+.form-group {
+  @media (min-width: 768px) {
+    padding: 5px 0;
+  }
+}

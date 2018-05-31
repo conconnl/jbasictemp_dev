@@ -13,10 +13,14 @@
 @import "_variables.less";
 @import "navbar.less";
 @import "toolbar.less";
-@import "slideshow.less";
 @import "breadcrumbs.less";
 @import "tables.less";
+@import "sharebuttons.less";
+@import "slideshow.less";
+@import "pagination.less";
+@import "forms.less";
 
+@import "responsive.less";
 
 /* ========================================================================
    SCROLLBAR FIX
@@ -28,8 +32,8 @@ html {
 	GENERAL
  ========================================================================== */
 body {
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
 /* ========================================================================
    KLEUREN
@@ -64,91 +68,83 @@ body {
 }
 
 /* ========================================================================
-   PAGINATION
+   PADDING
  ========================================================================== */
-.pagination{
-    width: 100%;
-    li{
-        display: inline-block;
-        padding: 0 10px;
-    }
-    
-    i{
-    font-style: normal;
-    }
-    
-    a{
-        text-decoration: none;
-    }
-    
-    .disabled a, .active a{
-        color: #333;
-    }
-    .active a{
-        font-weight: bold;
-    }
+
+.padding-none {
+  padding-bottom: 0px;
+  padding-top: 0px;
 }
 
-i.icon-first:before{
-    font-family: @iconfont;
-        content: '\f100';
+.padding-normal {
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
-i.icon-previous:before{
-    font-family: @iconfont;
-        content: '\f104';
-}
-i.icon-last:before{
-    font-family: @iconfont;
-        content: '\f101';
-}
-i.icon-next:before{
-    font-family: @iconfont;
-        content: '\f105';
+
+.padding-large {
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 /* ========================================================================
-   RESPONSIVE
+   DOUBLE PADDING FIX
  ========================================================================== */
 
-// Staande tablet en groter - vanaf 768 pixels breed
-@media (min-width: 768px) {}
+div[class^="col-"] div[class^="col-"]:first-child{
+  padding-left:0;
+}
 
-// Liggende tablet en groter - vanaf 992 pixels breed
-@media (min-width: 992px) {}
-
-// Desktop - vanaf 1200 pixels breed
-@media (min-width: 1200px) {}
-
-
+div[class^="col-"] div[class^="col-"]:last-child{
+  padding-right:0;
+}
 
 /* ========================================================================
-   SEARCH FORM
+   EQUAL HEIGHT FIX
  ========================================================================== */
-#insidebar ul.unstyled {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+
+.row.equal {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row.equal > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
 }
 
-#insidebar .form-control {
-	width: 100% !important;
+.row.equal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-.navbar div.search {
-	@media (max-width: 767px) {
-		padding: 0 0 20px 0;
-		width: 100%;
-	}
+.row.equal > [class*='col-'] {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
-#mod-search-searchword {
-	@media (min-width: 768px) {
-		margin-top: 7px;
-	}
+.row-eq-height {
+  display: flex;
 }
 
-.form-group {
-	@media (min-width: 768px) {
-		padding: 5px 0;
-	}
+/* ========================================================================
+  BACK TO TOP
+========================================================================== */
+
+.back-to-top {
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display:none;
 }

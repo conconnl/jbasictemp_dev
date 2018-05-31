@@ -14,12 +14,16 @@ use Joomla\CMS\Factory;
 $config         = Factory::getConfig();
 $sitename       = $config->get('sitename');
 
+// Body / HTML / Container
+$containerstyle     = $this->params->get('containerstyle', '');
+
 // Navbar
 $navcolor     		= $this->params->get('navcolor', '');
 $navwidth     		= $this->params->get('navwidth', '');
 $menualign			= $this->params->get('menualign', '');
 $stickymenu     	= $this->params->get('stickymenu', '');
 $stickymenuoffset  	= $this->params->get('stickymenuoffset', 0);
+$navbarmobile       = $this->params->get('navbarmobile','');
 
 // Logo
 $logoposition       = $this->params->get('logoposition', '');
@@ -86,14 +90,4 @@ else
 {
     $footermodule = 'col-sm-12';
     $totopicon = '';
-}
-
-// Use Container or Container-fluid
-if ($this->params->get('containerstyle') == 1)
-{
-    $containerstyle = 'container-fluid';
-}
-else
-{
-    $containerstyle = 'container';
 }

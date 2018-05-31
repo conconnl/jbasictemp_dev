@@ -49,6 +49,21 @@
 	<config>
 		<fields name="params">
 			<fieldset name="TPL_FRONTEND_MODULES">
+                <field name="basicparameters" type="note" class="alert alert-success"
+                       label="TPL_FRONTEND_NOTE_BASICPARAMETERS"
+                       description="TPL_FRONTEND_NOTE_BASICPARAMETERS_DESC" />
+                <field
+                        name="containerstyle"
+                        type="radio"
+                        class="btn-group"
+                        default="none"
+                        label="TPL_FRONTEND_PARAMETER_BASIC_CONTAINERSTYLE"
+                >
+                    <option value="none">TPL_FRONTEND_PARAMETER_BASIC_CONTAINERSTYLE_NONE</option>
+                    <option value="container">TPL_FRONTEND_PARAMETER_BASIC_CONTAINERSTYLE_CONTAINER</option>
+                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_BASIC_CONTAINERSTYLE_CONTAINER_FLUID</option>
+                </field>
+
                 <field name="navbarparameters" type="note" class="alert alert-success"
                        label="TPL_FRONTEND_NOTE_NAVBARPARAMETERS"
                        description="TPL_FRONTEND_NOTE_NAVBARPARAMETERS_DESC" />
@@ -108,6 +123,16 @@
 						label="TPL_FRONTEND_PARAMETER_NAVBAR_STICKY_OFFSET"
 						showon="stickymenu:1"
 				/>
+                <field
+                        name="navbarmobile"
+                        type="radio"
+                        class="btn-group"
+                        default="collapse"
+                        label="TPL_FRONTEND_PARAMETER_NAVBAR_MOBILE"
+                >
+                    <option value="collapse">TPL_FRONTEND_PARAMETER_NAVBAR_MOBILE_COLLAPSE</option>
+                    <option value="offcanvas">TPL_FRONTEND_PARAMETER_NAVBAR_MOBILE_COLLAPSE_OFFCANVAS</option>
+                </field>
                 <field name="logoparameters" type="note" class="alert alert-success"
                        label="TPL_FRONTEND_NOTE_LOGOPARAMETERS"
                        description="TPL_FRONTEND_NOTE_LOGOPARAMETERS_DESC" />

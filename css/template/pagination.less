@@ -1,0 +1,42 @@
+/* ========================================================================
+   PAGINATION
+ ========================================================================== */
+.pagination{
+  width: 100%;
+  li{
+    display: inline-block;
+    padding: 0 10px;
+  }
+
+  i{
+    font-style: normal;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .disabled a, .active a{
+    color: #333;
+  }
+  .active a{
+    font-weight: bold;
+  }
+}
+
+i.icon-first:before{
+  font-family: @iconfont;
+  content: '\f100';
+}
+i.icon-previous:before{
+  font-family: @iconfont;
+  content: '\f104';
+}
+i.icon-last:before{
+  font-family: @iconfont;
+  content: '\f101';
+}
+i.icon-next:before{
+  font-family: @iconfont;
+  content: '\f105';
+}
