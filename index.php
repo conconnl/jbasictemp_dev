@@ -36,6 +36,19 @@ BasicTemplateHelper::localstorageFont();
     </div>
 	<?php endif; ?>
 
+	<?php if (($this->countModules('toolbar-l')) | ($this->countModules('toolbar-r'))) : ?>
+        <!-- Toolbar -->
+        <div class="toolbar <?php echo $toolbarcolor. " " .$toolbarphone; ?>">
+            <div class="<?php echo $toolbarcontainerstyle; ?>">
+                <div class="toolbar-l">
+                    <jdoc:include type="modules" name="toolbar-l" style="notitle" />
+                </div>
+                <div class="toolbar-r">
+                    <jdoc:include type="modules" name="toolbar-r" style="notitle" />
+                </div>
+            </div>
+        </div>
+	<?php endif; ?>
 
     <!-- Begin Navigation bar -->
 	<?php if ($this->countModules('navbar')) : ?>

@@ -17,6 +17,11 @@ $sitename       = $config->get('sitename');
 // Body / HTML / Container
 $containerstyle     = $this->params->get('containerstyle', '');
 
+//Toolbar
+$toolbarcolor       = $this->params->get('toolbarcolor', '');
+$toolbarcontainerstyle     	= $this->params->get('toolbarcontainerstyle', '');
+$toolbarphone     	= $this->params->get('toolbarphone', '');
+
 // Navbar
 $navcolor     		= $this->params->get('navcolor', '');
 $navwidth     		= $this->params->get('navwidth', '');
