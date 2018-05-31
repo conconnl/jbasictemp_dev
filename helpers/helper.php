@@ -15,7 +15,7 @@ use Joomla\CMS\Uri\Uri;
 use Joomla\CMS\HTML\HTMLHelper;
 
 // Get Parameters configuration from templateDetails
-require_once 'params.php';
+require_once JPATH_THEMES . '/' . $this->template . '/helpers/params.php';
 
 // css
 if ($this->params->get('runless', 1) == 1)
@@ -23,6 +23,26 @@ if ($this->params->get('runless', 1) == 1)
 	require ('templates/' . $this->template . '/helpers/lesscompiler/runless.php');
 }
 
+// Calculate component width
+$componentwidth = '';
+$grid = 12;
+
+if ($this->countModules('left') && $this->countModules('right'))
+{
+	$componentwidth = ($grid - ($leftwidth + $rightwidth));
+}
+elseif ($this->countModules('left') && !$this->countModules('right'))
+{
+	$componentwidth = ($grid - $leftwidth);
+}
+elseif (!$this->countModules('left') && $this->countModules('right'))
+{
+	$componentwidth = ($grid - $rightwidth);
+}
+elseif (!$this->countModules('left') && !$this->countModules('right'))
+{
+	$componentwidth = $grid;
+}
 
 class BasicTemplateHelper
 {
@@ -173,6 +193,50 @@ class BasicTemplateHelper
         return (boolean) ($activeMenu) ? $activeMenu->home : false;
     }
 
+	/**
+	 * Method to determine whether the current visitor is logged in or not
+	 * @since BasicTemplate 2.0
+	 */
+	static public function isMember()
+	{
+		// Fetch the active visitor
+		$activeMember = Factory::getUser()->guest;
+
+		// Return whether this active visitor is guest or not
+		return (boolean) ($activeMember) ? $activeMember : false;
+	}
+
+	/**
+	 * @since BasicTemplate 2.0
+	 */
+
+	static public function getParent()
+	{
+		// Fetch the active menu-item
+		$activeMenu = Factory::getApplication()->getMenu()->getActive();
+		// Get the parent menu-item from the active menu-item
+		$parentId   = $activeMenu->tree[0];
+		// Get alias from the parent menu-item
+		$menu       = Factory::getApplication()->getMenu();
+		$parentName = $menu->getItem($parentId)->alias;
+
+		return $parentName;
+	}
+
+	/**
+	 * @since BasicTemplate 2.0
+	 */
+
+	static public function getLanguage()
+	{
+		// Fetch the active language
+		$lang       = Factory::getLanguage();
+		// Get the active language-tag
+		$langTag    = $lang->getTag();
+
+		return $langTag;
+	}
+
     /**
      * Generate a list of useful CSS classes for the body
      * @since  BasicTemplate 1.0
@@ -224,45 +288,41 @@ class BasicTemplateHelper
 
     /**
      * Remove unwanted JS
-     * @since  BasicTemplate 1.0
+     * @since  BasicTemplate 1.0, changed 2.0
      */
-    static public function unloadJs()
-    {
-        $doc = Factory::getDocument();
+	static public function unloadJs()
+	{
+		$doc = Factory::getDocument();
 
-        // Call JavaScript to be able to unset it correctly
-        HTMLHelper::_('behavior.framework');
-        HTMLHelper::_('bootstrap.framework');
-        HTMLHelper::_('jquery.framework');
-        HTMLHelper::_('bootstrap.tooltip');
+		// Call JavaScript to be able to unset it correctly
+		HTMLHelper::_('behavior.framework');
+		HTMLHelper::_('bootstrap.framework');
+		HTMLHelper::_('jquery.framework');
+		HTMLHelper::_('bootstrap.tooltip');
 
-        // Unset unwanted JavaScript
-        unset($doc->_scripts[$doc->baseurl . '/media/system/js/mootools-core.js']);
-        unset($doc->_scripts[$doc->baseurl . '/media/system/js/mootools-more.js']);
-        unset($doc->_scripts[$doc->baseurl . '/media/system/js/caption.js']);
-        unset($doc->_scripts[$doc->baseurl . '/media/system/js/core.js']);
-        unset($doc->_scripts[$doc->baseurl . '/media/system/js/validate.js']);
-        unset($doc->_scripts[$doc->baseurl . '/media/system/js/modal.js']);
-        unset($doc->_scripts[$doc->baseurl . '/media/jui/js/jquery.min.js']);
-        unset($doc->_scripts[$doc->baseurl . '/media/jui/js/jquery-noconflict.js']);
-        unset($doc->_scripts[$doc->baseurl . '/media/jui/js/jquery-migrate.min.js']);
-        unset($doc->_scripts[$doc->baseurl . '/media/jui/js/bootstrap.min.js']);
-        unset($doc->_scripts[$doc->baseurl . '/media/system/js/tabs-state.js']);
+		// Unset unwanted JavaScript
+		unset($doc->_scripts[$doc->baseurl . '/media/system/js/mootools-core.js']);
+		unset($doc->_scripts[$doc->baseurl . '/media/system/js/mootools-more.js']);
+		unset($doc->_scripts[$doc->baseurl . '/media/system/js/caption.js']);
+		unset($doc->_scripts[$doc->baseurl . '/media/system/js/modal.js']);
+		unset($doc->_scripts[$doc->baseurl . '/media/jui/js/jquery-noconflict.js']);
+		unset($doc->_scripts[$doc->baseurl . '/media/jui/js/jquery-migrate.min.js']);
+		unset($doc->_scripts[$doc->baseurl . '/media/jui/js/bootstrap.min.js']);
+		unset($doc->_scripts[$doc->baseurl . '/media/system/js/tabs-state.js']);
 
+		if (isset($doc->_script['text/javascript']))
+		{
+			$doc->_script['text/javascript'] = preg_replace('%jQuery\(window\)\.on\(\'load\'\,\s*function\(\)\s*\{\s*new\s*JCaption\(\'img.caption\'\);\s*}\s*\);\s*%', '', $doc->_script['text/javascript']);
+			$doc->_script['text/javascript'] = preg_replace("%\s*jQuery\(document\)\.ready\(function\(\)\{\s*jQuery\('\.hasTooltip'\)\.tooltip\(\{\"html\":\s*true,\"container\":\s*\"body\"\}\);\s*\}\);\s*%", '', $doc->_script['text/javascript']);
+			$doc->_script['text/javascript'] = preg_replace('%\s*jQuery\(function\(\$\)\{\s*\$\(\"\.hasTooltip\"\)\.tooltip\(\{\"html\":\s*true,\"container\":\s*\"body\"\}\);\s*\}\);\s*%', '', $doc->_script['text/javascript']);
 
-        if (isset($doc->_script['text/javascript']))
-        {
-            $doc->_script['text/javascript'] = preg_replace('%jQuery\(window\)\.on\(\'load\'\,\s*function\(\)\s*\{\s*new\s*JCaption\(\'img.caption\'\);\s*}\s*\);\s*%', '', $doc->_script['text/javascript']);
-            $doc->_script['text/javascript'] = preg_replace("%\s*jQuery\(document\)\.ready\(function\(\)\{\s*jQuery\('\.hasTooltip'\)\.tooltip\(\{\"html\":\s*true,\"container\":\s*\"body\"\}\);\s*\}\);\s*%", '', $doc->_script['text/javascript']);
-            $doc->_script['text/javascript'] = preg_replace('%\s*jQuery\(function\(\$\)\{\s*\$\(\"\.hasTooltip\"\)\.tooltip\(\{\"html\":\s*true,\"container\":\s*\"body\"\}\);\s*\}\);\s*%', '', $doc->_script['text/javascript']);
-
-            // Unset completely if empty
-            if (empty($doc->_script['text/javascript']))
-            {
-                unset($doc->_script['text/javascript']);
-            }
-        }
-    }
+			// Unset completely if empty
+			if (empty($doc->_script['text/javascript']))
+			{
+				unset($doc->_script['text/javascript']);
+			}
+		}
+	}
 
     /**
      * Load JS
@@ -278,23 +338,74 @@ class BasicTemplateHelper
 
     /**
      * Insert the Google Analytics Tracking code
-     * @since  BasicTemplate 1.0
+     * @since  BasicTemplate 2.0
      */
-    static public function putAnalyticsTrackingCode()
-    {
-        $analytics = Factory::getApplication()->getTemplate(true)->params->get('analytics');
-        if ($analytics)
-        {
-            echo "<script>\n";
-            echo "  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n";
-            echo "  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n";
-            echo "  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n";
-            echo "  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n";
-            echo "  ga('create', '$analytics', 'auto');\n";
-            echo "  ga('send', 'pageview');\n";
-            echo "</script>\n";
-        }
-    }
+	static public function getAnalytics()
+	{
+		$doc        = Factory::getDocument();
+		$bodyScript = '';
+		$useanalytics = Factory::getApplication()->getTemplate(true)->params->get('useanalytics');
+		$analytics = Factory::getApplication()->getTemplate(true)->params->get('analytics');
+		if (!$analytics)
+		{
+			return false;
+		}
+		switch ($useanalytics)
+		{
+			case 0:
+				break;
+
+			case 1:
+				// Universal Google Universal Analytics - loaded in head
+				$headScript = "
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                    ga('create', '" . $analytics . "', 'auto');
+                    ga('send', 'pageview');
+                  ";
+				$doc->addScriptDeclaration($headScript);
+				break;
+
+			case 2:
+				// Google Tag Manager - party loaded in head
+				$headScript = "
+                  <!-- Google Tag Manager -->
+                  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','" . $analytics . "');
+                  <!-- End Google Tag Manager -->
+                          ";
+				$doc->addScriptDeclaration($headScript);
+
+				// Google Tag Manager - partly loaded directly after body
+				$bodyScript = "<!-- Google Tag Manager -->
+                    <noscript><iframe src=\"//www.googletagmanager.com/ns.html?id=" . $analytics . "\" height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>
+                    <!-- End Google Tag Manager -->
+                    ";
+				break;
+
+			case 3:
+				// Google code for remarketing
+				$bodyScript = "
+                    <script type=\"text/javascript\">
+                    /* <![CDATA[ */
+                    var google_conversion_id = " . $analytics . ";
+                    var google_custom_params = window.google_tag_params;
+                    var google_remarketing_only = true;
+                    /* ]]> */
+                    </script>
+                    <script type=\"text/javascript\" src=\"//www.googleadservices.com/pagead/conversion.js\">
+                    </script>
+                    <noscript>
+                    <div style=\"display:inline;\">
+                    <img height=\"1\" width=\"1\" style=\"border-style:none;\" alt=\"\" src=\"//googleads.g.doubleclick.net/pagead/viewthroughconversion/" . $analytics . "/?guid=ON&amp;script=0\"/>
+                    </div>
+                    </noscript>
+                    ";
+				break;
+		}
+		return $bodyScript;
+	}
 
     static  public function loadAppleIcon()
     {
@@ -337,7 +448,7 @@ class BasicTemplateHelper
 	/**
 	 * Load custom font in localstorage
 	 *
-	 * @since  PerfectSite2.1.0
+	 * @since  BasicTemplate 1.0
 	 */
 	static public function localstorageFont()
 	{
