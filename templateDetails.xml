@@ -720,6 +720,12 @@
                 </field>
 
                 <field
+                        name="bottombspacer"
+                        type="spacer"
+                        hr="true"
+                />
+
+                <field
                         name="bottombcolor"
                         type="list"
                         default=""
@@ -766,6 +772,12 @@
                     <option value="hidden-xs hidden-sm">JNO</option>
                     <option value="">JYES</option>
                 </field>
+
+                <field
+                        name="bottomcspacer"
+                        type="spacer"
+                        hr="true"
+                />
 
                 <field
                         name="bottomccolor"
