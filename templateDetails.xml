@@ -63,49 +63,65 @@
 	<config>
 		<fields name="params">
 			<fieldset name="TPL_FRONTEND_MODULES">
-                <field name="basicparameters" type="note" class="alert alert-success"
-                       label="TPL_FRONTEND_NOTE_BASICPARAMETERS"
-                       description="TPL_FRONTEND_NOTE_BASICPARAMETERS_DESC" />
+                <field
+                        name="basicparameters"
+                        type="note"
+                        class="alert alert-success"
+                        label="TPL_FRONTEND_NOTE_BASICPARAMETERS"
+                        description="TPL_FRONTEND_NOTE_BASICPARAMETERS_DESC"
+                />
+
                 <field
                         name="containerstyle"
                         type="radio"
                         class="btn-group"
                         default="none"
                         label="TPL_FRONTEND_PARAMETER_BASIC_CONTAINERSTYLE"
-                        description="TPL_FRONTEND_PARAMETER_BASIC_CONTAINERSTYLE_DESC">
+                        description="TPL_FRONTEND_PARAMETER_BASIC_CONTAINERSTYLE_DESC"
+                >
                     <option value="none">TPL_FRONTEND_PARAMETER_BASIC_CONTAINERSTYLE_NONE</option>
                     <option value="container">TPL_FRONTEND_PARAMETER_BASIC_CONTAINERSTYLE_CONTAINER</option>
                     <option value="container-fluid">TPL_FRONTEND_PARAMETER_BASIC_CONTAINERSTYLE_CONTAINER_FLUID</option>
                 </field>
+
                 <field
                         name="homepagecomponent"
                         type="radio"
                         class="btn-group"
                         default="1"
                         label="TPL_FRONTEND_PARAMETER_BASIC_HOMEPAGECOMPONENT"
-                        description="TPL_FRONTEND_PARAMETER_BASIC_HOMEPAGECOMPONENT_DESC">
+                        description="TPL_FRONTEND_PARAMETER_BASIC_HOMEPAGECOMPONENT_DESC"
+                >
                     <option value="1">JYES</option>
                     <option value="0">JNO</option>
                 </field>
+
                 <field
                         name="backtotopshow"
                         type="radio"
                         class="btn-group"
                         default="1"
                         label="TPL_FRONTEND_PARAMETER_BASIC_BACKTOTOPSHOW"
-                        description="TPL_FRONTEND_PARAMETER_BASIC_BACKTOTOPSHOW_DESC">
+                        description="TPL_FRONTEND_PARAMETER_BASIC_BACKTOTOPSHOW_DESC"
+                >
                     <option value="1">JYES</option>"
                     <option value="0">JNO</option>
                 </field>
 
-				<field name="toolbarparameters" type="note" class="alert alert-success"
-					   label="TPL_FRONTEND_NOTE_TOOLBARPARAMETERS"
-					   description="TPL_FRONTEND_NOTE_TOOLBARPARAMETERS_DESC" />
+				<field
+                        name="toolbarparameters"
+                        type="note"
+                        class="alert alert-success"
+                        label="TPL_FRONTEND_NOTE_TOOLBARPARAMETERS"
+                        description="TPL_FRONTEND_NOTE_TOOLBARPARAMETERS_DESC"
+                />
+
 				<field
 						name="toolbarcolor"
 						type="list"
 						default=""
-						label="TPL_FRONTEND_PARAMETER_TOOLBAR_COLOR">
+						label="TPL_FRONTEND_PARAMETER_TOOLBAR_COLOR"
+                >
 					<option value="">TPL_FRONTEND_PARAMETER_TOOLBAR_NONE</option>
 					<option value="bg-color1">TPL_FRONTEND_PARAMETER_TOOLBAR_BGCOLOR1</option>
 					<option value="bg-color2">TPL_FRONTEND_PARAMETER_TOOLBAR_BGCOLOR2</option>
@@ -113,32 +129,43 @@
 					<option value="bg-color4">TPL_FRONTEND_PARAMETER_TOOLBAR_BGCOLOR4</option>
 					<option value="bg-color5">TPL_FRONTEND_PARAMETER_TOOLBAR_BGCOLOR5</option>
 				</field>
+
 				<field
 						name="toolbarcontainerstyle"
 						type="radio"
 						class="btn-group"
 						default="container"
-						label="TPL_FRONTEND_PARAMETER_TOOLBAR_CONTAINERSTYLE">
+						label="TPL_FRONTEND_PARAMETER_TOOLBAR_CONTAINERSTYLE"
+                >
 					<option value="container">TPL_FRONTEND_PARAMETER_TOOLBAR_CONTAINERSTYLE_CONTAINER</option>
 					<option value="container-fluid">TPL_FRONTEND_PARAMETER_TOOLBAR_CONTAINERSTYLE_CONTAINER_FLUID</option>
 				</field>
+
 				<field
 						name="toolbarphone"
 						type="radio"
 						class="btn-group"
 						default=""
-						label="TPL_FRONTEND_PARAMETER_TOOLBAR_DISPLAYPHONE">
+						label="TPL_FRONTEND_PARAMETER_TOOLBAR_DISPLAYPHONE"
+                >
 					<option value="hidden-xs hidden-sm">JNO</option>
 					<option value="">JYES</option>
 				</field>
-                <field name="navbarparameters" type="note" class="alert alert-success"
-                       label="TPL_FRONTEND_NOTE_NAVBARPARAMETERS"
-                       description="TPL_FRONTEND_NOTE_NAVBARPARAMETERS_DESC" />
+
+                <field
+                        name="navbarparameters"
+                        type="note"
+                        class="alert alert-success"
+                        label="TPL_FRONTEND_NOTE_NAVBARPARAMETERS"
+                        description="TPL_FRONTEND_NOTE_NAVBARPARAMETERS_DESC"
+                />
+
 				<field
 						name="navcolor"
 						type="list"
 						default=""
-						label="TPL_FRONTEND_PARAMETER_NAVBAR_COLOR">
+						label="TPL_FRONTEND_PARAMETER_NAVBAR_COLOR"
+                >
 					<option value="">TPL_FRONTEND_PARAMETER_NAVBAR_NONE</option>
 					<option value="bg-color1">TPL_FRONTEND_PARAMETER_NAVBAR_BGCOLOR1</option>
 					<option value="bg-color2">TPL_FRONTEND_PARAMETER_NAVBAR_BGCOLOR2</option>
@@ -152,7 +179,8 @@
 						type="radio"
 						class="btn-group"
 						default="container"
-						label="TPL_FRONTEND_PARAMETER_NAVBAR_WIDTH">
+						label="TPL_FRONTEND_PARAMETER_NAVBAR_WIDTH"
+                >
 					<option value="container">Container</option>
 					<option value="container-fluid">Fluid</option>
 				</field>
@@ -162,7 +190,8 @@
 						type="radio"
 						class="btn-group"
 						default="right"
-						label="TPL_FRONTEND_PARAMETER_NAVBAR_ALIGN">
+						label="TPL_FRONTEND_PARAMETER_NAVBAR_ALIGN"
+                >
 					<option value="left">TPL_FRONTEND_PARAMETER_NAVBAR_ALIGN_LEFT</option>
 					<option value="right">TPL_FRONTEND_PARAMETER_NAVBAR_ALIGN_RIGHT</option>
 				</field>
@@ -173,7 +202,8 @@
 						class="btn-group"
 						default=""
 						label="TPL_FRONTEND_PARAMETER_NAVBAR_STICKY"
-						description="TPL_FRONTEND_PARAMETER_NAVBAR_STICKY_DESC">
+						description="TPL_FRONTEND_PARAMETER_NAVBAR_STICKY_DESC"
+                >
 					<option value="1">JYES</option>
 					<option value="">JNO</option>
 				</field>
@@ -184,45 +214,71 @@
 						type="text"
 						default="0"
 						label="TPL_FRONTEND_PARAMETER_NAVBAR_STICKY_OFFSET"
-						showon="stickymenu:1"/>
+						showon="stickymenu:1"
+                />
+
                 <field
                         name="navbarmobile"
                         type="radio"
                         class="btn-group"
                         default="collapse"
-                        label="TPL_FRONTEND_PARAMETER_NAVBAR_MOBILE">
+                        label="TPL_FRONTEND_PARAMETER_NAVBAR_MOBILE"
+                >
                     <option value="collapse">TPL_FRONTEND_PARAMETER_NAVBAR_MOBILE_COLLAPSE</option>
                     <option value="offcanvas">TPL_FRONTEND_PARAMETER_NAVBAR_MOBILE_COLLAPSE_OFFCANVAS</option>
                 </field>
-                <field name="logoparameters" type="note" class="alert alert-success"
-                       label="TPL_FRONTEND_NOTE_LOGOPARAMETERS"
-                       description="TPL_FRONTEND_NOTE_LOGOPARAMETERS_DESC" />
-                <field name="logoFile" class="" type="media" default=""
-                       label="TPL_FRONTEND_PARAMETER_LOGO"
-                       description="TPL_FRONTEND_PARAMETER_LOGO_DESC" />
+
+                <field
+                        name="logoparameters"
+                        type="note"
+                        class="alert alert-success"
+                        label="TPL_FRONTEND_NOTE_LOGOPARAMETERS"
+                        description="TPL_FRONTEND_NOTE_LOGOPARAMETERS_DESC"
+                />
+
+                <field
+                        name="logoFile"
+                        class=""
+                        type="media"
+                        default=""
+                        label="TPL_FRONTEND_PARAMETER_LOGO"
+                        description="TPL_FRONTEND_PARAMETER_LOGO_DESC"
+                />
+
                 <field
                         name="logoposition"
                         type="radio"
                         class="btn-group"
                         default="right"
                         label="TPL_FRONTEND_PARAMETER_LOGO_POSITION"
-                        description="TPL_FRONTEND_PARAMETER_LOGO_POSITION_DESC">
+                        description="TPL_FRONTEND_PARAMETER_LOGO_POSITION_DESC"
+                >
                     <option value="header">TPL_FRONTEND_PARAMETER_LOGO_POSITION_HEADER</option>
                     <option value="menu">TPL_FRONTEND_PARAMETER_LOGO_POSITION_MENU</option>
                 </field>
-                <field name="sitetitle"  type="text" default=""
-                       label="JGLOBAL_TITLE"
-                       description="JFIELD_ALT_PAGE_TITLE_LABEL"
-                       filter="string" />
 
-                <field name="breadcrumbsparameters" type="note" class="alert alert-success"
-                       label="TPL_FRONTEND_NOTE_BREADCRUMBSPARAMETERS"
-                       description="TPL_FRONTEND_NOTE_BREADCRUMBSPARAMETERS_DESC" />
+                <field
+                        name="sitetitle"
+                        type="text"
+                        default=""
+                        label="JGLOBAL_TITLE"
+                        description="JFIELD_ALT_PAGE_TITLE_LABEL"
+                        filter="string"
+                />
+
+                <field
+                        name="breadcrumbsparameters"
+                        type="note"
+                        class="alert alert-success"
+                        label="TPL_FRONTEND_NOTE_BREADCRUMBSPARAMETERS"
+                        description="TPL_FRONTEND_NOTE_BREADCRUMBSPARAMETERS_DESC"
+                />
                 <field
                         name="breadcrumbscolor"
                         type="list"
                         default=""
-                        label="TPL_FRONTEND_PARAMETER_BREADCRUMBS_COLOR">
+                        label="TPL_FRONTEND_PARAMETER_BREADCRUMBS_COLOR"
+                >
                     <option value="">TPL_FRONTEND_PARAMETER_BREADCRUMBS_NONE</option>
                     <option value="bg-color1">TPL_FRONTEND_PARAMETER_BREADCRUMBS_BGCOLOR1</option>
                     <option value="bg-color2">TPL_FRONTEND_PARAMETER_BREADCRUMBS_BGCOLOR2</option>
@@ -236,7 +292,8 @@
                         type="radio"
                         class="btn-group"
                         default="padding-normal"
-                        label="TPL_FRONTEND_PARAMETER_BREADCRUMBS_PADDING">
+                        label="TPL_FRONTEND_PARAMETER_BREADCRUMBS_PADDING"
+                >
                     <option value="padding-none">TPL_FRONTEND_PARAMETER_BREADCRUMBS_PADDING_NONE</option>
                     <option value="padding-normal">TPL_FRONTEND_PARAMETER_BREADCRUMBS_PADDING_NORMAL</option>
                     <option value="padding-large">TPL_FRONTEND_PARAMETER_BREADCRUMBS_PADDING_LARGE</option>
@@ -247,7 +304,8 @@
                         type="radio"
                         class="btn-group"
                         default="container"
-                        label="TPL_FRONTEND_PARAMETER_BREADCRUMBS_WIDTH">
+                        label="TPL_FRONTEND_PARAMETER_BREADCRUMBS_WIDTH"
+                >
                     <option value="container">TPL_FRONTEND_PARAMETER_BREADCRUMBS_WIDTH_CONTAINER</option>
                     <option value="container-fluid">TPL_FRONTEND_PARAMETER_BREADCRUMBS_WIDTH_CONTAINER_FLUID</option>
                 </field>
@@ -257,19 +315,25 @@
                         type="radio"
                         class="btn-group"
                         default=""
-                        label="Breadcrumbs on phone">
+                        label="TPL_FRONTEND_PARAMETER_BREADCRUMBS_DISPLAYPHONE"
+                >
                     <option value="hidden-xs hidden-sm">JNO</option>
                     <option value="">JYES</option>
                 </field>
 
-                <field name="slideshowparameters" type="note" class="alert alert-success"
+                <field name="slideshowparameters"
+                       type="note"
+                       class="alert alert-success"
                        label="TPL_FRONTEND_NOTE_SLIDESHOWPARAMETERS"
-                       description="TPL_FRONTEND_NOTE_SLIDESHOWPARAMETERS_DESC" />
+                       description="TPL_FRONTEND_NOTE_SLIDESHOWPARAMETERS_DESC"
+                />
+
                 <field
                         name="slideshowcolor"
                         type="list"
                         default=""
-                        label="TPL_FRONTEND_PARAMETER_SLIDESHOW_COLOR">
+                        label="TPL_FRONTEND_PARAMETER_SLIDESHOW_COLOR"
+                >
                     <option value="">TPL_FRONTEND_PARAMETER_SLIDESHOW_NONE</option>
                     <option value="bg-color1">TPL_FRONTEND_PARAMETER_SLIDESHOW_BGCOLOR1</option>
                     <option value="bg-color2">TPL_FRONTEND_PARAMETER_SLIDESHOW_BGCOLOR2</option>
@@ -277,53 +341,59 @@
                     <option value="bg-color4">TPL_FRONTEND_PARAMETER_SLIDESHOW_BGCOLOR4</option>
                     <option value="bg-color5">TPL_FRONTEND_PARAMETER_SLIDESHOW_BGCOLOR5</option>
                 </field>
+
                 <field
                         name="slideshowpadding"
                         type="radio"
                         class="btn-group"
                         default="padding-normal"
-                        label="TPL_FRONTEND_PARAMETER_SLIDESHOW_PADDING">
+                        label="TPL_FRONTEND_PARAMETER_SLIDESHOW_PADDING"
+                >
                     <option value="padding-none">TPL_FRONTEND_PARAMETER_SLIDESHOW_PADDING_NONE</option>
                     <option value="padding-normal">TPL_FRONTEND_PARAMETER_SLIDESHOW_PADDING_NORMAL</option>
                     <option value="padding-large">TPL_FRONTEND_PARAMETER_SLIDESHOW_PADDING_LARGE</option>
                 </field>
+
                 <field
                         name="slideshowwidth"
                         type="radio"
                         class="btn-group"
                         default="container-fluid"
-                        label="TPL_FRONTEND_PARAMETER_SLIDESHOW_WIDTH">
+                        label="TPL_FRONTEND_PARAMETER_SLIDESHOW_WIDTH"
+                >
                     <option value="container">TPL_FRONTEND_PARAMETER_SLIDESHOW_WIDTH_CONTAINER</option>
                     <option value="container-fluid">TPL_FRONTEND_PARAMETER_SLIDESHOW_WIDTH_CONTAINER_FLUID</option>
                 </field>
+
                 <field
                         name="slideshowphone"
                         type="radio"
                         class="btn-group"
                         default=""
-                        label="Slideshow on phone">
-                    <option value="hidden-xs hidden-sm">No</option>
-                    <option value="">Yes</option>
+                        label="TPL_FRONTEND_PARAMETER_SLIDESHOW_DISPLAYPHONE">
+                    <option value="hidden-xs hidden-sm">JNO</option>
+                    <option value="">JYES</option>
                 </field>
 
-<!-- TODO -->
-                <field name="topparameters" type="note" class="alert alert-success"
-                       label="TPL_FRONTEND_NOTE_SLIDESHOWPARAMETERS"
-                       description="TPL_FRONTEND_NOTE_SLIDESHOWPARAMETERS_DESC" />
- <!--               <field name="note1" type="note" class="alert alert-success" label="Top Positions" description="Styling options for Top-A, Top-B, Top-C and Top-D" /> -->
-
+                <field
+                        name="topparameters"
+                        type="note"
+                        class="alert alert-success"
+                        label="TPL_FRONTEND_NOTE_TOPPARAMETERS"
+                        description="TPL_FRONTEND_NOTE_TOPPARAMETERS_DESC"
+                />
                 <field
                         name="topacolor"
                         type="list"
                         default=""
-                        label="Top A Color"
+                        label="TPL_FRONTEND_PARAMETER_TOPA_COLOR"
                 >
-                    <option value="">None</option>
-                    <option value="bg-color1">TPL_MAESTRO_OPTION_BGCOLOR_COLOR1</option>
-                    <option value="bg-color2">TPL_MAESTRO_OPTION_BGCOLOR_COLOR2</option>
-                    <option value="bg-color3">TPL_MAESTRO_OPTION_BGCOLOR_COLOR3</option>
-                    <option value="bg-color4">TPL_MAESTRO_OPTION_BGCOLOR_COLOR4</option>
-                    <option value="bg-color5">TPL_MAESTRO_OPTION_BGCOLOR_COLOR5</option>
+                    <option value="">TPL_FRONTEND_PARAMETER_TOPA_NONE</option>
+                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_TOPA_BGCOLOR1</option>
+                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_TOPA_BGCOLOR2</option>
+                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_TOPA_BGCOLOR3</option>
+                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_TOPA_BGCOLOR4</option>
+                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_TOPA_BGCOLOR5</option>
                 </field>
 
                 <field
@@ -331,11 +401,11 @@
                         type="radio"
                         class="btn-group"
                         default="padding-normal"
-                        label="Top A Padding"
+                        label="TPL_FRONTEND_PARAMETER_TOPA_PADDING"
                 >
-                    <option value="padding-none">None</option>
-                    <option value="padding-normal">Normal</option>
-                    <option value="padding-large">Large</option>
+                    <option value="padding-none">TPL_FRONTEND_PARAMETER_TOPA_PADDING_NONE</option>
+                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_TOPA_PADDING_NORMAL</option>
+                    <option value="padding-large">TPL_FRONTEND_PARAMETER_TOPA_PADDING_LARGE</option>
                 </field>
 
                 <field
@@ -343,10 +413,10 @@
                         type="radio"
                         class="btn-group"
                         default="container"
-                        label="Top A Width"
+                        label="TPL_FRONTEND_PARAMETER_TOPA_WIDTH"
                 >
-                    <option value="container">Container</option>
-                    <option value="container-fluid">Fluid</option>
+                    <option value="container">TPL_FRONTEND_PARAMETER_TOPA_WIDTH_CONTAINER</option>
+                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_TOPA_WIDTH_CONTAINER_FLUID</option>
                 </field>
 
                 <field
@@ -354,10 +424,10 @@
                         type="radio"
                         class="btn-group"
                         default=""
-                        label="Top A on phone"
+                        label="TPL_FRONTEND_PARAMETER_TOPA_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">No</option>
-                    <option value="">Yes</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
+                    <option value="">JYES</option>
                 </field>
 
                 <field
@@ -370,14 +440,14 @@
                         name="topbcolor"
                         type="list"
                         default=""
-                        label="Top B Color"
+                        label="TPL_FRONTEND_PARAMETER_TOPB_COLOR"
                 >
-                    <option value="">None</option>
-                    <option value="bg-color1">TPL_MAESTRO_OPTION_BGCOLOR_COLOR1</option>
-                    <option value="bg-color2">TPL_MAESTRO_OPTION_BGCOLOR_COLOR2</option>
-                    <option value="bg-color3">TPL_MAESTRO_OPTION_BGCOLOR_COLOR3</option>
-                    <option value="bg-color4">TPL_MAESTRO_OPTION_BGCOLOR_COLOR4</option>
-                    <option value="bg-color5">TPL_MAESTRO_OPTION_BGCOLOR_COLOR5</option>
+                    <option value="">TPL_FRONTEND_PARAMETER_TOPB_NONE</option>
+                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_TOPB_BGCOLOR1</option>
+                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_TOPB_BGCOLOR2</option>
+                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_TOPB_BGCOLOR3</option>
+                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_TOPB_BGCOLOR4</option>
+                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_TOPB_BGCOLOR5</option>
                 </field>
 
                 <field
@@ -385,11 +455,11 @@
                         type="radio"
                         class="btn-group"
                         default="padding-normal"
-                        label="Top B Padding"
+                        label="TPL_FRONTEND_PARAMETER_TOPB_PADDING"
                 >
-                    <option value="padding-none">None</option>
-                    <option value="padding-normal">Normal</option>
-                    <option value="padding-large">Large</option>
+                    <option value="padding-none">TPL_FRONTEND_PARAMETER_TOPB_PADDING_NONE</option>
+                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_TOPB_PADDING_NORMAL</option>
+                    <option value="padding-large">TPL_FRONTEND_PARAMETER_TOPB_PADDING_LARGE</option>
                 </field>
 
                 <field
@@ -397,10 +467,10 @@
                         type="radio"
                         class="btn-group"
                         default="container"
-                        label="Top B Width"
+                        label="TPL_FRONTEND_PARAMETER_TOPB_WIDTH"
                 >
-                    <option value="container">Container</option>
-                    <option value="container-fluid">Fluid</option>
+                    <option value="container">TPL_FRONTEND_PARAMETER_TOPB_WIDTH_CONTAINER</option>
+                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_TOPB_WIDTH_CONTAINER_FLUID</option>
                 </field>
 
                 <field
@@ -408,10 +478,10 @@
                         type="radio"
                         class="btn-group"
                         default=""
-                        label="Top B on phone"
+                        label="TPL_FRONTEND_PARAMETER_TOPB_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">No</option>
-                    <option value="">Yes</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
+                    <option value="">JYES</option>
                 </field>
 
                 <field
@@ -424,14 +494,14 @@
                         name="topccolor"
                         type="list"
                         default=""
-                        label="Top C Color"
+                        label="TPL_FRONTEND_PARAMETER_TOPC_COLOR"
                 >
-                    <option value="">None</option>
-                    <option value="bg-color1">TPL_MAESTRO_OPTION_BGCOLOR_COLOR1</option>
-                    <option value="bg-color2">TPL_MAESTRO_OPTION_BGCOLOR_COLOR2</option>
-                    <option value="bg-color3">TPL_MAESTRO_OPTION_BGCOLOR_COLOR3</option>
-                    <option value="bg-color4">TPL_MAESTRO_OPTION_BGCOLOR_COLOR4</option>
-                    <option value="bg-color5">TPL_MAESTRO_OPTION_BGCOLOR_COLOR5</option>
+                    <option value="">TPL_FRONTEND_PARAMETER_TOPC_NONE</option>
+                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_TOPC_BGCOLOR1</option>
+                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_TOPC_BGCOLOR2</option>
+                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_TOPC_BGCOLOR3</option>
+                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_TOPC_BGCOLOR4</option>
+                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_TOPC_BGCOLOR5</option>
                 </field>
 
                 <field
@@ -439,11 +509,11 @@
                         type="radio"
                         class="btn-group"
                         default="padding-normal"
-                        label="Top C Padding"
+                        label="TPL_FRONTEND_PARAMETER_TOPC_PADDING"
                 >
-                    <option value="padding-none">None</option>
-                    <option value="padding-normal">Normal</option>
-                    <option value="padding-large">Large</option>
+                    <option value="padding-none">TPL_FRONTEND_PARAMETER_TOPC_PADDING_NONE</option>
+                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_TOPC_PADDING_NORMAL</option>
+                    <option value="padding-large">TPL_FRONTEND_PARAMETER_TOPC_PADDING_LARGE</option>
                 </field>
 
                 <field
@@ -451,10 +521,10 @@
                         type="radio"
                         class="btn-group"
                         default="container"
-                        label="Top C Width"
+                        label="TPL_FRONTEND_PARAMETER_TOPC_WIDTH"
                 >
-                    <option value="container">Container</option>
-                    <option value="container-fluid">Fluid</option>
+                    <option value="container">TPL_FRONTEND_PARAMETER_TOPC_WIDTH_CONTAINER</option>
+                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_TOPC_WIDTH_CONTAINER_FLUID</option>
                 </field>
 
                 <field
@@ -462,10 +532,10 @@
                         type="radio"
                         class="btn-group"
                         default=""
-                        label="Top C on phone"
+                        label="TPL_FRONTEND_PARAMETER_TOPC_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">No</option>
-                    <option value="">Yes</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
+                    <option value="">JYES</option>
                 </field>
 
                 <field
@@ -478,14 +548,14 @@
                         name="topdcolor"
                         type="list"
                         default=""
-                        label="Top D Color"
+                        label="TPL_FRONTEND_PARAMETER_TOPD_COLOR"
                 >
-                    <option value="">None</option>
-                    <option value="bg-color1">TPL_MAESTRO_OPTION_BGCOLOR_COLOR1</option>
-                    <option value="bg-color2">TPL_MAESTRO_OPTION_BGCOLOR_COLOR2</option>
-                    <option value="bg-color3">TPL_MAESTRO_OPTION_BGCOLOR_COLOR3</option>
-                    <option value="bg-color4">TPL_MAESTRO_OPTION_BGCOLOR_COLOR4</option>
-                    <option value="bg-color5">TPL_MAESTRO_OPTION_BGCOLOR_COLOR5</option>
+                    <option value="">TPL_FRONTEND_PARAMETER_TOPD_NONE</option>
+                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_TOPD_BGCOLOR1</option>
+                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_TOPD_BGCOLOR2</option>
+                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_TOPD_BGCOLOR3</option>
+                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_TOPD_BGCOLOR4</option>
+                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_TOPD_BGCOLOR5</option>
                 </field>
 
                 <field
@@ -493,11 +563,11 @@
                         type="radio"
                         class="btn-group"
                         default="padding-normal"
-                        label="Top D Padding"
+                        label="TPL_FRONTEND_PARAMETER_TOPD_PADDING"
                 >
-                    <option value="padding-none">None</option>
-                    <option value="padding-normal">Normal</option>
-                    <option value="padding-large">Large</option>
+                    <option value="padding-none">TPL_FRONTEND_PARAMETER_TOPD_PADDING_NONE</option>
+                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_TOPD_PADDING_NORMAL</option>
+                    <option value="padding-large">TPL_FRONTEND_PARAMETER_TOPD_PADDING_LARGE</option>
                 </field>
 
                 <field
@@ -505,10 +575,10 @@
                         type="radio"
                         class="btn-group"
                         default="container"
-                        label="Top D Width"
+                        label="TPL_FRONTEND_PARAMETER_TOPD_WIDTH"
                 >
-                    <option value="container">Container</option>
-                    <option value="container-fluid">Fluid</option>
+                    <option value="container">TPL_FRONTEND_PARAMETER_TOPD_WIDTH_CONTAINER</option>
+                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_TOPD_WIDTH_CONTAINER_FLUID</option>
                 </field>
 
                 <field
@@ -516,29 +586,31 @@
                         type="radio"
                         class="btn-group"
                         default=""
-                        label="Top D on phone"
+                        label="TPL_FRONTEND_PARAMETER_TOPD_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">No</option>
-                    <option value="">Yes</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
+                    <option value="">JYES</option>
                 </field>
 
-<!-- TODO -->
-                <field name="mainbodyparameters" type="note" class="alert alert-success"
-                       label="TPL_FRONTEND_NOTE_SLIDESHOWPARAMETERS"
-                       description="TPL_FRONTEND_NOTE_SLIDESHOWPARAMETERS_DESC" />
-<!--               <field name="note4" type="note" class="alert alert-info" label="Mainbody Positions" description="Styling options for Mainbody" /> -->
+                <field name="mainbodyparameters"
+                       type="note"
+                       class="alert alert-success"
+                       label="TPL_FRONTEND_NOTE_MAINBODYPARAMETERS"
+                       description="TPL_FRONTEND_NOTE_MAINBODYPARAMETERS_DESC"
+                />
+
                 <field
                         name="mainbodycolor"
                         type="list"
                         default=""
-                        label="Mainbody Color"
+                        label="TPL_FRONTEND_PARAMETER_MAINBODY_COLOR"
                 >
-                    <option value="">None</option>
-                    <option value="bg-color1">TPL_MAESTRO_OPTION_BGCOLOR_COLOR1</option>
-                    <option value="bg-color2">TPL_MAESTRO_OPTION_BGCOLOR_COLOR2</option>
-                    <option value="bg-color3">TPL_MAESTRO_OPTION_BGCOLOR_COLOR3</option>
-                    <option value="bg-color4">TPL_MAESTRO_OPTION_BGCOLOR_COLOR4</option>
-                    <option value="bg-color5">TPL_MAESTRO_OPTION_BGCOLOR_COLOR5</option>
+                    <option value="">TPL_FRONTEND_PARAMETER_MAINBODY_NONE</option>
+                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR1</option>
+                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR2</option>
+                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR3</option>
+                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR4</option>
+                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR5</option>
                 </field>
 
                 <field
@@ -546,11 +618,11 @@
                         type="radio"
                         class="btn-group"
                         default="padding-normal"
-                        label="Mainbody Padding"
+                        label="TPL_FRONTEND_PARAMETER_MAINBODY_PADDING"
                 >
-                    <option value="padding-none">None</option>
-                    <option value="padding-normal">Normal</option>
-                    <option value="padding-large">Large</option>
+                    <option value="padding-none">TPL_FRONTEND_PARAMETER_MAINBODY_PADDING_NONE</option>
+                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_MAINBODY_PADDING_NORMAL</option>
+                    <option value="padding-large">TPL_FRONTEND_PARAMETER_MAINBODY_PADDING_LARGE</option>
                 </field>
 
                 <field
@@ -558,56 +630,59 @@
                         type="radio"
                         class="btn-group"
                         default="container"
-                        label="Mainbody Width"
+                        label="TPL_FRONTEND_PARAMETER_MAINBODY_WIDTH"
                 >
-                    <option value="container">Container</option>
-                    <option value="container-fluid">Fluid</option>
+                    <option value="container">TPL_FRONTEND_PARAMETER_MAINBODY_WIDTH_CONTAINER</option>
+                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_MAINBODY_WIDTH_CONTAINER_FLUID</option>
                 </field>
 
                 <field
                         name="leftwidth"
                         type="list"
                         default="4"
-                        label="TPL_MAESTRO_SIDEBAR_LEFT_WIDTH_LABEL"
-                        description="TPL_MAESTRO_SIDEBAR_LEFT_WIDTH_DESC"
+                        label="TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_WIDTH"
+                        description="TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_WIDTH_DESC"
                 >
-                    <option value="2">TPL_MAESTRO_OPTION_SIDEBAR_LEFT_SPAN2</option>
-                    <option value="3">TPL_MAESTRO_OPTION_SIDEBAR_LEFT_SPAN3</option>
-                    <option value="4">TPL_MAESTRO_OPTION_SIDEBAR_LEFT_SPAN4</option>
-                    <option value="5">TPL_MAESTRO_OPTION_SIDEBAR_LEFT_SPAN5</option>
-                    <option value="6">TPL_MAESTRO_OPTION_SIDEBAR_LEFT_SPAN6</option>
+                    <option value="2">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN2</option>
+                    <option value="3">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN3</option>
+                    <option value="4">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN4</option>
+                    <option value="5">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN5</option>
+                    <option value="6">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN6</option>
                 </field>
 
                 <field
                         name="rightwidth"
                         type="list"
                         default="4"
-                        label="TPL_MAESTRO_SIDEBAR_RIGHT_WIDTH_LABEL"
-                        description="TPL_MAESTRO_SIDEBAR_RIGHT_WIDTH_DESC"
+                        label="TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_WIDTH"
+                        description="TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_WIDTH_DESC"
                 >
-                    <option value="2">TPL_MAESTRO_OPTION_SIDEBAR_RIGHT_SPAN2</option>
-                    <option value="3">TPL_MAESTRO_OPTION_SIDEBAR_RIGHT_SPAN3</option>
-                    <option value="4">TPL_MAESTRO_OPTION_SIDEBAR_RIGHT_SPAN4</option>
-                    <option value="5">TPL_MAESTRO_OPTION_SIDEBAR_RIGHT_SPAN5</option>
-                    <option value="6">TPL_MAESTRO_OPTION_SIDEBAR_RIGHT_SPAN6</option>
+                    <option value="2">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN2</option>
+                    <option value="3">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN3</option>
+                    <option value="4">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN4</option>
+                    <option value="5">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN5</option>
+                    <option value="6">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN6</option>
                 </field>
-<!-- TODO -->
-                <field name="bottomparameters" type="note" class="alert alert-success"
-                       label="TPL_FRONTEND_NOTE_SLIDESHOWPARAMETERS"
-                       description="TPL_FRONTEND_NOTE_SLIDESHOWPARAMETERS_DESC" />
-<!--               <field name="note2" type="note" class="alert alert-success" label="Bottom Positions" description="Styling options for Bottom-A, Bottom-B, Bottom-C and Bottom-D" /> -->
+
+                <field name="bottomparameters"
+                       type="note"
+                       class="alert alert-success"
+                       label="TPL_FRONTEND_NOTE_BOTTOMPARAMETERS"
+                       description="TPL_FRONTEND_NOTE_BOTTOMPARAMETERS"
+                />
+
                 <field
                         name="bottomacolor"
                         type="list"
                         default=""
-                        label="Bottom A Color"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMA_COLOR"
                 >
-                    <option value="">None</option>
-                    <option value="bg-color1">TPL_MAESTRO_OPTION_BGCOLOR_COLOR1</option>
-                    <option value="bg-color2">TPL_MAESTRO_OPTION_BGCOLOR_COLOR2</option>
-                    <option value="bg-color3">TPL_MAESTRO_OPTION_BGCOLOR_COLOR3</option>
-                    <option value="bg-color4">TPL_MAESTRO_OPTION_BGCOLOR_COLOR4</option>
-                    <option value="bg-color5">TPL_MAESTRO_OPTION_BGCOLOR_COLOR5</option>
+                    <option value="">TPL_FRONTEND_PARAMETER_BOTTOMA_NONE</option>
+                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_BOTTOMA_BGCOLOR1</option>
+                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_BOTTOMA_BGCOLOR2</option>
+                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_BOTTOMA_BGCOLOR3</option>
+                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_BOTTOMA_BGCOLOR4</option>
+                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_BOTTOMA_BGCOLOR5</option>
                 </field>
 
                 <field
@@ -615,11 +690,11 @@
                         type="radio"
                         class="btn-group"
                         default="padding-normal"
-                        label="Bottom A Padding"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMA_PADDING"
                 >
-                    <option value="padding-none">None</option>
-                    <option value="padding-normal">Normal</option>
-                    <option value="padding-large">Large</option>
+                    <option value="padding-none">TPL_FRONTEND_PARAMETER_BOTTOMA_PADDING_NONE</option>
+                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_BOTTOMA_PADDING_NORMAL</option>
+                    <option value="padding-large">TPL_FRONTEND_PARAMETER_BOTTOMA_PADDING_LARGE</option>
                 </field>
 
                 <field
@@ -627,10 +702,10 @@
                         type="radio"
                         class="btn-group"
                         default="container"
-                        label="Bottom A Width"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMA_WIDTH"
                 >
-                    <option value="container">Container</option>
-                    <option value="container-fluid">Fluid</option>
+                    <option value="container">TPL_FRONTEND_PARAMETER_BOTTOMA_WIDTH_CONTAINER</option>
+                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_BOTTOMA_WIDTH_CONTAINER_FLUID</option>
                 </field>
 
                 <field
@@ -638,24 +713,24 @@
                         type="radio"
                         class="btn-group"
                         default=""
-                        label="Bottom A on phone"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMA_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">No</option>
-                    <option value="">Yes</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
+                    <option value="">JYES</option>
                 </field>
 
                 <field
                         name="bottombcolor"
                         type="list"
                         default=""
-                        label="Bottom B Color"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMB_COLOR"
                 >
-                    <option value="">None</option>
-                    <option value="bg-color1">TPL_MAESTRO_OPTION_BGCOLOR_COLOR1</option>
-                    <option value="bg-color2">TPL_MAESTRO_OPTION_BGCOLOR_COLOR2</option>
-                    <option value="bg-color3">TPL_MAESTRO_OPTION_BGCOLOR_COLOR3</option>
-                    <option value="bg-color4">TPL_MAESTRO_OPTION_BGCOLOR_COLOR4</option>
-                    <option value="bg-color5">TPL_MAESTRO_OPTION_BGCOLOR_COLOR5</option>
+                    <option value="">TPL_FRONTEND_PARAMETER_BOTTOMB_NONE</option>
+                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_BOTTOMB_BGCOLOR1</option>
+                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_BOTTOMB_BGCOLOR2</option>
+                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_BOTTOMB_BGCOLOR3</option>
+                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_BOTTOMB_BGCOLOR4</option>
+                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_BOTTOMB_BGCOLOR5</option>
                 </field>
 
                 <field
@@ -663,11 +738,11 @@
                         type="radio"
                         class="btn-group"
                         default="padding-normal"
-                        label="Bottom B Padding"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMB_PADDING"
                 >
-                    <option value="padding-none">None</option>
-                    <option value="padding-normal">Normal</option>
-                    <option value="padding-large">Large</option>
+                    <option value="padding-none">TPL_FRONTEND_PARAMETER_BOTTOMB_PADDING_NONE</option>
+                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_BOTTOMB_PADDING_NORMAL</option>
+                    <option value="padding-large">TPL_FRONTEND_PARAMETER_BOTTOMB_PADDING_LARGE</option>
                 </field>
 
                 <field
@@ -675,10 +750,10 @@
                         type="radio"
                         class="btn-group"
                         default="container"
-                        label="Bottom B Width"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMB_WIDTH"
                 >
-                    <option value="container">Container</option>
-                    <option value="container-fluid">Fluid</option>
+                    <option value="container">TPL_FRONTEND_PARAMETER_BOTTOMB_WIDTH_CONTAINER</option>
+                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_BOTTOMB_WIDTH_CONTAINER_FLUID</option>
                 </field>
 
                 <field
@@ -686,24 +761,24 @@
                         type="radio"
                         class="btn-group"
                         default=""
-                        label="Bottom B on phone"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMB_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">No</option>
-                    <option value="">Yes</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
+                    <option value="">JYES</option>
                 </field>
 
                 <field
                         name="bottomccolor"
                         type="list"
                         default=""
-                        label="Bottom C Color"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMC_COLOR"
                 >
-                    <option value="">None</option>
-                    <option value="bg-color1">TPL_MAESTRO_OPTION_BGCOLOR_COLOR1</option>
-                    <option value="bg-color2">TPL_MAESTRO_OPTION_BGCOLOR_COLOR2</option>
-                    <option value="bg-color3">TPL_MAESTRO_OPTION_BGCOLOR_COLOR3</option>
-                    <option value="bg-color4">TPL_MAESTRO_OPTION_BGCOLOR_COLOR4</option>
-                    <option value="bg-color5">TPL_MAESTRO_OPTION_BGCOLOR_COLOR5</option>
+                    <option value="">TPL_FRONTEND_PARAMETER_BOTTOMC_NONE</option>
+                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_BOTTOMC_BGCOLOR1</option>
+                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_BOTTOMC_BGCOLOR2</option>
+                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_BOTTOMC_BGCOLOR3</option>
+                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_BOTTOMC_BGCOLOR4</option>
+                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_BOTTOMC_BGCOLOR5</option>
                 </field>
 
                 <field
@@ -711,11 +786,11 @@
                         type="radio"
                         class="btn-group"
                         default="padding-normal"
-                        label="Bottom C Padding"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMC_PADDING"
                 >
-                    <option value="padding-none">None</option>
-                    <option value="padding-normal">Normal</option>
-                    <option value="padding-large">Large</option>
+                    <option value="padding-none">TPL_FRONTEND_PARAMETER_BOTTOMC_PADDING_NONE</option>
+                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_BOTTOMC_PADDING_NORMAL</option>
+                    <option value="padding-large">TPL_FRONTEND_PARAMETER_BOTTOMC_PADDING_LARGE</option>
                 </field>
 
                 <field
@@ -723,10 +798,10 @@
                         type="radio"
                         class="btn-group"
                         default="container"
-                        label="Bottom C Width"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMC_WIDTH"
                 >
-                    <option value="container">Container</option>
-                    <option value="container-fluid">Fluid</option>
+                    <option value="container">TPL_FRONTEND_PARAMETER_BOTTOMC_WIDTH_CONTAINER</option>
+                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_BOTTOMC_WIDTH_CONTAINER_FLUID</option>
                 </field>
 
                 <field
@@ -734,24 +809,30 @@
                         type="radio"
                         class="btn-group"
                         default=""
-                        label="Bottom C on phone"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMC_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">No</option>
-                    <option value="">Yes</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
+                    <option value="">JYES</option>
                 </field>
+
+                <field
+                        name="bottomdspacer"
+                        type="spacer"
+                        hr="true"
+                />
 
                 <field
                         name="bottomdcolor"
                         type="list"
                         default=""
-                        label="Bottom D Color"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMD_COLOR"
                 >
-                    <option value="">None</option>
-                    <option value="bg-color1">TPL_MAESTRO_OPTION_BGCOLOR_COLOR1</option>
-                    <option value="bg-color2">TPL_MAESTRO_OPTION_BGCOLOR_COLOR2</option>
-                    <option value="bg-color3">TPL_MAESTRO_OPTION_BGCOLOR_COLOR3</option>
-                    <option value="bg-color4">TPL_MAESTRO_OPTION_BGCOLOR_COLOR4</option>
-                    <option value="bg-color5">TPL_MAESTRO_OPTION_BGCOLOR_COLOR5</option>
+                    <option value="">TPL_FRONTEND_PARAMETER_BOTTOMD_NONE</option>
+                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_BOTTOMD_BGCOLOR1</option>
+                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_BOTTOMD_BGCOLOR2</option>
+                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_BOTTOMD_BGCOLOR3</option>
+                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_BOTTOMD_BGCOLOR4</option>
+                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_BOTTOMD_BGCOLOR5</option>
                 </field>
 
                 <field
@@ -759,11 +840,11 @@
                         type="radio"
                         class="btn-group"
                         default="padding-normal"
-                        label="bottom D Padding"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMD_PADDING"
                 >
-                    <option value="padding-none">None</option>
-                    <option value="padding-normal">Normal</option>
-                    <option value="padding-large">Large</option>
+                    <option value="padding-none">TPL_FRONTEND_PARAMETER_BOTTOMD_PADDING_NONE</option>
+                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_BOTTOMD_PADDING_NORMAL</option>
+                    <option value="padding-large">TPL_FRONTEND_PARAMETER_BOTTOMD_PADDING_LARGE</option>
                 </field>
 
                 <field
@@ -771,10 +852,10 @@
                         type="radio"
                         class="btn-group"
                         default="container"
-                        label="Bottom D Width"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMD_WIDTH"
                 >
-                    <option value="container">Container</option>
-                    <option value="container-fluid">Fluid</option>
+                    <option value="container">TPL_FRONTEND_PARAMETER_BOTTOMD_WIDTH_CONTAINER</option>
+                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_BOTTOMD_WIDTH_CONTAINER_FLUID</option>
                 </field>
 
                 <field
@@ -782,29 +863,30 @@
                         type="radio"
                         class="btn-group"
                         default=""
-                        label="Bottom D on phone"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMD_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">No</option>
-                    <option value="">Yes</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
+                    <option value="">JYES</option>
                 </field>
 
-<!-- TODO -->
-                <field name="footerparameters" type="note" class="alert alert-success"
-                       label="TPL_FRONTEND_NOTE_SLIDESHOWPARAMETERS"
-                       description="TPL_FRONTEND_NOTE_SLIDESHOWPARAMETERS_DESC" />
-<!--               <field name="note3" type="note" class="alert alert-success" label="Footer Positions" description="Styling options for Footer" /> -->
+                <field
+                        name="footerparameters" type="note" class="alert alert-success"
+                        label="TPL_FRONTEND_NOTE_FOOTERPARAMETERS"
+                        description="TPL_FRONTEND_NOTE_FOOTERPARAMETERS_DESC"
+                />
+
                 <field
                         name="footermenucolor"
                         type="list"
                         default=""
-                        label="Footer Menu Color"
+                        label="TPL_FRONTEND_PARAMETER_FOOTER_COLOR"
                 >
-                    <option value="">None</option>
-                    <option value="bg-color1">TPL_MAESTRO_OPTION_BGCOLOR_COLOR1</option>
-                    <option value="bg-color2">TPL_MAESTRO_OPTION_BGCOLOR_COLOR2</option>
-                    <option value="bg-color3">TPL_MAESTRO_OPTION_BGCOLOR_COLOR3</option>
-                    <option value="bg-color4">TPL_MAESTRO_OPTION_BGCOLOR_COLOR4</option>
-                    <option value="bg-color5">TPL_MAESTRO_OPTION_BGCOLOR_COLOR5</option>
+                    <option value="">TPL_FRONTEND_PARAMETER_FOOTER_NONE</option>
+                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR1</option>
+                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR2</option>
+                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR3</option>
+                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR4</option>
+                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR5</option>
                 </field>
 
                 <field
@@ -812,11 +894,11 @@
                         type="radio"
                         class="btn-group"
                         default="padding-normal"
-                        label="Footer Menu Padding"
+                        label="TPL_FRONTEND_PARAMETER_FOOTER_PADDING"
                 >
-                    <option value="padding-none">None</option>
-                    <option value="padding-normal">Normal</option>
-                    <option value="padding-large">Large</option>
+                    <option value="padding-none">TPL_FRONTEND_PARAMETER_FOOTER_PADDING_NONE</option>
+                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_FOOTER_PADDING_NORMAL</option>
+                    <option value="padding-large">TPL_FRONTEND_PARAMETER_FOOTER_PADDING_LARGE</option>
                 </field>
 
                 <field
@@ -824,10 +906,10 @@
                         type="radio"
                         class="btn-group"
                         default="container"
-                        label="Footer Menu Width"
+                        label="TPL_FRONTEND_PARAMETER_FOOTER_WIDTH"
                 >
-                    <option value="container">Container</option>
-                    <option value="container-fluid">Fluid</option>
+                    <option value="container">TPL_FRONTEND_PARAMETER_FOOTER_WIDTH_CONTAINER</option>
+                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_FOOTER_WIDTH_CONTAINER_FLUID</option>
                 </field>
 
                 <field
@@ -835,28 +917,32 @@
                         type="radio"
                         class="btn-group"
                         default=""
-                        label="Footer Menu on phone"
+                        label="TPL_FRONTEND_PARAMETER_FOOTER_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">No</option>
-                    <option value="">Yes</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
+                    <option value="">JYES</option>
                 </field>
-<!-- TODO -->
-                <field name="copyrightparameters" type="note" class="alert alert-success"
-                       label="TPL_FRONTEND_NOTE_SLIDESHOWPARAMETERS"
-                       description="TPL_FRONTEND_NOTE_SLIDESHOWPARAMETERS_DESC" />
-<!--               <field name="note3" type="note" class="alert alert-success" label="Footer Positions" description="Styling options for Footer" /> -->
+
+                <field
+                        name="copyrightparameters"
+                        type="note"
+                        class="alert alert-success"
+                        label="TPL_FRONTEND_NOTE_COPYRIGHTPARAMETERS"
+                        description="TPL_FRONTEND_NOTE_COPYRIGHTPARAMETERS_DESC"
+                />
+
                 <field
                         name="copyrightcolor"
                         type="list"
                         default=""
-                        label="Copyright Color"
+                        label="TPL_FRONTEND_PARAMETER_COPYRIGHT_COLOR"
                 >
-                    <option value="">None</option>
-                    <option value="bg-color1">TPL_MAESTRO_OPTION_BGCOLOR_COLOR1</option>
-                    <option value="bg-color2">TPL_MAESTRO_OPTION_BGCOLOR_COLOR2</option>
-                    <option value="bg-color3">TPL_MAESTRO_OPTION_BGCOLOR_COLOR3</option>
-                    <option value="bg-color4">TPL_MAESTRO_OPTION_BGCOLOR_COLOR4</option>
-                    <option value="bg-color5">TPL_MAESTRO_OPTION_BGCOLOR_COLOR5</option>
+                    <option value="">TPL_FRONTEND_PARAMETER_COPYRIGHT_NONE</option>
+                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_COPYRIGHT_BGCOLOR1</option>
+                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_COPYRIGHT_BGCOLOR2</option>
+                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_COPYRIGHT_BGCOLOR3</option>
+                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_COPYRIGHT_BGCOLOR4</option>
+                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_COPYRIGHT_BGCOLOR5</option>
                 </field>
 
                 <field
@@ -864,11 +950,11 @@
                         type="radio"
                         class="btn-group"
                         default="padding-normal"
-                        label="Copyright Padding"
+                        label="TPL_FRONTEND_PARAMETER_COPYRIGHT_PADDING"
                 >
-                    <option value="padding-none">None</option>
-                    <option value="padding-normal">Normal</option>
-                    <option value="padding-large">Large</option>
+                    <option value="padding-none">TPL_FRONTEND_PARAMETER_COPYRIGHT_PADDING_NONE</option>
+                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_COPYRIGHT_PADDING_NORMAL</option>
+                    <option value="padding-large">TPL_FRONTEND_PARAMETER_COPYRIGHT_PADDING_LARGE</option>
                 </field>
 
                 <field
@@ -876,10 +962,10 @@
                         type="radio"
                         class="btn-group"
                         default="container"
-                        label="Copyright Width"
+                        label="TPL_FRONTEND_PARAMETER_COPYRIGHT_WIDTH"
                 >
-                    <option value="container">Container</option>
-                    <option value="container-fluid">Fluid</option>
+                    <option value="container">TPL_FRONTEND_PARAMETER_COPYRIGHT_WIDTH_CONTAINER</option>
+                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_COPYRIGHT_WIDTH_CONTAINER_FLUID</option>
                 </field>
 
                 <field
@@ -889,23 +975,31 @@
                         default="center"
                         label="Copyright Align"
                 >
-                    <option value="left">Left</option>
-                    <option value="center">Center</option>
-                    <option value="right">Right</option>
+                    <option value="left">TPL_FRONTEND_PARAMETER_COPYRIGHT_ALIGN_LEFT</option>
+                    <option value="center">TPL_FRONTEND_PARAMETER_COPYRIGHT_ALIGN_CENTER</option>
+                    <option value="right">TPL_FRONTEND_PARAMETER_COPYRIGHT_ALIGN_RIGHT</option>
                 </field>
-
             </fieldset>
+
 			<fieldset name="advanced">
-				<field name="runless" type="radio" class="btn-group" default="1" label="TPL_FRONTEND_RUNLESS" description="TPL_FRONTEND_RUNLESS_DESC">
+				<field
+                        name="runless"
+                        type="radio"
+                        class="btn-group"
+                        default="1"
+                        label="TPL_FRONTEND_RUNLESS"
+                        description="TPL_FRONTEND_RUNLESS_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
+
                 <field
                         name="useanalytics"
                         type="list"
                         default="0"
                         label="TPL_FRONTEND_USEANALYTICS"
-                        description="TPL_FRONTEND_USEANALYTICS_DESC">
+                        description="TPL_FRONTEND_USEANALYTICS_DESC"
+                >
                     <option value="0">JNO</option>
                     <option value="1">TPL_FRONTEND_USEANALYTICS_GUA</option>
                     <option value="2">TPL_FRONTEND_USEANALYTICS_GTM</option>
@@ -919,8 +1013,8 @@
                         default=""
                         label="TPL_FRONTEND_ANALYTICS"
                         description="TPL_FRONTEND_ANALYTICS_DESC"
-                        showon="useanalytics:1,2,3,4,5"/>
-
+                        showon="useanalytics:1,2,3,4,5"
+                />
             </fieldset>
 		</fields>
 	</config>
