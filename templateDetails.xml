@@ -48,17 +48,12 @@
 		<position>bottom-b</position>
 		<position>bottom-c</position>
 		<position>bottom-d</position>
-		<position>footerblock1</position>
-		<position>footerblock2</position>
-		<position>footerblock3</position>
 		<position>footer</position>
 	</positions>
 
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.tpl_frontend.ini</language>
 		<language tag="en-GB">en-GB/en-GB.tpl_frontend.sys.ini</language>
-        <language tag="nl-NL">nl-NL/nl-NL.tpl_frontend.ini</language>
-        <language tag="nl-NL">nl-NL/nl-NL.tpl_frontend.sys.ini</language>
 	</languages>
 	
 	<config>
