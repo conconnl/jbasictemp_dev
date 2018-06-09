@@ -59,8 +59,12 @@ BasicTemplateHelper::localstorageFont();
         <nav class="navbar navbar-default navbar-main <?php echo $navcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
             <div class="<?php echo $navwidth; ?>">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#navbar-collapse" aria-expanded="false">
+                    <button type="button"
+                            class="navbar-toggle collapsed"
+                            data-toggle="collapse"
+                            data-target="#navbar-collapse"
+                            aria-expanded="false"
+                    >
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -90,8 +94,12 @@ BasicTemplateHelper::localstorageFont();
             <nav class="navbar navbar-default navbar-main <?php echo $navcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
                 <div class="<?php echo $navwidth; ?>">
                     <div class="navbar-header">
-                        <button type="button" class="offcanvas-toggle pull-right" data-toggle="offcanvas"
-                                data-target="#js-bootstrap-offcanvas" aria-expanded="false">
+                        <button type="button"
+                                class="offcanvas-toggle pull-<?php if ($menualign == 'right') :?>left<?php endif; ?><?php if ($menualign == 'left') :?>right<?php endif; ?>"
+                                data-toggle="offcanvas"
+                                data-target="#js-bootstrap-offcanvas"
+                                aria-expanded="false"
+                        >
                             <span class="navbar-toggle">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
@@ -110,10 +118,10 @@ BasicTemplateHelper::localstorageFont();
                         <jdoc:include type="modules" name="navbar" style="notitle"/>
                     </div>
 
-                    <!-- Mobile Navigation Collapse -->
-                    <div class="navbar-offcanvas navbar-offcanvas-touch" id="js-bootstrap-offcanvas">
+                    <!-- Mobile Navigation -->
+                    <div class="navbar-offcanvas navbar-offcanvas-touch navbar-offcanvas-<?php echo $menualign; ?>" id="js-bootstrap-offcanvas">
                         <div class="navbar-mobile">
-                            <jdoc:include type="modules" name="navbar" style="notitle"/>
+                            <jdoc:include type="modules" name="offcanvas" style="notitle"/>
                         </div>
                     </div>
                 </div>
