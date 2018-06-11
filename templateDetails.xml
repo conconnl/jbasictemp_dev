@@ -58,6 +58,9 @@
 	
 	<config>
 		<fields name="params">
+            <fieldset name="instructions">
+
+            </fieldset>
 			<fieldset name="TPL_FRONTEND_MODULES">
                 <field
                         name="basicparameters"
@@ -83,7 +86,7 @@
                 <field
                         name="homepagecomponent"
                         type="radio"
-                        class="btn-group"
+                        class="btn-group btn-group-yesno"
                         default="1"
                         label="TPL_FRONTEND_PARAMETER_BASIC_HOMEPAGECOMPONENT"
                         description="TPL_FRONTEND_PARAMETER_BASIC_HOMEPAGECOMPONENT_DESC"
@@ -95,7 +98,7 @@
                 <field
                         name="backtotopshow"
                         type="radio"
-                        class="btn-group"
+                        class="btn-group btn-group-yesno"
                         default="1"
                         label="TPL_FRONTEND_PARAMETER_BASIC_BACKTOTOPSHOW"
                         description="TPL_FRONTEND_PARAMETER_BASIC_BACKTOTOPSHOW_DESC"
@@ -140,12 +143,12 @@
 				<field
 						name="toolbarphone"
 						type="radio"
-						class="btn-group"
+						class="btn-group btn-group-yesno"
 						default=""
 						label="TPL_FRONTEND_PARAMETER_TOOLBAR_DISPLAYPHONE"
                 >
-					<option value="hidden-xs hidden-sm">JNO</option>
-					<option value="">JYES</option>
+                    <option value="">JYES</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
 				</field>
 
                 <field
@@ -195,13 +198,13 @@
 				<field
 						name="stickymenu"
 						type="radio"
-						class="btn-group"
+						class="btn-group btn-group-yesno"
 						default=""
 						label="TPL_FRONTEND_PARAMETER_NAVBAR_STICKY"
 						description="TPL_FRONTEND_PARAMETER_NAVBAR_STICKY_DESC"
                 >
 					<option value="1">JYES</option>
-					<option value="">JNO</option>
+					<option value="0">JNO</option>
 				</field>
 
 				<field
@@ -309,12 +312,12 @@
                 <field
                         name="breadcrumbsphone"
                         type="radio"
-                        class="btn-group"
+                        class="btn-group btn-group-yesno"
                         default=""
                         label="TPL_FRONTEND_PARAMETER_BREADCRUMBS_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">JNO</option>
                     <option value="">JYES</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
                 </field>
 
                 <field name="slideshowparameters"
@@ -364,11 +367,11 @@
                 <field
                         name="slideshowphone"
                         type="radio"
-                        class="btn-group"
+                        class="btn-group btn-group-yesno"
                         default=""
                         label="TPL_FRONTEND_PARAMETER_SLIDESHOW_DISPLAYPHONE">
-                    <option value="hidden-xs hidden-sm">JNO</option>
                     <option value="">JYES</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
                 </field>
 
                 <field
@@ -418,12 +421,12 @@
                 <field
                         name="topaphone"
                         type="radio"
-                        class="btn-group"
+                        class="btn-group btn-group-yesno"
                         default=""
                         label="TPL_FRONTEND_PARAMETER_TOPA_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">JNO</option>
                     <option value="">JYES</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
                 </field>
 
                 <field
@@ -472,12 +475,12 @@
                 <field
                         name="topbphone"
                         type="radio"
-                        class="btn-group"
+                        class="btn-group btn-group-yesno"
                         default=""
                         label="TPL_FRONTEND_PARAMETER_TOPB_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">JNO</option>
                     <option value="">JYES</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
                 </field>
 
                 <field
@@ -526,12 +529,12 @@
                 <field
                         name="topcphone"
                         type="radio"
-                        class="btn-group"
+                        class="btn-group btn-group-yesno"
                         default=""
                         label="TPL_FRONTEND_PARAMETER_TOPC_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">JNO</option>
                     <option value="">JYES</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
                 </field>
 
                 <field
@@ -580,12 +583,12 @@
                 <field
                         name="topdphone"
                         type="radio"
-                        class="btn-group"
+                        class="btn-group btn-group-yesno"
                         default=""
                         label="TPL_FRONTEND_PARAMETER_TOPD_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">JNO</option>
                     <option value="">JYES</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
                 </field>
 
                 <field name="mainbodyparameters"
@@ -707,12 +710,12 @@
                 <field
                         name="bottomaphone"
                         type="radio"
-                        class="btn-group"
+                        class="btn-group btn-group-yesno"
                         default=""
                         label="TPL_FRONTEND_PARAMETER_BOTTOMA_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">JNO</option>
                     <option value="">JYES</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
                 </field>
 
                 <field
@@ -761,12 +764,12 @@
                 <field
                         name="bottombphone"
                         type="radio"
-                        class="btn-group"
+                        class="btn-group btn-group-yesno"
                         default=""
                         label="TPL_FRONTEND_PARAMETER_BOTTOMB_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">JNO</option>
                     <option value="">JYES</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
                 </field>
 
                 <field
@@ -815,12 +818,12 @@
                 <field
                         name="bottomcphone"
                         type="radio"
-                        class="btn-group"
+                        class="btn-group btn-group-yesno"
                         default=""
                         label="TPL_FRONTEND_PARAMETER_BOTTOMC_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">JNO</option>
                     <option value="">JYES</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
                 </field>
 
                 <field
@@ -869,12 +872,12 @@
                 <field
                         name="bottomdphone"
                         type="radio"
-                        class="btn-group"
+                        class="btn-group btn-group-yesno"
                         default=""
                         label="TPL_FRONTEND_PARAMETER_BOTTOMD_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">JNO</option>
                     <option value="">JYES</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
                 </field>
 
                 <field
@@ -923,12 +926,12 @@
                 <field
                         name="footermenuphone"
                         type="radio"
-                        class="btn-group"
+                        class="btn-group btn-group-yesno"
                         default=""
                         label="TPL_FRONTEND_PARAMETER_FOOTER_DISPLAYPHONE"
                 >
-                    <option value="hidden-xs hidden-sm">JNO</option>
                     <option value="">JYES</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
                 </field>
 
                 <field
@@ -993,12 +996,12 @@
 				<field
                         name="runless"
                         type="radio"
-                        class="btn-group"
+                        class="btn-group btn-group-yesno"
                         default="1"
                         label="TPL_FRONTEND_RUNLESS"
                         description="TPL_FRONTEND_RUNLESS_DESC">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
 				</field>
 
                 <field
@@ -1021,7 +1024,7 @@
                         default=""
                         label="TPL_FRONTEND_ANALYTICS"
                         description="TPL_FRONTEND_ANALYTICS_DESC"
-                        showon="useanalytics:1,2,3,4,5"
+                        showon="useanalytics:1,2,3"
                 />
             </fieldset>
 		</fields>
