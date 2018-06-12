@@ -58,9 +58,6 @@
 	
 	<config>
 		<fields name="params">
-            <fieldset name="instructions">
-
-            </fieldset>
 			<fieldset name="TPL_FRONTEND_MODULES">
                 <field
                         name="basicparameters"
