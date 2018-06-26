@@ -120,7 +120,7 @@ BasicTemplateHelper::localstorageFont();
 
                     <!-- Mobile Navigation -->
                     <div class="navbar-offcanvas navbar-offcanvas-touch navbar-offcanvas-<?php echo $menualign; ?>" id="js-bootstrap-offcanvas">
-                        <div class="navbar-mobile">
+                        <div>
                             <jdoc:include type="modules" name="offcanvas" style="notitle"/>
                         </div>
                     </div>
