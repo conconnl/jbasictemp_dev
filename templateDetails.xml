@@ -52,8 +52,8 @@
 	</positions>
 
 	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.tpl_frontend.ini</language>
-		<language tag="en-GB">en-GB/en-GB.tpl_frontend.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_frontend_v2_j3.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_frontend_v2_j3.sys.ini</language>
 	</languages>
 	
 	<config>
