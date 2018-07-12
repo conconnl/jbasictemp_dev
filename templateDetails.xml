@@ -48,7 +48,7 @@
 		<position>bottom-b</position>
 		<position>bottom-c</position>
 		<position>bottom-d</position>
-		<position>footer</position>
+		<position>footer-menu</position>
 	</positions>
 
 	<languages folder="language">
