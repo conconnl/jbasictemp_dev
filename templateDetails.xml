@@ -373,34 +373,6 @@
                 </field>
 
                 <field
-                        name="leftwidth"
-                        type="list"
-                        default="4"
-                        label="TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_WIDTH"
-                        description="TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_WIDTH_DESC"
-                >
-                    <option value="2">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN2</option>
-                    <option value="3">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN3</option>
-                    <option value="4">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN4</option>
-                    <option value="5">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN5</option>
-                    <option value="6">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN6</option>
-                </field>
-
-                <field
-                        name="rightwidth"
-                        type="list"
-                        default="4"
-                        label="TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_WIDTH"
-                        description="TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_WIDTH_DESC"
-                >
-                    <option value="2">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN2</option>
-                    <option value="3">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN3</option>
-                    <option value="4">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN4</option>
-                    <option value="5">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN5</option>
-                    <option value="6">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN6</option>
-                </field>
-
-                <field
                         name="footerparameters" type="note" class="alert alert-success"
                         label="TPL_FRONTEND_NOTE_FOOTERPARAMETERS"
                         description="TPL_FRONTEND_NOTE_FOOTERPARAMETERS_DESC"
@@ -555,6 +527,34 @@
                 >
                     <option value="container">TPL_FRONTEND_PARAMETER_MAINBODY_WIDTH_CONTAINER</option>
                     <option value="container-fluid">TPL_FRONTEND_PARAMETER_MAINBODY_WIDTH_CONTAINER_FLUID</option>
+                </field>
+
+                <field
+                        name="leftwidth"
+                        type="list"
+                        default="4"
+                        label="TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_WIDTH"
+                        description="TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_WIDTH_DESC"
+                >
+                    <option value="2">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN2</option>
+                    <option value="3">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN3</option>
+                    <option value="4">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN4</option>
+                    <option value="5">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN5</option>
+                    <option value="6">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN6</option>
+                </field>
+
+                <field
+                        name="rightwidth"
+                        type="list"
+                        default="4"
+                        label="TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_WIDTH"
+                        description="TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_WIDTH_DESC"
+                >
+                    <option value="2">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN2</option>
+                    <option value="3">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN3</option>
+                    <option value="4">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN4</option>
+                    <option value="5">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN5</option>
+                    <option value="6">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN6</option>
                 </field>
 
                 <field
