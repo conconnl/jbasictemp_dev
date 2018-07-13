@@ -15,8 +15,9 @@ $config         = Factory::getConfig();
 $sitename       = $config->get('sitename');
 
 // Body / HTML / Container
-$containerstyle     = $this->params->get('containerstyle', '');
+$analytics 			= $this->params->get('analytics');
 $backtotopshow      = $this->params->get('backtotopshow', 1);
+$containerstyle     = $this->params->get('containerstyle', '');
 $homepagecomponent  = $this->params->get('homepagecomponent', 0);
 //Toolbar
 $toolbarcolor       = $this->params->get('toolbarcolor', '');
@@ -81,6 +82,16 @@ $bottomdcolor     	= $this->params->get('bottomdcolor', '');
 $bottomdpadding   	= $this->params->get('bottomdpadding', '');
 $bottomdwidth     	= $this->params->get('bottomdwidth', '');
 $bottomdphone     	= $this->params->get('bottomdphone', '');
+// Footer
+$footermenucolor    = $this->params->get('footermenucolor', '');
+$footermenupadding  = $this->params->get('footermenupadding', '');
+$footermenuwidth    = $this->params->get('footermenuwidth', '');
+$footermenuphone    = $this->params->get('footermenuphone', '');
+// Copyright
+$copyrightcolor    	= $this->params->get('copyrightcolor', '');
+$copyrightpadding  	= $this->params->get('copyrightpadding', '');
+$copyrightwidth    	= $this->params->get('copyrightwidth', '');
+$copyrightalign    	= $this->params->get('copyrightalign', '');
 
 // Template parameters specific configurations
 // Use chosen Logo, Site Title or sitename
