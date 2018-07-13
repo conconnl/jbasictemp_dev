@@ -58,7 +58,7 @@
 	
 	<config>
 		<fields name="params">
-			<fieldset name="TPL_FRONTEND_MODULES">
+            <fieldset name="TPL_FRONTEND_GENERAL">
                 <field
                         name="basicparameters"
                         type="note"
@@ -104,6 +104,45 @@
                     <option value="0">JNO</option>
                 </field>
 
+                <field
+                        name="logoparameters"
+                        type="note"
+                        class="alert alert-success"
+                        label="TPL_FRONTEND_NOTE_LOGOPARAMETERS"
+                        description="TPL_FRONTEND_NOTE_LOGOPARAMETERS_DESC"
+                />
+
+                <field
+                        name="logoFile"
+                        class=""
+                        type="media"
+                        default=""
+                        label="TPL_FRONTEND_PARAMETER_LOGO"
+                        description="TPL_FRONTEND_PARAMETER_LOGO_DESC"
+                />
+
+                <field
+                        name="logoposition"
+                        type="radio"
+                        class="btn-group"
+                        default="right"
+                        label="TPL_FRONTEND_PARAMETER_LOGO_POSITION"
+                        description="TPL_FRONTEND_PARAMETER_LOGO_POSITION_DESC"
+                >
+                    <option value="header">TPL_FRONTEND_PARAMETER_LOGO_POSITION_HEADER</option>
+                    <option value="menu">TPL_FRONTEND_PARAMETER_LOGO_POSITION_MENU</option>
+                </field>
+
+                <field
+                        name="sitetitle"
+                        type="text"
+                        default=""
+                        label="JGLOBAL_TITLE"
+                        description="JFIELD_ALT_PAGE_TITLE_LABEL"
+                        filter="string"
+                />
+            </fieldset>
+			<fieldset name="TPL_FRONTEND_MODULES">
 				<field
                         name="toolbarparameters"
                         type="note"
@@ -225,44 +264,6 @@
                 </field>
 
                 <field
-                        name="logoparameters"
-                        type="note"
-                        class="alert alert-success"
-                        label="TPL_FRONTEND_NOTE_LOGOPARAMETERS"
-                        description="TPL_FRONTEND_NOTE_LOGOPARAMETERS_DESC"
-                />
-
-                <field
-                        name="logoFile"
-                        class=""
-                        type="media"
-                        default=""
-                        label="TPL_FRONTEND_PARAMETER_LOGO"
-                        description="TPL_FRONTEND_PARAMETER_LOGO_DESC"
-                />
-
-                <field
-                        name="logoposition"
-                        type="radio"
-                        class="btn-group"
-                        default="right"
-                        label="TPL_FRONTEND_PARAMETER_LOGO_POSITION"
-                        description="TPL_FRONTEND_PARAMETER_LOGO_POSITION_DESC"
-                >
-                    <option value="header">TPL_FRONTEND_PARAMETER_LOGO_POSITION_HEADER</option>
-                    <option value="menu">TPL_FRONTEND_PARAMETER_LOGO_POSITION_MENU</option>
-                </field>
-
-                <field
-                        name="sitetitle"
-                        type="text"
-                        default=""
-                        label="JGLOBAL_TITLE"
-                        description="JFIELD_ALT_PAGE_TITLE_LABEL"
-                        filter="string"
-                />
-
-                <field
                         name="breadcrumbsparameters"
                         type="note"
                         class="alert alert-success"
@@ -372,12 +373,198 @@
                 </field>
 
                 <field
+                        name="leftwidth"
+                        type="list"
+                        default="4"
+                        label="TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_WIDTH"
+                        description="TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_WIDTH_DESC"
+                >
+                    <option value="2">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN2</option>
+                    <option value="3">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN3</option>
+                    <option value="4">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN4</option>
+                    <option value="5">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN5</option>
+                    <option value="6">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN6</option>
+                </field>
+
+                <field
+                        name="rightwidth"
+                        type="list"
+                        default="4"
+                        label="TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_WIDTH"
+                        description="TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_WIDTH_DESC"
+                >
+                    <option value="2">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN2</option>
+                    <option value="3">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN3</option>
+                    <option value="4">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN4</option>
+                    <option value="5">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN5</option>
+                    <option value="6">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN6</option>
+                </field>
+
+                <field
+                        name="footerparameters" type="note" class="alert alert-success"
+                        label="TPL_FRONTEND_NOTE_FOOTERPARAMETERS"
+                        description="TPL_FRONTEND_NOTE_FOOTERPARAMETERS_DESC"
+                />
+
+                <field
+                        name="footermenucolor"
+                        type="list"
+                        default=""
+                        label="TPL_FRONTEND_PARAMETER_FOOTER_COLOR"
+                >
+                    <option value="">TPL_FRONTEND_PARAMETER_FOOTER_NONE</option>
+                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR1</option>
+                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR2</option>
+                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR3</option>
+                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR4</option>
+                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR5</option>
+                </field>
+
+                <field
+                        name="footermenupadding"
+                        type="radio"
+                        class="btn-group"
+                        default="padding-normal"
+                        label="TPL_FRONTEND_PARAMETER_FOOTER_PADDING"
+                >
+                    <option value="padding-none">TPL_FRONTEND_PARAMETER_FOOTER_PADDING_NONE</option>
+                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_FOOTER_PADDING_NORMAL</option>
+                    <option value="padding-large">TPL_FRONTEND_PARAMETER_FOOTER_PADDING_LARGE</option>
+                </field>
+
+                <field
+                        name="footermenuwidth"
+                        type="radio"
+                        class="btn-group"
+                        default="container"
+                        label="TPL_FRONTEND_PARAMETER_FOOTER_WIDTH"
+                >
+                    <option value="container">TPL_FRONTEND_PARAMETER_FOOTER_WIDTH_CONTAINER</option>
+                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_FOOTER_WIDTH_CONTAINER_FLUID</option>
+                </field>
+
+                <field
+                        name="footermenuphone"
+                        type="radio"
+                        class="btn-group btn-group-yesno"
+                        default=""
+                        label="TPL_FRONTEND_PARAMETER_FOOTER_DISPLAYPHONE"
+                >
+                    <option value="">JYES</option>
+                    <option value="hidden-xs hidden-sm">JNO</option>
+                </field>
+
+                <field
+                        name="copyrightparameters"
+                        type="note"
+                        class="alert alert-success"
+                        label="TPL_FRONTEND_NOTE_COPYRIGHTPARAMETERS"
+                        description="TPL_FRONTEND_NOTE_COPYRIGHTPARAMETERS_DESC"
+                />
+
+                <field
+                        name="copyrightcolor"
+                        type="list"
+                        default=""
+                        label="TPL_FRONTEND_PARAMETER_COPYRIGHT_COLOR"
+                >
+                    <option value="">TPL_FRONTEND_PARAMETER_COPYRIGHT_NONE</option>
+                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_COPYRIGHT_BGCOLOR1</option>
+                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_COPYRIGHT_BGCOLOR2</option>
+                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_COPYRIGHT_BGCOLOR3</option>
+                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_COPYRIGHT_BGCOLOR4</option>
+                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_COPYRIGHT_BGCOLOR5</option>
+                </field>
+
+                <field
+                        name="copyrightpadding"
+                        type="radio"
+                        class="btn-group"
+                        default="padding-normal"
+                        label="TPL_FRONTEND_PARAMETER_COPYRIGHT_PADDING"
+                >
+                    <option value="padding-none">TPL_FRONTEND_PARAMETER_COPYRIGHT_PADDING_NONE</option>
+                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_COPYRIGHT_PADDING_NORMAL</option>
+                    <option value="padding-large">TPL_FRONTEND_PARAMETER_COPYRIGHT_PADDING_LARGE</option>
+                </field>
+
+                <field
+                        name="copyrightwidth"
+                        type="radio"
+                        class="btn-group"
+                        default="container"
+                        label="TPL_FRONTEND_PARAMETER_COPYRIGHT_WIDTH"
+                >
+                    <option value="container">TPL_FRONTEND_PARAMETER_COPYRIGHT_WIDTH_CONTAINER</option>
+                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_COPYRIGHT_WIDTH_CONTAINER_FLUID</option>
+                </field>
+
+                <field
+                        name="copyrightalign"
+                        type="radio"
+                        class="btn-group"
+                        default="center"
+                        label="Copyright Align"
+                >
+                    <option value="left">TPL_FRONTEND_PARAMETER_COPYRIGHT_ALIGN_LEFT</option>
+                    <option value="center">TPL_FRONTEND_PARAMETER_COPYRIGHT_ALIGN_CENTER</option>
+                    <option value="right">TPL_FRONTEND_PARAMETER_COPYRIGHT_ALIGN_RIGHT</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="TPL_FRONTEND_POSITIONS">
+                <field name="mainbodyparameters"
+                       type="note"
+                       class="alert alert-success"
+                       label="TPL_FRONTEND_NOTE_MAINBODYPARAMETERS"
+                       description="TPL_FRONTEND_NOTE_MAINBODYPARAMETERS_DESC"
+                />
+
+                <field
+                        name="mainbodycolor"
+                        type="list"
+                        default=""
+                        label="TPL_FRONTEND_PARAMETER_MAINBODY_COLOR"
+                >
+                    <option value="">TPL_FRONTEND_PARAMETER_MAINBODY_NONE</option>
+                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR1</option>
+                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR2</option>
+                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR3</option>
+                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR4</option>
+                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR5</option>
+                </field>
+
+                <field
+                        name="mainbodypadding"
+                        type="radio"
+                        class="btn-group"
+                        default="padding-normal"
+                        label="TPL_FRONTEND_PARAMETER_MAINBODY_PADDING"
+                >
+                    <option value="padding-none">TPL_FRONTEND_PARAMETER_MAINBODY_PADDING_NONE</option>
+                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_MAINBODY_PADDING_NORMAL</option>
+                    <option value="padding-large">TPL_FRONTEND_PARAMETER_MAINBODY_PADDING_LARGE</option>
+                </field>
+
+                <field
+                        name="mainbodywidth"
+                        type="radio"
+                        class="btn-group"
+                        default="container"
+                        label="TPL_FRONTEND_PARAMETER_MAINBODY_WIDTH"
+                >
+                    <option value="container">TPL_FRONTEND_PARAMETER_MAINBODY_WIDTH_CONTAINER</option>
+                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_MAINBODY_WIDTH_CONTAINER_FLUID</option>
+                </field>
+
+                <field
                         name="topparameters"
                         type="note"
                         class="alert alert-success"
                         label="TPL_FRONTEND_NOTE_TOPPARAMETERS"
                         description="TPL_FRONTEND_NOTE_TOPPARAMETERS_DESC"
                 />
+
                 <field
                         name="topacolor"
                         type="list"
@@ -586,78 +773,6 @@
                 >
                     <option value="">JYES</option>
                     <option value="hidden-xs hidden-sm">JNO</option>
-                </field>
-
-                <field name="mainbodyparameters"
-                       type="note"
-                       class="alert alert-success"
-                       label="TPL_FRONTEND_NOTE_MAINBODYPARAMETERS"
-                       description="TPL_FRONTEND_NOTE_MAINBODYPARAMETERS_DESC"
-                />
-
-                <field
-                        name="mainbodycolor"
-                        type="list"
-                        default=""
-                        label="TPL_FRONTEND_PARAMETER_MAINBODY_COLOR"
-                >
-                    <option value="">TPL_FRONTEND_PARAMETER_MAINBODY_NONE</option>
-                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR1</option>
-                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR2</option>
-                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR3</option>
-                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR4</option>
-                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR5</option>
-                </field>
-
-                <field
-                        name="mainbodypadding"
-                        type="radio"
-                        class="btn-group"
-                        default="padding-normal"
-                        label="TPL_FRONTEND_PARAMETER_MAINBODY_PADDING"
-                >
-                    <option value="padding-none">TPL_FRONTEND_PARAMETER_MAINBODY_PADDING_NONE</option>
-                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_MAINBODY_PADDING_NORMAL</option>
-                    <option value="padding-large">TPL_FRONTEND_PARAMETER_MAINBODY_PADDING_LARGE</option>
-                </field>
-
-                <field
-                        name="mainbodywidth"
-                        type="radio"
-                        class="btn-group"
-                        default="container"
-                        label="TPL_FRONTEND_PARAMETER_MAINBODY_WIDTH"
-                >
-                    <option value="container">TPL_FRONTEND_PARAMETER_MAINBODY_WIDTH_CONTAINER</option>
-                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_MAINBODY_WIDTH_CONTAINER_FLUID</option>
-                </field>
-
-                <field
-                        name="leftwidth"
-                        type="list"
-                        default="4"
-                        label="TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_WIDTH"
-                        description="TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_WIDTH_DESC"
-                >
-                    <option value="2">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN2</option>
-                    <option value="3">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN3</option>
-                    <option value="4">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN4</option>
-                    <option value="5">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN5</option>
-                    <option value="6">TPL_FRONTEND_PARAMETER_SIDEBAR_LEFT_SPAN6</option>
-                </field>
-
-                <field
-                        name="rightwidth"
-                        type="list"
-                        default="4"
-                        label="TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_WIDTH"
-                        description="TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_WIDTH_DESC"
-                >
-                    <option value="2">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN2</option>
-                    <option value="3">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN3</option>
-                    <option value="4">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN4</option>
-                    <option value="5">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN5</option>
-                    <option value="6">TPL_FRONTEND_PARAMETER_SIDEBAR_RIGHT_SPAN6</option>
                 </field>
 
                 <field name="bottomparameters"
@@ -877,116 +992,6 @@
                     <option value="hidden-xs hidden-sm">JNO</option>
                 </field>
 
-                <field
-                        name="footerparameters" type="note" class="alert alert-success"
-                        label="TPL_FRONTEND_NOTE_FOOTERPARAMETERS"
-                        description="TPL_FRONTEND_NOTE_FOOTERPARAMETERS_DESC"
-                />
-
-                <field
-                        name="footermenucolor"
-                        type="list"
-                        default=""
-                        label="TPL_FRONTEND_PARAMETER_FOOTER_COLOR"
-                >
-                    <option value="">TPL_FRONTEND_PARAMETER_FOOTER_NONE</option>
-                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR1</option>
-                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR2</option>
-                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR3</option>
-                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR4</option>
-                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR5</option>
-                </field>
-
-                <field
-                        name="footermenupadding"
-                        type="radio"
-                        class="btn-group"
-                        default="padding-normal"
-                        label="TPL_FRONTEND_PARAMETER_FOOTER_PADDING"
-                >
-                    <option value="padding-none">TPL_FRONTEND_PARAMETER_FOOTER_PADDING_NONE</option>
-                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_FOOTER_PADDING_NORMAL</option>
-                    <option value="padding-large">TPL_FRONTEND_PARAMETER_FOOTER_PADDING_LARGE</option>
-                </field>
-
-                <field
-                        name="footermenuwidth"
-                        type="radio"
-                        class="btn-group"
-                        default="container"
-                        label="TPL_FRONTEND_PARAMETER_FOOTER_WIDTH"
-                >
-                    <option value="container">TPL_FRONTEND_PARAMETER_FOOTER_WIDTH_CONTAINER</option>
-                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_FOOTER_WIDTH_CONTAINER_FLUID</option>
-                </field>
-
-                <field
-                        name="footermenuphone"
-                        type="radio"
-                        class="btn-group btn-group-yesno"
-                        default=""
-                        label="TPL_FRONTEND_PARAMETER_FOOTER_DISPLAYPHONE"
-                >
-                    <option value="">JYES</option>
-                    <option value="hidden-xs hidden-sm">JNO</option>
-                </field>
-
-                <field
-                        name="copyrightparameters"
-                        type="note"
-                        class="alert alert-success"
-                        label="TPL_FRONTEND_NOTE_COPYRIGHTPARAMETERS"
-                        description="TPL_FRONTEND_NOTE_COPYRIGHTPARAMETERS_DESC"
-                />
-
-                <field
-                        name="copyrightcolor"
-                        type="list"
-                        default=""
-                        label="TPL_FRONTEND_PARAMETER_COPYRIGHT_COLOR"
-                >
-                    <option value="">TPL_FRONTEND_PARAMETER_COPYRIGHT_NONE</option>
-                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_COPYRIGHT_BGCOLOR1</option>
-                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_COPYRIGHT_BGCOLOR2</option>
-                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_COPYRIGHT_BGCOLOR3</option>
-                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_COPYRIGHT_BGCOLOR4</option>
-                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_COPYRIGHT_BGCOLOR5</option>
-                </field>
-
-                <field
-                        name="copyrightpadding"
-                        type="radio"
-                        class="btn-group"
-                        default="padding-normal"
-                        label="TPL_FRONTEND_PARAMETER_COPYRIGHT_PADDING"
-                >
-                    <option value="padding-none">TPL_FRONTEND_PARAMETER_COPYRIGHT_PADDING_NONE</option>
-                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_COPYRIGHT_PADDING_NORMAL</option>
-                    <option value="padding-large">TPL_FRONTEND_PARAMETER_COPYRIGHT_PADDING_LARGE</option>
-                </field>
-
-                <field
-                        name="copyrightwidth"
-                        type="radio"
-                        class="btn-group"
-                        default="container"
-                        label="TPL_FRONTEND_PARAMETER_COPYRIGHT_WIDTH"
-                >
-                    <option value="container">TPL_FRONTEND_PARAMETER_COPYRIGHT_WIDTH_CONTAINER</option>
-                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_COPYRIGHT_WIDTH_CONTAINER_FLUID</option>
-                </field>
-
-                <field
-                        name="copyrightalign"
-                        type="radio"
-                        class="btn-group"
-                        default="center"
-                        label="Copyright Align"
-                >
-                    <option value="left">TPL_FRONTEND_PARAMETER_COPYRIGHT_ALIGN_LEFT</option>
-                    <option value="center">TPL_FRONTEND_PARAMETER_COPYRIGHT_ALIGN_CENTER</option>
-                    <option value="right">TPL_FRONTEND_PARAMETER_COPYRIGHT_ALIGN_RIGHT</option>
-                </field>
             </fieldset>
 
 			<fieldset name="advanced">
