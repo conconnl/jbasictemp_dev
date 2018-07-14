@@ -50,7 +50,7 @@ class BasicTemplateHelper
     {
         return Factory::getApplication()->getTemplate();
     }
-
+    
     /**
     * Method to manually override the META-generator
     * @since BasicTemplate 1.0
@@ -244,14 +244,16 @@ class BasicTemplateHelper
     static public function getBodySuffix()
     {
         $classes   = array();
+        $classes[] = self::getLanguage();
+        $classes[] = 'parent-' . self::getParent();
         $classes[] = 'option-' . self::getPageOption();
         $classes[] = 'view-' . self::getPageView();
         $classes[] = self::getPageLayout() ? 'layout-' . self::getPageLayout() : 'no-layout';
         $classes[] = self::getPageTask() ? 'task-' . self::getPageTask() : 'no-task';
         $classes[] = 'itemid-' . self::getItemId();
-        $classes[] = self::getPageClass();
         $classes[] = self::isHome() ? 'path-home' : 'path-' . implode('-', self::getPath('array'));
-        $classes[] = 'home-' . (int) self::isHome();
+        $classes[] = self::isMember() ? 'guest' : 'member';
+		$classes[] = self::getPageClass();
 
         return implode(' ', $classes);
     }
