@@ -40,7 +40,7 @@ BasicTemplateHelper::localstorageFont();
 
 	<?php if (($this->countModules('toolbar-l')) | ($this->countModules('toolbar-r'))) : ?>
         <!-- Toolbar -->
-        <div id="toolbar" class="toolbar <?php echo $toolbarcolor. " " .$toolbarphone; ?>">
+        <div id="toolbar" class="toolbar <?php echo $toolbarcolor. " " .$toolbarfontcolor. " " .$toolbarphone; ?>">
             <div class="<?php echo $toolbarcontainerstyle; ?>">
                 <div class="toolbar-l">
                     <jdoc:include type="modules" name="toolbar-l" style="standard" />
@@ -56,7 +56,7 @@ BasicTemplateHelper::localstorageFont();
 	<?php if ($this->countModules('navbar')) : ?>
     <div class="nav-wrapper">
 	    <?php if ($navbarmobile == 'collapse') :?>
-        <nav id="navbar" class="navbar navbar-default navbar-main <?php echo $navcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
+        <nav id="navbar" class="navbar navbar-default navbar-main <?php echo $navcolor. " " .$navfontcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
             <div class="<?php echo $navwidth; ?>">
                 <div class="navbar-header">
                     <button type="button"
@@ -91,7 +91,7 @@ BasicTemplateHelper::localstorageFont();
         </nav>
 	    <?php endif; ?>
 	    <?php if ($navbarmobile == 'offcanvas') :?>
-            <nav class="navbar navbar-default navbar-main <?php echo $navcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
+            <nav class="navbar navbar-default navbar-main <?php echo $navcolor. " " .$navfontcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
                 <div class="<?php echo $navwidth; ?>">
                     <div class="navbar-header">
                         <button type="button"
@@ -135,7 +135,7 @@ BasicTemplateHelper::localstorageFont();
 
 		<?php if ($this->countModules('slideshow')): ?>
             <!-- Slideshow -->
-            <div id="slideshow" class="slideshow text-center <?php echo $slideshowcolor. " " .$slideshowpadding. " " .$slideshowphone; ?> clearfix">
+            <div id="slideshow" class="slideshow text-center <?php echo $slideshowcolor. " " .$slideshowfontcolor. " " .$slideshowpadding. " " .$slideshowphone; ?> clearfix">
                 <div class="<?php echo $slideshowwidth; ?>">
                     <jdoc:include type="modules" name="slideshow" style="standard" />
                 </div>
@@ -144,7 +144,7 @@ BasicTemplateHelper::localstorageFont();
 
 		<?php if ($this->countModules('breadcrumbs')): ?>
             <!-- Breadcrumbs -->
-            <div id="breadcrumbs" class="breadcrumbs <?php echo $breadcrumbscolor. " " .$breadcrumbspadding. " " .$breadcrumbsphone; ?>clearfix">
+            <div id="breadcrumbs" class="breadcrumbs <?php echo $breadcrumbscolor. " " .$breadcrumbsfontcolor. " " .$breadcrumbspadding. " " .$breadcrumbsphone; ?>clearfix">
                 <div class="<?php echo $breadcrumbswidth; ?>">
                     <jdoc:include type="modules" name="breadcrumbs" style="standard"/>
                 </div>
@@ -153,7 +153,7 @@ BasicTemplateHelper::localstorageFont();
 
 		<?php if ($this->countModules('top-a')): ?>
             <!-- Top-A -->
-            <div id="top-a" class="top-a <?php echo $topacolor. " " .$topapadding. " " .$topaphone; ?> clearfix">
+            <div id="top-a" class="top-a <?php echo $topacolor. " " .$topafontcolor. " " .$topapadding. " " .$topaphone; ?> clearfix">
                 <div class="<?php echo $topawidth; ?>">
                     <jdoc:include type="modules" name="top-a" style="standard" />
                 </div>
@@ -162,7 +162,7 @@ BasicTemplateHelper::localstorageFont();
 
 		<?php if ($this->countModules('top-b')): ?>
             <!-- Top-B -->
-            <div id="top-b" class="top-b <?php echo $topbcolor. " " .$topbpadding. " " .$topbphone; ?> clearfix">
+            <div id="top-b" class="top-b <?php echo $topbcolor. " " .$topbfontcolor. " " .$topbpadding. " " .$topbphone; ?> clearfix">
                 <div class="<?php echo $topbwidth; ?>">
                     <jdoc:include type="modules" name="top-b" style="standard" />
                 </div>
@@ -171,7 +171,7 @@ BasicTemplateHelper::localstorageFont();
 
 		<?php if ($this->countModules('top-c')): ?>
             <!-- Top-C -->
-            <div id="top-c" class="top-c <?php echo $topccolor. " " .$topcpadding. " " .$topcphone; ?> clearfix">
+            <div id="top-c" class="top-c <?php echo $topccolor. " " .$topcfontcolor. " " .$topcpadding. " " .$topcphone; ?> clearfix">
                 <div class="<?php echo $topcwidth; ?>">
                     <jdoc:include type="modules" name="top-c" style="standard" />
                 </div>
@@ -180,14 +180,14 @@ BasicTemplateHelper::localstorageFont();
 
 		<?php if ($this->countModules('top-d')): ?>
             <!-- Top-D -->
-            <div id="top-d" class="top-d <?php echo $topdcolor. " " .$topdpadding. " " .$topdphone; ?> clearfix">
+            <div id="top-d" class="top-d <?php echo $topdcolor. " " .$topdfontcolor. " " .$topdpadding. " " .$topdphone; ?> clearfix">
                 <div class="<?php echo $topdwidth; ?>">
                     <jdoc:include type="modules" name="top-d" style="standard" />
                 </div>
             </div>
 		<?php endif; ?>
 
-        <div id="mainbody" class="mainbody <?php echo $mainbodycolor. " " .$mainbodypadding; ?> clearfix">
+        <div id="mainbody" class="mainbody <?php echo $mainbodycolor. " " .$mainbodyfontcolor. " " .$mainbodypadding; ?> clearfix">
             <div class="<?php echo $mainbodywidth; ?>">
                 <div class="row">
 
@@ -251,7 +251,7 @@ BasicTemplateHelper::localstorageFont();
 
 		<?php if ($this->countModules('bottom-a')): ?>
             <!-- Bottom-A -->
-            <div id="bottom-a" class="bottom-a <?php echo $bottomacolor. " " .$bottomapadding. " " .$bottomaphone; ?> clearfix">
+            <div id="bottom-a" class="bottom-a <?php echo $bottomacolor. " " .$bottomafontcolor. " " .$bottomapadding. " " .$bottomaphone; ?> clearfix">
                 <div class="<?php echo $bottomawidth; ?>">
                     <jdoc:include type="modules" name="bottom-a" style="standard" />
                 </div>
@@ -260,7 +260,7 @@ BasicTemplateHelper::localstorageFont();
 
 		<?php if ($this->countModules('bottom-b')): ?>
             <!-- Bottom-B -->
-            <div id="bottom-b" class="bottom-b <?php echo $bottombcolor. " " .$bottombpadding. " " .$bottombphone; ?> clearfix">
+            <div id="bottom-b" class="bottom-b <?php echo $bottombcolor. " " .$bottombfontcolor. " " .$bottombpadding. " " .$bottombphone; ?> clearfix">
                 <div class="<?php echo $bottombwidth; ?>">
                     <jdoc:include type="modules" name="bottom-b" style="standard" />
                 </div>
@@ -269,7 +269,7 @@ BasicTemplateHelper::localstorageFont();
 
 		<?php if ($this->countModules('bottom-c')): ?>
             <!-- Bottom-C -->
-            <div id="bottom-c" class="bottom-c <?php echo $bottomccolor. " " .$bottomcpadding. " " .$bottomcphone; ?> clearfix">
+            <div id="bottom-c" class="bottom-c <?php echo $bottomccolor. " " .$bottomcfontcolor. " " .$bottomcpadding. " " .$bottomcphone; ?> clearfix">
                 <div class="<?php echo $bottomcwidth; ?>">
                     <jdoc:include type="modules" name="bottom-c" style="standard" />
                 </div>
@@ -278,7 +278,7 @@ BasicTemplateHelper::localstorageFont();
 
 		<?php if ($this->countModules('bottom-d')): ?>
             <!-- Bottom-D -->
-            <div id="bottom-d" class="bottom-d <?php echo $bottomdcolor. " " .$bottomdpadding. " " .$bottomdphone; ?> clearfix">
+            <div id="bottom-d" class="bottom-d <?php echo $bottomdcolor. " " .$bottomdfontcolor. " " .$bottomdpadding. " " .$bottomdphone; ?> clearfix">
                 <div class="<?php echo $bottomdwidth; ?>">
                     <jdoc:include type="modules" name="bottom-d" style="standard" />
                 </div>
@@ -291,7 +291,7 @@ BasicTemplateHelper::localstorageFont();
 
 		<?php if ($this->countModules('footer-menu')): ?>
             <!-- Footer Menu -->
-            <div id="footer-menu" class="footer-menu <?php echo $footermenucolor. " " .$footermenupadding. " " .$footermenuphone; ?> clearfix">
+            <div id="footer-menu" class="footer-menu <?php echo $footermenucolor. " " .$footermenufontcolor. " " .$footermenupadding. " " .$footermenuphone; ?> clearfix">
                 <div class="<?php echo $footermenuwidth; ?>">
                     <jdoc:include type="modules" name="footer-menu" style="standard" />
                 </div>
@@ -299,7 +299,7 @@ BasicTemplateHelper::localstorageFont();
 		<?php endif; ?>
 
         <!-- Copyright -->
-        <div id="copyright" class="copyright <?php echo $copyrightcolor. " " .$copyrightpadding; ?> clearfix">
+        <div id="copyright" class="copyright <?php echo $copyrightcolor. " " .$copyrightfontcolor. " " .$copyrightpadding; ?> clearfix">
             <div class="<?php echo $copyrightwidth; ?> text-<?php echo $copyrightalign; ?>">
                 <jdoc:include type="modules" name="copyright" style="standard" />
                 <jdoc:include type="modules" name="cookies" style="standard" />

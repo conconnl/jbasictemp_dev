@@ -165,6 +165,17 @@
 					<option value="bg-color5">TPL_FRONTEND_PARAMETER_TOOLBAR_BGCOLOR5</option>
 				</field>
 
+                <field
+                        name="toolbarfontcolor"
+                        type="radio"
+                        class="btn-group"
+                        default="fontcolor-dark"
+                        label="TPL_FRONTEND_PARAMETER_TOOLBAR_FONTCOLOR"
+                >
+                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_TOOLBAR_FONTCOLOR_DARK</option>
+                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_TOOLBAR_FONTCOLOR_LIGHT</option>
+                </field>
+
 				<field
 						name="toolbarcontainerstyle"
 						type="radio"
@@ -209,6 +220,17 @@
 					<option value="bg-color5">TPL_FRONTEND_PARAMETER_NAVBAR_BGCOLOR5</option>
 				</field>
 
+                <field
+                        name="navfontcolor"
+                        type="radio"
+                        class="btn-group"
+                        default="fontcolor-dark"
+                        label="TPL_FRONTEND_PARAMETER_NAVBAR_FONTCOLOR"
+                >
+                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_NAVBAR_FONTCOLOR_DARK</option>
+                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_NAVBAR_FONTCOLOR_LIGHT</option>
+                </field>
+
 				<field
 						name="navwidth"
 						type="radio"
@@ -235,7 +257,7 @@
 						name="stickymenu"
 						type="radio"
 						class="btn-group btn-group-yesno"
-						default=""
+						default="0"
 						label="TPL_FRONTEND_PARAMETER_NAVBAR_STICKY"
 						description="TPL_FRONTEND_PARAMETER_NAVBAR_STICKY_DESC"
                 >
@@ -282,6 +304,17 @@
                     <option value="bg-color3">TPL_FRONTEND_PARAMETER_BREADCRUMBS_BGCOLOR3</option>
                     <option value="bg-color4">TPL_FRONTEND_PARAMETER_BREADCRUMBS_BGCOLOR4</option>
                     <option value="bg-color5">TPL_FRONTEND_PARAMETER_BREADCRUMBS_BGCOLOR5</option>
+                </field>
+
+                <field
+                        name="breadcrumbsfontcolor"
+                        type="radio"
+                        class="btn-group"
+                        default="fontcolor-dark"
+                        label="TPL_FRONTEND_PARAMETER_BREADCRUMBS_FONTCOLOR"
+                >
+                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_BREADCRUMBS_FONTCOLOR_DARK</option>
+                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_BREADCRUMBS_FONTCOLOR_LIGHT</option>
                 </field>
 
                 <field
@@ -340,6 +373,17 @@
                 </field>
 
                 <field
+                        name="slideshowfontcolor"
+                        type="radio"
+                        class="btn-group"
+                        default="fontcolor-dark"
+                        label="TPL_FRONTEND_PARAMETER_SLIDESHOW_FONTCOLOR"
+                >
+                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_SLIDESHOW_FONTCOLOR_DARK</option>
+                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_SLIDESHOW_FONTCOLOR_LIGHT</option>
+                </field>
+
+                <field
                         name="slideshowpadding"
                         type="radio"
                         class="btn-group"
@@ -390,6 +434,17 @@
                     <option value="bg-color3">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR3</option>
                     <option value="bg-color4">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR4</option>
                     <option value="bg-color5">TPL_FRONTEND_PARAMETER_FOOTER_BGCOLOR5</option>
+                </field>
+
+                <field
+                        name="footermenufontcolor"
+                        type="radio"
+                        class="btn-group"
+                        default="fontcolor-dark"
+                        label="TPL_FRONTEND_PARAMETER_FOOTER_FONTCOLOR"
+                >
+                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_FOOTER_FONTCOLOR_DARK</option>
+                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_FOOTER_FONTCOLOR_LIGHT</option>
                 </field>
 
                 <field
@@ -449,6 +504,17 @@
                 </field>
 
                 <field
+                        name="copyrightfontcolor"
+                        type="radio"
+                        class="btn-group"
+                        default="fontcolor-dark"
+                        label="TPL_FRONTEND_PARAMETER_COPYRIGHT_FONTCOLOR"
+                >
+                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_COPYRIGHT_FONTCOLOR_DARK</option>
+                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_COPYRIGHT_FONTCOLOR_LIGHT</option>
+                </field>
+
+                <field
                         name="copyrightpadding"
                         type="radio"
                         class="btn-group"
@@ -504,6 +570,17 @@
                     <option value="bg-color3">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR3</option>
                     <option value="bg-color4">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR4</option>
                     <option value="bg-color5">TPL_FRONTEND_PARAMETER_MAINBODY_BGCOLOR5</option>
+                </field>
+
+                <field
+                        name="mainbodyfontcolor"
+                        type="radio"
+                        class="btn-group"
+                        default="fontcolor-dark"
+                        label="TPL_FRONTEND_PARAMETER_MAINBODY_FONTCOLOR"
+                >
+                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_MAINBODY_FONTCOLOR_DARK</option>
+                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_MAINBODY_FONTCOLOR_LIGHT</option>
                 </field>
 
                 <field
@@ -580,6 +657,17 @@
                 </field>
 
                 <field
+                        name="topafontcolor"
+                        type="radio"
+                        class="btn-group"
+                        default="fontcolor-dark"
+                        label="TPL_FRONTEND_PARAMETER_TOPA_FONTCOLOR"
+                >
+                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_TOPA_FONTCOLOR_DARK</option>
+                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_TOPA_FONTCOLOR_LIGHT</option>
+                </field>
+
+                <field
                         name="topapadding"
                         type="radio"
                         class="btn-group"
@@ -631,6 +719,17 @@
                     <option value="bg-color3">TPL_FRONTEND_PARAMETER_TOPB_BGCOLOR3</option>
                     <option value="bg-color4">TPL_FRONTEND_PARAMETER_TOPB_BGCOLOR4</option>
                     <option value="bg-color5">TPL_FRONTEND_PARAMETER_TOPB_BGCOLOR5</option>
+                </field>
+
+                <field
+                        name="topbfontcolor"
+                        type="radio"
+                        class="btn-group"
+                        default="fontcolor-dark"
+                        label="TPL_FRONTEND_PARAMETER_TOPB_FONTCOLOR"
+                >
+                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_TOPB_FONTCOLOR_DARK</option>
+                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_TOPB_FONTCOLOR_LIGHT</option>
                 </field>
 
                 <field
@@ -688,6 +787,17 @@
                 </field>
 
                 <field
+                        name="topcfontcolor"
+                        type="radio"
+                        class="btn-group"
+                        default="fontcolor-dark"
+                        label="TPL_FRONTEND_PARAMETER_TOPC_FONTCOLOR"
+                >
+                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_TOPC_FONTCOLOR_DARK</option>
+                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_TOPC_FONTCOLOR_LIGHT</option>
+                </field>
+
+                <field
                         name="topcpadding"
                         type="radio"
                         class="btn-group"
@@ -739,6 +849,17 @@
                     <option value="bg-color3">TPL_FRONTEND_PARAMETER_TOPD_BGCOLOR3</option>
                     <option value="bg-color4">TPL_FRONTEND_PARAMETER_TOPD_BGCOLOR4</option>
                     <option value="bg-color5">TPL_FRONTEND_PARAMETER_TOPD_BGCOLOR5</option>
+                </field>
+
+                <field
+                        name="topdfontcolor"
+                        type="radio"
+                        class="btn-group"
+                        default="fontcolor-dark"
+                        label="TPL_FRONTEND_PARAMETER_TOPD_FONTCOLOR"
+                >
+                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_TOPD_FONTCOLOR_DARK</option>
+                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_TOPD_FONTCOLOR_LIGHT</option>
                 </field>
 
                 <field
@@ -797,6 +918,17 @@
                 </field>
 
                 <field
+                        name="bottomafontcolor"
+                        type="radio"
+                        class="btn-group"
+                        default="fontcolor-dark"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMA_FONTCOLOR"
+                >
+                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_BOTTOMA_FONTCOLOR_DARK</option>
+                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_BOTTOMA_FONTCOLOR_LIGHT</option>
+                </field>
+
+                <field
                         name="bottomapadding"
                         type="radio"
                         class="btn-group"
@@ -848,6 +980,17 @@
                     <option value="bg-color3">TPL_FRONTEND_PARAMETER_BOTTOMB_BGCOLOR3</option>
                     <option value="bg-color4">TPL_FRONTEND_PARAMETER_BOTTOMB_BGCOLOR4</option>
                     <option value="bg-color5">TPL_FRONTEND_PARAMETER_BOTTOMB_BGCOLOR5</option>
+                </field>
+
+                <field
+                        name="bottombfontcolor"
+                        type="radio"
+                        class="btn-group"
+                        default="fontcolor-dark"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMB_FONTCOLOR"
+                >
+                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_BOTTOMB_FONTCOLOR_DARK</option>
+                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_BOTTOMB_FONTCOLOR_LIGHT</option>
                 </field>
 
                 <field
@@ -905,6 +1048,17 @@
                 </field>
 
                 <field
+                        name="bottomcfontcolor"
+                        type="radio"
+                        class="btn-group"
+                        default="fontcolor-dark"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMC_FONTCOLOR"
+                >
+                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_BOTTOMC_FONTCOLOR_DARK</option>
+                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_BOTTOMC_FONTCOLOR_LIGHT</option>
+                </field>
+
+                <field
                         name="bottomcpadding"
                         type="radio"
                         class="btn-group"
@@ -959,6 +1113,17 @@
                 </field>
 
                 <field
+                        name="bottomdfontcolor"
+                        type="radio"
+                        class="btn-group"
+                        default="fontcolor-dark"
+                        label="TPL_FRONTEND_PARAMETER_BOTTOMD_FONTCOLOR"
+                >
+                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_BOTTOMD_FONTCOLOR_DARK</option>
+                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_BOTTOMD_FONTCOLOR_LIGHT</option>
+                </field>
+
+                <field
                         name="bottomdpadding"
                         type="radio"
                         class="btn-group"
@@ -991,6 +1156,107 @@
                     <option value="">JYES</option>
                     <option value="hidden-xs hidden-sm">JNO</option>
                 </field>
+
+            </fieldset>
+
+            <fieldset name="TPL_FRONTEND_VARIABLES">
+                <field
+                        name="bgcolor1"
+                        type="color"
+                        default="#7ac143"
+                        label="TPL_FRONTEND_PARAMETER_BGCOLOR1"
+                />
+                <field
+                        name="bgcolor2"
+                        type="color"
+                        default="#5091cd"
+                        label="TPL_FRONTEND_PARAMETER_BGCOLOR2"
+                />
+                <field
+                        name="bgcolor3"
+                        type="color"
+                        default="#f9a541"
+                        label="TPL_FRONTEND_PARAMETER_BGCOLOR3"
+                />
+                <field
+                        name="bgcolor4"
+                        type="color"
+                        default="#f44321"
+                        label="TPL_FRONTEND_PARAMETER_BGCOLOR4"
+                />
+                <field
+                        name="bgcolor5"
+                        type="color"
+                        default="#433E42"
+                        label="TPL_FRONTEND_PARAMETER_BGCOLOR5"
+                />
+
+                <field
+                        name="bgcolorspacer"
+                        type="spacer"
+                        hr="true"
+                />
+
+                <field
+                        name="headingcolordark"
+                        type="color"
+                        default="#75bee9"
+                        label="TPL_FRONTEND_PARAMETER_HEADINGCOLORDARK"
+                />
+
+                <field
+                        name="headingcolorlight"
+                        type="color"
+                        default="#eeeeee"
+                        label="TPL_FRONTEND_PARAMETER_HEADINGCOLORLIGHT"
+                />
+
+                <field
+                        name="fontcolordark"
+                        type="color"
+                        default="#444444"
+                        label="TPL_FRONTEND_PARAMETER_FONTCOLORDARK"
+                />
+
+                <field
+                        name="fontcolorlight"
+                        type="color"
+                        default="#ffffff"
+                        label="TPL_FRONTEND_PARAMETER_FONTCOLORLIGHT"
+                />
+
+                <field
+                        name="fontcolorspacer"
+                        type="spacer"
+                        hr="true"
+                />
+
+                <field
+                        name="paddingnone"
+                        type="text"
+                        class="input-mini"
+                        default="0px"
+                        label="TPL_FRONTEND_PARAMETER_PADDINGNONE"
+                />
+                <field
+                        name="paddingnormal"
+                        type="text"
+                        class="input-mini"
+                        default="20px"
+                        label="TPL_FRONTEND_PARAMETER_PADDINGNORMAL"
+                />
+                <field
+                        name="paddinglarge"
+                        type="text"
+                        class="input-mini"
+                        default="50px"
+                        label="TPL_FRONTEND_PARAMETER_PADDINGLARGE"
+                />
+                <field
+                        name="paddingspacer"
+                        type="spacer"
+                        hr="true"
+                />
 
             </fieldset>
 

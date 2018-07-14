@@ -50,7 +50,7 @@ class BasicTemplateHelper
     {
         return Factory::getApplication()->getTemplate();
     }
-    
+
     /**
     * Method to manually override the META-generator
     * @since BasicTemplate 1.0
