@@ -13,7 +13,7 @@ Perfect Web Team (https://perfectwebteam.nl/)
 
 Rene Kreijveld (https://github.com/renekreijveld)
 
-Jeroen Moolenschot (https://www.joomill-extensions.com/)
+Jeroen Moolenschot (https://www.joomill.nl/)
 
 Connecting Connections (https://con-con.nl/)
 

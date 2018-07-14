@@ -33,20 +33,20 @@ BasicTemplateHelper::localstorageFont();
 <?php BasicTemplateHelper::getAnalytics(); ?>
 <div class="<?php echo $containerstyle; ?>">
 	<?php if ($logoposition == 'header') :?>
-    <div class="headerbar">
+    <div id="headerbar" class="headerbar">
 		    <?php echo $logo; ?>
     </div>
 	<?php endif; ?>
 
 	<?php if (($this->countModules('toolbar-l')) | ($this->countModules('toolbar-r'))) : ?>
         <!-- Toolbar -->
-        <div class="toolbar <?php echo $toolbarcolor. " " .$toolbarphone; ?>">
+        <div id="toolbar" class="toolbar <?php echo $toolbarcolor. " " .$toolbarphone; ?>">
             <div class="<?php echo $toolbarcontainerstyle; ?>">
                 <div class="toolbar-l">
-                    <jdoc:include type="modules" name="toolbar-l" style="notitle" />
+                    <jdoc:include type="modules" name="toolbar-l" style="standard" />
                 </div>
                 <div class="toolbar-r">
-                    <jdoc:include type="modules" name="toolbar-r" style="notitle" />
+                    <jdoc:include type="modules" name="toolbar-r" style="standard" />
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@ BasicTemplateHelper::localstorageFont();
 	<?php if ($this->countModules('navbar')) : ?>
     <div class="nav-wrapper">
 	    <?php if ($navbarmobile == 'collapse') :?>
-        <nav class="navbar navbar-default navbar-main <?php echo $navcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
+        <nav id="navbar" class="navbar navbar-default navbar-main <?php echo $navcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
             <div class="<?php echo $navwidth; ?>">
                 <div class="navbar-header">
                     <button type="button"
@@ -78,13 +78,13 @@ BasicTemplateHelper::localstorageFont();
 
                 <!-- Desktop Navigation -->
                 <div class="navbar-main-menu navbar-<?php echo $menualign; ?>">
-                    <jdoc:include type="modules" name="navbar" style="notitle"/>
+                    <jdoc:include type="modules" name="navbar" style="standard"/>
                 </div>
 
                 <!-- Mobile Navigation Collapse -->
                 <div class="collapse navbar-collapse" id="navbar-collapse">
                     <div class="navbar-mobile">
-                        <jdoc:include type="modules" name="navbar" style="notitle"/>
+                        <jdoc:include type="modules" name="navbar" style="standard"/>
                     </div>
                 </div>
             </div>
@@ -115,13 +115,13 @@ BasicTemplateHelper::localstorageFont();
 
                     <!-- Desktop Navigation -->
                     <div class="navbar-main-menu navbar-<?php echo $menualign; ?>">
-                        <jdoc:include type="modules" name="navbar" style="notitle"/>
+                        <jdoc:include type="modules" name="navbar" style="standard"/>
                     </div>
 
                     <!-- Mobile Navigation -->
                     <div class="navbar-offcanvas navbar-offcanvas-touch navbar-offcanvas-<?php echo $menualign; ?>" id="js-bootstrap-offcanvas">
                         <div>
-                            <jdoc:include type="modules" name="offcanvas" style="notitle"/>
+                            <jdoc:include type="modules" name="offcanvas" style="standard"/>
                         </div>
                     </div>
                 </div>
@@ -137,7 +137,7 @@ BasicTemplateHelper::localstorageFont();
             <!-- Slideshow -->
             <div id="slideshow" class="slideshow text-center <?php echo $slideshowcolor. " " .$slideshowpadding. " " .$slideshowphone; ?> clearfix">
                 <div class="<?php echo $slideshowwidth; ?>">
-                    <jdoc:include type="modules" name="slideshow" style="notitle" />
+                    <jdoc:include type="modules" name="slideshow" style="standard" />
                 </div>
             </div>
 		<?php endif; ?>
@@ -146,7 +146,7 @@ BasicTemplateHelper::localstorageFont();
             <!-- Breadcrumbs -->
             <div id="breadcrumbs" class="breadcrumbs <?php echo $breadcrumbscolor. " " .$breadcrumbspadding. " " .$breadcrumbsphone; ?>clearfix">
                 <div class="<?php echo $breadcrumbswidth; ?>">
-                    <jdoc:include type="modules" name="breadcrumbs" style="notitle"/>
+                    <jdoc:include type="modules" name="breadcrumbs" style="standard"/>
                 </div>
             </div>
 		<?php endif; ?>
@@ -301,13 +301,13 @@ BasicTemplateHelper::localstorageFont();
         <!-- Copyright -->
         <div id="copyright" class="copyright <?php echo $copyrightcolor. " " .$copyrightpadding; ?> clearfix">
             <div class="<?php echo $copyrightwidth; ?> text-<?php echo $copyrightalign; ?>">
-                <jdoc:include type="modules" name="copyright" style="notitle" />
-                <jdoc:include type="modules" name="cookies" style="notitle" />
+                <jdoc:include type="modules" name="copyright" style="standard" />
+                <jdoc:include type="modules" name="cookies" style="standard" />
             </div>
         </div>
     </footer>
 
-    <jdoc:include type="modules" name="debug" style="notitle"/>
+    <jdoc:include type="modules" name="debug" style="standard"/>
 
     <?php if ($backtotopshow){ ?>
         <!-- Back to Top Button -->
