@@ -24,6 +24,12 @@ $toolbarcolor       = $this->params->get('toolbarcolor', '');
 $toolbarfontcolor   = $this->params->get('toolbarfontcolor', '');
 $toolbarcontainerstyle     	= $this->params->get('toolbarcontainerstyle', '');
 $toolbarphone     	= $this->params->get('toolbarphone', '');
+//Headerbar
+$headerbarcolor     = $this->params->get('headerbarcolor', '');
+$headerbarfontcolor = $this->params->get('headerbarfontcolor', '');
+$headerbarwidth 	= $this->params->get('headerbarwidth', '');
+$headerbarpadding   = $this->params->get('headerbarpadding', '');
+$headerbaralign	    = $this->params->get('headerbaralign', '');
 // Navbar
 $navcolor     		= $this->params->get('navcolor', '');
 $navfontcolor       = $this->params->get('navfontcolor', '');

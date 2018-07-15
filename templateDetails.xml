@@ -115,15 +115,6 @@
                 />
 
                 <field
-                        name="logoFile"
-                        class=""
-                        type="media"
-                        default=""
-                        label="TPL_FRONTEND_PARAMETER_LOGO"
-                        description="TPL_FRONTEND_PARAMETER_LOGO_DESC"
-                />
-
-                <field
                         name="logoposition"
                         type="radio"
                         class="btn-group"
@@ -136,6 +127,15 @@
                 </field>
 
                 <field
+                        name="logoFile"
+                        class=""
+                        type="media"
+                        default=""
+                        label="TPL_FRONTEND_PARAMETER_LOGO"
+                        description="TPL_FRONTEND_PARAMETER_LOGO_DESC"
+                />
+
+                <field
                         name="sitetitle"
                         type="text"
                         default=""
@@ -143,6 +143,81 @@
                         description="JFIELD_ALT_PAGE_TITLE_LABEL"
                         filter="string"
                 />
+
+                <field
+                        name="headerbarparameters"
+                        type="note"
+                        class="alert alert-success"
+                        label="TPL_FRONTEND_NOTE_HEADERBARPARAMETERS"
+                        description="TPL_FRONTEND_NOTE_HEADERBARPARAMETERS_DESC"
+                        showon="logoposition:header"
+                />
+
+                <field
+                        name="headerbarcolor"
+                        type="list"
+                        default=""
+                        label="TPL_FRONTEND_PARAMETER_HEADERBAR_COLOR"
+                        showon="logoposition:header"
+                >
+                    <option value="">TPL_FRONTEND_PARAMETER_HEADERBAR_NONE</option>
+                    <option value="bg-color1">TPL_FRONTEND_PARAMETER_HEADERBAR_BGCOLOR1</option>
+                    <option value="bg-color2">TPL_FRONTEND_PARAMETER_HEADERBAR_BGCOLOR2</option>
+                    <option value="bg-color3">TPL_FRONTEND_PARAMETER_HEADERBAR_BGCOLOR3</option>
+                    <option value="bg-color4">TPL_FRONTEND_PARAMETER_HEADERBAR_BGCOLOR4</option>
+                    <option value="bg-color5">TPL_FRONTEND_PARAMETER_HEADERBAR_BGCOLOR5</option>
+                </field>
+
+                <field
+                        name="headerbarfontcolor"
+                        type="radio"
+                        class="btn-group"
+                        default="fontcolor-dark"
+                        label="TPL_FRONTEND_PARAMETER_HEADERBAR_FONTCOLOR"
+                        showon="logoposition:header"
+                >
+                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_HEADERBAR_FONTCOLOR_DARK</option>
+                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_HEADERBAR_FONTCOLOR_LIGHT</option>
+                </field>
+
+                <field
+                        name="headerbarwidth"
+                        type="radio"
+                        class="btn-group"
+                        default="container"
+                        label="TPL_FRONTEND_PARAMETER_HEADERBAR_CONTAINERSTYLE"
+                        showon="logoposition:header"
+                >
+                    <option value="container">TPL_FRONTEND_PARAMETER_HEADERBAR_CONTAINERSTYLE_CONTAINER</option>
+                    <option value="container-fluid">TPL_FRONTEND_PARAMETER_HEADERBAR_CONTAINERSTYLE_CONTAINER_FLUID</option>
+                </field>
+
+                <field
+                        name="headerbarpadding"
+                        type="radio"
+                        class="btn-group"
+                        default="padding-normal"
+                        label="TPL_FRONTEND_PARAMETER_HEADERBAR_PADDING"
+                        showon="logoposition:header"
+                >
+                    <option value="padding-none">TPL_FRONTEND_PARAMETER_HEADERBAR_PADDING_NONE</option>
+                    <option value="padding-normal">TPL_FRONTEND_PARAMETER_HEADERBAR_PADDING_NORMAL</option>
+                    <option value="padding-large">TPL_FRONTEND_PARAMETER_HEADERBAR_PADDING_LARGE</option>
+                </field>
+
+                <field
+                        name="headerbaralign"
+                        type="radio"
+                        class="btn-group"
+                        default="center"
+                        label="TPL_FRONTEND_PARAMETER_HEADERBAR_ALIGN"
+                        showon="logoposition:header"
+                >
+                    <option value="left">TPL_FRONTEND_PARAMETER_HEADERBAR_ALIGN_LEFT</option>
+                    <option value="center">TPL_FRONTEND_PARAMETER_HEADERBAR_ALIGN_CENTER</option>
+                    <option value="right">TPL_FRONTEND_PARAMETER_HEADERBAR_ALIGN_RIGHT</option>
+                </field>
+
             </fieldset>
 			<fieldset name="TPL_FRONTEND_MODULES">
 				<field
@@ -252,6 +327,7 @@
 						label="TPL_FRONTEND_PARAMETER_NAVBAR_ALIGN"
                 >
 					<option value="left">TPL_FRONTEND_PARAMETER_NAVBAR_ALIGN_LEFT</option>
+                    <option value="center">TPL_FRONTEND_PARAMETER_NAVBAR_ALIGN_CENTER</option>
 					<option value="right">TPL_FRONTEND_PARAMETER_NAVBAR_ALIGN_RIGHT</option>
 				</field>
 

@@ -32,11 +32,6 @@ BasicTemplateHelper::localstorageFont();
 <body class="<?php echo BasicTemplateHelper::getBodySuffix(); ?>" role="document">
 <?php BasicTemplateHelper::getAnalytics(); ?>
 <div class="<?php echo $containerstyle; ?>">
-	<?php if ($logoposition == 'header') :?>
-    <div id="headerbar" class="headerbar">
-		    <?php echo $logo; ?>
-    </div>
-	<?php endif; ?>
 
 	<?php if (($this->countModules('toolbar-l')) | ($this->countModules('toolbar-r'))) : ?>
         <!-- Toolbar -->
@@ -48,6 +43,15 @@ BasicTemplateHelper::localstorageFont();
                 <div class="toolbar-r">
                     <jdoc:include type="modules" name="toolbar-r" style="standard" />
                 </div>
+            </div>
+        </div>
+	<?php endif; ?>
+
+	<?php if ($logoposition == 'header') :?>
+        <!-- Headerbar -->
+        <div id="headerbar" class="headerbar <?php echo $headerbarcolor. " " .$headerbarfontcolor. " " .$headerbarpadding; ?> text-<?php echo $headerbaralign; ?> clearfix">
+            <div class="<?php echo $headerbarwidth; ?>">
+	            <?php echo $logo; ?>
             </div>
         </div>
 	<?php endif; ?>
