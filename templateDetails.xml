@@ -30,25 +30,27 @@
 	</files>
 	
 	<positions>
+        <position>toolbar-l</position>
+        <position>toolbar-r</position>
 		<position>navbar</position>
 		<position>offcanvas</position>
 		<position>slideshow</position>
 		<position>breadcrumbs</position>
-		<position>toolbar-l</position>
-		<position>toolbar-r</position>
+        <position>top-a</position>
+        <position>top-b</position>
+        <position>top-c</position>
+        <position>top-d</position>
 		<position>content-top</position>
 		<position>content-bottom</position>
 		<position>left</position>
 		<position>right</position>
-		<position>top-a</position>
-		<position>top-b</position>
-		<position>top-c</position>
-		<position>top-d</position>
 		<position>bottom-a</position>
 		<position>bottom-b</position>
 		<position>bottom-c</position>
 		<position>bottom-d</position>
 		<position>footer-menu</position>
+		<position>copyright</position>
+		<position>cookies</position>
 	</positions>
 
 	<languages folder="language">
