@@ -298,17 +298,6 @@
 				</field>
 
                 <field
-                        name="navfontcolor"
-                        type="radio"
-                        class="btn-group"
-                        default="fontcolor-dark"
-                        label="TPL_FRONTEND_PARAMETER_NAVBAR_FONTCOLOR"
-                >
-                    <option value="fontcolor-dark">TPL_FRONTEND_PARAMETER_NAVBAR_FONTCOLOR_DARK</option>
-                    <option value="fontcolor-light">TPL_FRONTEND_PARAMETER_NAVBAR_FONTCOLOR_LIGHT</option>
-                </field>
-
-				<field
 						name="navwidth"
 						type="radio"
 						class="btn-group"

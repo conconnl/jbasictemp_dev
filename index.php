@@ -60,7 +60,7 @@ BasicTemplateHelper::localstorageFont();
 	<?php if ($this->countModules('navbar')) : ?>
     <div class="nav-wrapper">
 	    <?php if ($navbarmobile == 'collapse') :?>
-        <nav id="navbar" class="navbar navbar-default navbar-main <?php echo $navcolor. " " .$navfontcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
+        <nav id="navbar" class="navbar navbar-default navbar-main <?php echo $navcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
             <div class="<?php echo $navwidth; ?>">
                 <div class="navbar-header">
                     <button type="button"
@@ -95,7 +95,7 @@ BasicTemplateHelper::localstorageFont();
         </nav>
 	    <?php endif; ?>
 	    <?php if ($navbarmobile == 'offcanvas') :?>
-            <nav class="navbar navbar-default navbar-main <?php echo $navcolor. " " .$navfontcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
+            <nav class="navbar navbar-default navbar-main <?php echo $navcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
                 <div class="<?php echo $navwidth; ?>">
                     <div class="navbar-header">
                         <button type="button"
