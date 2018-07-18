@@ -87,6 +87,12 @@
   }
 }
 
+.nav > li > a, .nav > li > span {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+}
+
 .navbar-main-menu {
   display: block;
   height: @main-menu-height+2;
@@ -130,8 +136,8 @@
     border-radius: 0;
     height: @main-menu-height;
 
-    .nav > li > a {
-      line-height: @main-menu-height;
+    .nav > li > a , .nav > li > span.nav-header {
+    line-height: @main-menu-height;
       padding: 0 12px;
     }
 
@@ -249,7 +255,7 @@ ul.nav li:hover li {
   }
 }
 
-.navbar-mobile .nav > li > a {
+.navbar-mobile .nav > li > a, .navbar-mobile .nav > li > span.nav-header {
   padding: @nav-link-padding;
 }
 
