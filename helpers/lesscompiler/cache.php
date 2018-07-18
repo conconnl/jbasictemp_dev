@@ -175,7 +175,7 @@ class Less_Cache{
 
 		$files = scandir(Less_Cache::$cache_dir);
 		if( $files ){
-			$check_time = time() - 604800;
+			$check_time = time() - 86400;
 			foreach($files as $file){
 				if( strpos($file,'lessphp_') !== 0 ){
 					continue;
