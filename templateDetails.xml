@@ -336,7 +336,7 @@
 						name="stickymenuoffset"
 						class=""
 						type="text"
-						default="0"
+						default="1"
 						label="TPL_FRONTEND_PARAMETER_NAVBAR_STICKY_OFFSET"
 						showon="stickymenu:1"
                 />

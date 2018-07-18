@@ -60,7 +60,7 @@ BasicTemplateHelper::localstorageFont();
 	<?php if ($this->countModules('navbar')) : ?>
     <div class="nav-wrapper">
 	    <?php if ($navbarmobile == 'collapse') :?>
-        <nav id="navbar" class="navbar navbar-default navbar-main <?php echo $navcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
+        <nav id="navbar navbar-mobile-collapse" class="navbar navbar-default navbar-main <?php echo $navcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
             <div class="<?php echo $navwidth; ?>">
                 <div class="navbar-header">
                     <button type="button"
@@ -86,7 +86,7 @@ BasicTemplateHelper::localstorageFont();
                 </div>
 
                 <!-- Mobile Navigation Collapse -->
-                <div class="collapse navbar-collapse" id="navbar-collapse">
+                <div id="navbar-collapse" class="collapse navbar-collapse">
                     <div class="navbar-mobile">
                         <jdoc:include type="modules" name="navbar" style="standard"/>
                     </div>
@@ -95,11 +95,11 @@ BasicTemplateHelper::localstorageFont();
         </nav>
 	    <?php endif; ?>
 	    <?php if ($navbarmobile == 'offcanvas') :?>
-            <nav class="navbar navbar-default navbar-main <?php echo $navcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
+            <nav id="navbar navbar-mobile-offcanvas" class="navbar navbar-default navbar-main <?php echo $navcolor; ?>" role="navigation" <?php if ($stickymenu) : ?> data-spy="affix" data-offset-top="<?php echo $stickymenuoffset; ?>"<?php endif; ?>>
                 <div class="<?php echo $navwidth; ?>">
                     <div class="navbar-header">
                         <button type="button"
-                                class="offcanvas-toggle pull-<?php if ($menualign == 'right') :?>left<?php endif; ?><?php if ($menualign == 'left') :?>right<?php endif; ?>"
+                                class="offcanvas-toggle pull-<?php if ($menualign == 'right') :?>left<?php else :?>right<?php endif; ?>"
                                 data-toggle="offcanvas"
                                 data-target="#js-bootstrap-offcanvas"
                                 aria-expanded="false"
@@ -123,7 +123,7 @@ BasicTemplateHelper::localstorageFont();
                     </div>
 
                     <!-- Mobile Navigation -->
-                    <div class="navbar-offcanvas navbar-offcanvas-touch navbar-offcanvas-<?php echo $menualign; ?>" id="js-bootstrap-offcanvas">
+                    <div id="js-bootstrap-offcanvas" class="navbar-offcanvas navbar-offcanvas-touch navbar-offcanvas-<?php echo $menualign; ?>">
                         <div>
                             <jdoc:include type="modules" name="offcanvas" style="standard"/>
                         </div>

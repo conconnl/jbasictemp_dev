@@ -17,51 +17,6 @@
   color: #777777;
 }
 
-// Navbar logo
-.navbar-logo {
-  height: @main-menu-height;
-  overflow: hidden;
-  clear: left;
-}
-
-.navbar-logo .logo {
-  display: block;
-  height: @main-menu-height;
-  margin: 0 auto;
-  &:hover,
-  &:focus,
-  &:active,
-  &:visited {
-    text-decoration: none;
-  }
-  p {
-    margin: 0px;
-  }
-  @media (max-width: @screen-xs) {
-    float: left;
-  }
-  @media (max-width: 300px) {
-    background: none;
-    padding-left: 7px;
-  }
-}
-
-.text-center .logo img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.text-left .logo img {
-  display: block;
-  float: left;
-}
-
-.text-right .logo img {
-  display: block;
-  float: right;
-}
-
 .navbar .navbar-center {
   display: inline-block;
   margin-left: auto;
@@ -99,32 +54,161 @@
   padding-left: 10px;
 }
 
-
-// mobile
+// mobile specific
 @media (max-width: @grid-float-breakpoint-max) {
-  .nav-wrapper {
-    min-height: 0px;
-  }
   .navbar-main-menu {
     display: none !important;
+  }
+
+  .nav-wrapper {
+    min-height: 0px;
   }
 
   .affix {
     position: absolute;
   }
+
+  .navbar-mobile .navbar-nav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  // Collapse
+  .navbar-collapse {
+    will-change: height; // the browser may optimize
+  }
+
+  .navbar-mobile .nav > li > a, .navbar-mobile .nav > li > span.nav-header {
+    padding: @nav-link-padding;
+  }
+
+  .nav li {
+    width: 100%;
+  }
+
+  // Offcanvas
+  .offcanvas-stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .navbar-default .navbar-offcanvas {
+    background-color: #f8f8f8;
+  }
+
+  .navbar-inverse .navbar-offcanvas {
+    background-color: #222;
+  }
+
+  .navbar-offcanvas {
+    position: fixed;
+    width: 100%;
+    max-width: 250px;
+    left: -250px;
+    top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 999;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+  }
+
+  .navbar-offcanvas.in {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .navbar-offcanvas.navbar-offcanvas-fade {
+    opacity: 0;
+  }
+
+  .navbar-offcanvas.navbar-offcanvas-fade.in {
+    opacity: 1;
+  }
+
+  .navbar-offcanvas.offcanvas-transform.in {
+    -webkit-transform: translateX(250px);
+    transform: translateX(250px);
+  }
+
+  .navbar-offcanvas.offcanvas-position.in {
+    left: 0;
+  }
+
+  .navbar-offcanvas.navbar-offcanvas-right {
+    left: auto;
+    right: -250px;
+  }
+
+  .navbar-offcanvas.navbar-offcanvas-right.offcanvas-transform.in {
+    -webkit-transform: translateX(-250px);
+    transform: translateX(-250px);
+  }
+
+  .navbar-offcanvas.navbar-offcanvas-right.offcanvas-position.in {
+    left: auto;
+    right: 0;
+  }
+
+  .navbar-offcanvas .dropdown.active .caret {
+    border-top: 0;
+    border-bottom: 4px solid;
+  }
+
+  .navbar-offcanvas .dropdown-menu {
+    position: relative;
+    width: 100%;
+    border: inherit;
+    box-shadow: none;
+    -webkit-transition: height 0.15s ease-in;
+    transition: height 0.15s ease-in;
+  }
+
+  .navbar-offcanvas .dropdown-menu.shown {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  // Offcanvas Hamburger icon
+  .offcanvas-toggle {
+    display: block;
+    background: transparent;
+    border: 0px;
+  }
+
+  .navbar-toggle {
+    margin-right: 15px;
+  }
+
+  .offcanvas-toggle .icon-bar{
+    -webkit-transition:all .25s ease-in-out;
+    transition:all .25s ease-in-out;
+  }
+
+  .offcanvas-toggle.is-open .icon-bar:nth-child(2){
+    -webkit-transform:rotate(45deg) translate(5px, 4px);
+    transform:rotate(45deg) translate(5px, 4px);
+  }
+
+  .offcanvas-toggle.is-open .icon-bar:nth-child(3){
+    opacity:0;
+  }
+
+  .offcanvas-toggle.is-open .icon-bar:nth-child(4) {
+    -webkit-transform: rotate(-45deg) translate(4px, -4px);
+    transform: rotate(-45deg) translate(4px, -4px);
+  }
 }
 
 // desktop specific
 @media (min-width: @grid-float-breakpoint) {
+  .navbar-mobile, .navbar-offcanvas, .offcanvas-toggle {
+    display: none !important;
+  }
 
   .nav-wrapper {
     min-height: 0px;
-  }
-
-  .navbar-mobile,
-  .toggle-sub,
-  .dropdown-toggle-text {
-    display: none !important;
   }
 
   .navbar-main {
@@ -192,114 +276,4 @@
     margin-left: 100%;
     margin-top: -35px;
   }
-}
-
-// Navlist
-
-.navlist-nav li.active.deeper ul {
-  display: block;
-}
-
-.navlist-nav li.deeper:hover ul {
-  display: none;
-}
-ul.nav li:hover li {
-  float: none;
-  display: block;
-}
-
-.navlist-nav .nav-child a {
-  padding-left: 25px;
-}
-
-.navlist-nav li.active.deeper:hover > ul {
-  display: block !important;
-  position: inherit;
-}
-
-// navbar mobile
-.navbar-toggle {
-  margin: 0;
-  padding: 23px 15px;
-  border: none;
-  border-radius: 0;
-  transition: background-color .1s ease;
-}
-
-.navbar-default .navbar-toggle,
-.navbar-default .navbar-toggle:focus,
-.navbar-default .navbar-toggle:hover {
-  background: #efefef;
-  border: none;
-  &.collapsed {
-    background: transparent;
-  }
-}
-
-.navbar-collapse {
-  will-change: height; // the browser may optimize
-}
-
-.navbar-mobile .navbar-nav {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.navbar-mobile {
-  li.parent > ul {
-    display: none;
-  }
-  li.expand > ul {
-    display: block;
-  }
-}
-
-.navbar-mobile .nav > li > a, .navbar-mobile .nav > li > span.nav-header {
-  padding: @nav-link-padding;
-}
-
-.navbar-mobile .parent > a {
-  margin-right: (@font-size-base * 1.8) + @grid-gutter-width; // calculated width of .toggle-sub + margin
-
-  @switch: sibling; // selects ".toggle-sub"
-  color: #000000;
-}
-
-.navbar-mobile .nav-child li {
-  margin-left: 10px;
-}
-
-// Toggle button, expands submenu items
-.toggle-sub {
-  float: right;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: @nav-link-padding;
-  width: 1.8em;
-  height: 1.8em;
-  border-radius: @border-radius-base;
-  line-height: 1.8em;
-  font-size: @font-size-base;
-  text-align: center;
-  color: #ffffff;
-  background: @color-primary;
-  cursor: pointer;
-
-  &:before {
-    content: "+";
-  }
-  &.active:before {
-    content: "-";
-  }
-  &:hover,
-  &:active,
-  &:focus {
-    background: #ccc;
-  }
-}
-
-.navbar-expanded.affix {
-  bottom: 0;
-  overflow-y: auto;
 }
