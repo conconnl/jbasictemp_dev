@@ -286,6 +286,7 @@ class BasicTemplateHelper
     static public function loadCss()
     {
         HTMLHelper::_('stylesheet', 'templates/' . self::template() . '/css/template.css', array('version' => 'auto'));
+	    HTMLHelper::_('stylesheet', 'templates/' . self::template() . '/css/font.css', array('version' => 'auto'));
     }
 
     /**
